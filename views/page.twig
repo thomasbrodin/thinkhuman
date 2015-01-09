@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div id="{{post.post_type}}">
+        <div class="container">
+          <div class="row">
+          	{% set bgImage = post.get_field('background_image_right_side') %}
+			
+          	<div class="{% if bgImage %}col-md-10{% else %}col-md-12{% endif %}">	
+
+	          	{% if post.get_thumbnail %}
+					<div id="featured-image">
+						<img class="page-img" src="{{post.get_thumbnail.get_src|resize(400)}}" />
+					</div>
+				{% endif %}
+
+				{{post.content}}
+				{% if post.can_edit %}
+				    <a href="{{post.get_edit_url}}">Edit me!</a>
+				{% endif %}
+
+          	</div>
+
+        </div>
+      </div>
+	</div><!-- content -->
+	{% if bgImage %}
+		<div id="bg-page-img" style="background:url({{TimberImage(bgImage.url).src|resize(300)}}) no-repeat right 150px"></div>
+	{% endif %}
+	<!--   Clients logos pre Footer       -->
+	{% include 'partials/bottom-page.twig' %}
+
+{% endblock %}

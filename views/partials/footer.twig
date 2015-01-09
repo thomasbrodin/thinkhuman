@@ -1,0 +1,47 @@
+  {% block footer %}
+	  <footer class="site-footer">
+			<div class="col-md-7">
+				<ul>
+					<li><span class="agenda">©&nbsp;{{"now"|date('Y')}}&nbsp;</span>&nbsp;&nbsp;{{site.name}}</li>
+				{% for item in footer.get_items %}
+				    <li class="{{item.classes | join(' ')}}">
+				        <a class="nav-item services" href="{{item.get_link}}">{{item.title}}</a>
+				    </Li>
+				{% endfor %}
+				</ul>
+			</div>
+
+			<div class="col-md-5">
+				<div class="connect">
+				  <a class="phone" href="tel:{{options.phone_number}}">{{options.phone_number}}</a>
+				  {% if options.facebook %}
+				  	<a href="{{options.facebook}}" class="social-connect facebook"></a>
+				  {% endif %}
+				  {% if options.twitter %}
+				  	<a href="{{options.twitter}}" class="social-connect twitter"></a>
+				  {% endif %}
+				  {% if options.google %}
+				  	<a href="{{options.google}}" class="social-connect google"></a>
+				  {% endif %}
+				  {% if options.linkedin %}
+				  	<a href="{{options.linkedin}}" class="social-connect linkdin"></a>
+				  {% endif %}
+				  {% if options.email %}
+				  	<a href="{{options.email}}" class="social-connect email"></a>
+				   {% endif %}
+				</div>
+			</div>
+	</footer>
+
+	{{ function('wp_footer') }}
+	<script>
+	(function() {
+		[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+	  		new SelectFx(el, {
+			    stickyPlaceholder: false
+			});
+		});
+	})();
+	</script>
+
+{% endblock %}

@@ -1,0 +1,181 @@
+div.cs-select {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-align: left;
+	z-index: 8;
+	width: 100%;
+	max-width: 500px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.cs-select:focus {
+	outline: none; 
+}
+
+.cs-select select {
+	display: none;
+}
+
+.cs-select span.cs-placeholder {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	padding: 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: #f3af19;
+  	text-transform: uppercase;
+  	padding: 11px 15px 11px 15px;
+  	width:93%;
+  	height: 44px;
+  	color: #6a4900;
+  	font-family:'Raleway Heavy';
+  	font-size: 1em;
+  	border: 1px solid #6a4900;
+  	/*-webkit-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
+	-moz-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
+	box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);*/
+  	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/* Options */
+.cs-select .cs-options {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	background:transparent;
+	visibility: hidden;
+}
+
+.cs-select.cs-active .cs-options {
+	visibility: visible;
+}
+
+.cs-select ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.cs-select li.cs-optgroup span {
+	width:100%;
+	padding-bottom:1em;
+	font-size: 2em;
+	display: block;
+	text-align: center;
+	font-family: 'Raleway light';
+	letter-spacing: 1pt;
+	color:#666;
+	padding-bottom: 2.5em;
+}
+.cs-select li.cs-optgroup > ul li span {
+	padding: 0;
+	font-size: 1.1em;
+	font-family:  "Agenda Black";
+	letter-spacing: 0.1em;
+	color: #404040;
+	text-transform: uppercase;
+}
+.cs-select .cs-options li.cs-optgroup{
+	background-image: none!important;
+}
+.cs-select li.cs-optgroup > ul li {
+	float: left;
+	width:16.66%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	padding-top: 60px;
+	min-height: 160px;
+	margin:0 8.3333% 4.1666%;
+	opacity: .8
+}
+.cs-select .cs-options li:first-child{
+	background-image: url(images/icon1.png);
+}
+.cs-select .cs-options li:nth-child(2) {
+	background-image: url(images/icon2.png);
+}
+.cs-select .cs-options li:nth-child(3) {
+	background-image: url(images/icon3.png);
+}
+.cs-select .cs-options li:nth-child(4) {
+	background-image: url(images/icon4.png);
+}
+.cs-select .cs-options li:nth-child(5) {
+	background-image: url(images/icon5.png);
+}
+.cs-select li.cs-optgroup > ul li:hover {
+	opacity: 1
+}
+
+@media screen and (max-width: 30em) {
+	div.cs-skin-overlay { font-size: 1em; }
+}
+
+.cs-skin-overlay > span:before,
+.cs-skin-overlay.cs-active > span:before {
+	display: block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 1.3em;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+	content: "\f0c9";
+	float: right;
+	padding-top:19px;
+}
+
+.cs-skin-overlay .cs-selected span::after {
+	content: '';
+}
+
+.cs-skin-overlay .cs-options {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transform: perspective(1000px) translate3d(0, 0, -200px);
+	transform: perspective(1000px) translate3d(0, 0, -200px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
+	transition: transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.cs-skin-overlay.cs-active .cs-options {
+	opacity: 1;
+	-webkit-transform: perspective(1000px) translate3d(0, 0, 0px);
+	transform: perspective(1000px) translate3d(0, 0, 0px);
+	-webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+	transition: opacity 0.4s, transform 0.4s;
+}
+
+.cs-skin-overlay .cs-options > ul {
+	position: relative;
+	top: 30%;
+	left: 50%;
+	-webkit-transform: translate3d(-50%, -50%,0);
+	transform: translate3d(-50%, -50%,0);
+}
+
+.cs-skin-overlay li.cs-focus span,
+.cs-skin-overlay li.cs-selected span {
+	color: #f3af19;
+	background: transparent;
+}

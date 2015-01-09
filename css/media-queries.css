@@ -1,0 +1,246 @@
+
+@media screen and (max-width: 767px) {	
+	.only-xs {
+		display: inline-block!important;
+	}
+ 	.gutter-sm{
+	  	padding-right: 15px;
+		padding-left: 15px;
+	}
+	.gutter-lg{
+	 padding:0 1em ;
+	}
+	.gutter-xlg{
+	 padding:0 1.5em ;
+	}
+	.gutter-xxlg{
+	 padding:0 3.2em ;
+	}
+	.cs-skin-overlay .cs-options > ul {
+		width: 100%;
+	}
+	.bottom-xs {
+		bottom: 0;
+		position: fixed;
+		height: 32px;
+		background: #232323;
+	}
+	.top-navbar {
+		padding-top:0;
+		background: #fff;
+	}
+	.top-navbar.fixed header{
+  		margin-top: 6px;
+  		margin-bottom: 4px
+	}
+	.top-navbar .mandala {
+		max-width: 45px;
+		margin-left: 15px;
+	}
+	.top-navbar .brand {
+		margin-left:10px;
+	}
+	.top-navbar h1.header {
+  		padding-top: 0;
+  		font-size: 1.5em;
+	}
+	.top-navbar.fixed h1.header {
+		padding-top: 10px;
+  		font-size: 1.5em;
+	}
+	.top-navbar .sub-head {
+		font-size: .7em;
+  		letter-spacing: 0.08em;
+	}
+	.top-navbar nav {
+		margin-top: 10px;
+		width:100%;
+		margin-bottom: 25px;
+	}
+	.top-navbar.fixed nav {
+		margin-top: 10px
+	}
+	.top-navbar nav ul li {
+		display: block;
+		text-align: left;
+		padding-right: 15px;
+		line-height: 25px
+	}
+	.site-footer {
+		height:140px;
+		padding-top: 20px;
+		position: relative;
+	}
+	.site-footer ul {
+		padding:0;
+	}
+	.social-connect {
+		margin: 15px 28px;
+	}
+	a.social-connect:last-of-type {
+		margin-right: 28px
+	}
+	.connect a.phone {
+		display: none
+	}
+	#page ul.service-menu li {
+		width: 100%;
+		margin:0;
+		padding:60px 1em 1em;
+	}
+	.scrolled .cs-skin-overlay .cs-options {
+		display: block
+	}
+	.cs-select li.cs-optgroup > ul li{
+		width: 100%;
+		margin:0;
+		padding:60px 1em 1em;
+	}
+	.cs-select .cs-options li:nth-child(5) {
+		margin-bottom: 2em
+	}
+	div.cs-select {
+		max-width: 300px
+	}
+	#masthead {
+		max-height: none;
+		padding-bottom:2em;
+	}
+	.mission {
+		padding-top: 2em
+	}
+	.yellowPanel {
+		padding-top: 25px
+	}
+	.shading-top {
+		margin-top: -25px;
+	}
+	.logobar_title {
+		font-size: .8em;
+	}
+	.logobar_break {
+		width:150px;
+	}
+	.yellowPanel .client-logos {
+		padding:15px
+	}
+	.section-graybar {
+		font-size: .8em;
+		padding: 15px;
+		margin: 0 0 25px;
+	}
+	.put-work {
+		padding: 25px
+	}
+	.yellowPanel .button {
+		width:220px;
+	}
+	.testimonials .header {
+		margin: 30px auto 0;
+		font-size: 1.1em;
+		padding: 0 15px
+	}
+	.testi p {
+		line-height: 1.5;
+		font-size: .8em;
+	}
+	.witness .name {
+		font-size: .9em;
+	}
+	.witness .info {
+		font-size: .8em;
+	}
+	#testimonial-slider .flex-direction-nav .flex-prev {
+		left:0;
+	}
+	#testimonial-slider .flex-direction-nav .flex-next {
+		right:0;
+	}
+	.inThePress {
+		margin: 0;
+	}
+	img.icon {
+		max-height: 65px;
+	}
+	#page ul.service-menu {
+		margin-top: 0
+	}
+	#page ol {
+		background: transparent;
+		padding-left: 20px;
+	}
+	#page ol li {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 0 0 5px;
+	}
+	#page h3 {
+		text-shadow:none;
+		background: none;
+	}
+	#page blockquote {
+		padding: 30px;
+	}
+	div#featured-image {
+		width:50%;
+	}
+	.inThePress .header {
+		font-size: .8em;
+		margin: 0;
+	}
+}
+  	
+@media (min-width: 992px) {
+  	.container {
+		width:970px;
+	}	
+	.gutter-xs{
+		padding:0 15px ;
+	}
+	.gutter-sm{
+		padding:0 30px ;
+	}
+	.gutter-lg{
+		padding:0 50px ;
+	}
+	.gutter-xlg{
+		padding:0 90px ;
+	}
+	.gutter-xxlg{
+		padding:0 120px ;
+	}
+	.cs-skin-overlay .cs-options > ul {
+		width: 970px;
+	}
+	.top-navbar .mandala {
+ 	 max-width:75px;
+	}
+	.top-navbar .header {
+		font-size: 2.75em;
+	}
+	.top-navbar .sub-head {
+		font-size: 0.97em;
+	}
+	.top-navbar nav {
+  		margin-top: 67px;
+	}
+	.inThePress .header {
+		font-size: 1em;
+		margin: 6px 40px 0 6px;
+		max-width: 75px;
+	}
+	.find-out-about {
+		padding: 1.5em 0 0;
+	}
+}
+@media (min-width: 1200px) {
+  div#bg-page-img {
+		position: absolute;
+		top: 0;
+		right:0;
+		width:100%;
+		height:100%;
+	}
+}
+
+

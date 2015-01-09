@@ -1,0 +1,27 @@
+{% block html_head_container %}
+{% include 'partials/html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+    </head>
+{% endblock %}
+    <body class="{{body_class}}" data-template="base.twig">
+        
+        <div id="wrapper">
+            <!--   top bar     -->
+            {% include 'partials/top-bar.twig' %}
+
+            {% include 'partials/header.twig' %}
+
+            <section id="content" role="main">
+
+                {% block content %}
+                    Sorry, no content
+                {% endblock %}
+                
+            </section>
+        </div>  <!--wrapper-->
+        
+        {% include 'partials/footer.twig' %}
+
+    </body>
+</html>

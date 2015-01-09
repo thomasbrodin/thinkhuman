@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div id="{{post.post_type}}">
+        <div class="container">
+          <div class="row">
+          	
+          	<div class="col-md-12">
+				<h1 class="title">{{post.title}}</h2>
+				<ul class="service-menu">
+				    {% for child in post.children %}
+				        <li>
+				        	<a href="{{child.link}}">{{child.title}}</a>
+				        </li>
+				    {% endfor %}
+				</ul>
+				
+          	</div>
+
+        </div>
+      </div>
+	</div><!--content -->
+
+	<!--   Clients logos pre Footer       -->
+	{% include 'partials/bottom-page.twig' %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+
+<div class="top-navbar" role="navigation">
+    <div class="container">
+        
+        {% block header %}
+        <header class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <i class="fa hamburger"></i>
+            </button>
+            <a href="tel: {{options.phone_number}}">
+                <i class="only-xs fa phone"></i>
+            </a>
+            <img src="{{options.logo}}" alt="logo" class="mandala">
+
+            <a class="brand" href="/think-human/">
+              <h1 class="header">{{site.name}}</h1>
+              <h2 class="sub-head">
+               {{options.tagline}}<br>
+               <span class="yellow">+</span> 
+               {{options.sub_tagline}}
+              </h2>
+            </a>
+
+        </header>
+        
+        <nav id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+            {% for item in menu.get_items %}
+                <li class="{{item.classes | join(' ')}}">
+                    <a class="nav-item services" href="{{item.get_link}}">{{item.title}}</a>
+                </Li>
+            {% endfor %}
+            </ul>
+        </nav>
+        {% endblock %}
+    </div>
+
+    <div class="container bar"></div>
+
+</div>
