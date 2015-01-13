@@ -99,19 +99,19 @@ div.cs-select:focus {
 	opacity: .8
 }
 .cs-select .cs-options li:first-child{
-	background-image: url(images/icon1.png);
+	background-image: url(../images/icon1.png);
 }
 .cs-select .cs-options li:nth-child(2) {
-	background-image: url(images/icon2.png);
+	background-image: url(../images/icon2.png);
 }
 .cs-select .cs-options li:nth-child(3) {
-	background-image: url(images/icon3.png);
+	background-image: url(../images/icon3.png);
 }
 .cs-select .cs-options li:nth-child(4) {
-	background-image: url(images/icon4.png);
+	background-image: url(../images/icon4.png);
 }
 .cs-select .cs-options li:nth-child(5) {
-	background-image: url(images/icon5.png);
+	background-image: url(../images/icon5.png);
 }
 .cs-select li.cs-optgroup > ul li:hover {
 	opacity: 1

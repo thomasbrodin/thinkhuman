@@ -3,6 +3,9 @@
 	.only-xs {
 		display: inline-block!important;
 	}
+	.top-yellow-bar span.start {
+		display: block!important
+	}
  	.gutter-sm{
 	  	padding-right: 15px;
 		padding-left: 15px;
@@ -69,7 +72,6 @@
 	.site-footer {
 		height:140px;
 		padding-top: 20px;
-		position: relative;
 	}
 	.site-footer ul {
 		padding:0;
@@ -188,9 +190,22 @@
 		font-size: .8em;
 		margin: 0;
 	}
+	#page ul.about li:first-child a {
+		padding: 35px 25px 0 155px;
+	}
+	#page ul.about li:nth-child(2) a {
+	padding: 68px 15px 0 161px
+	}
+	#page ul.about li:nth-child(3) a {
+	padding: 90px 22px 0 190px
+	}
 }
   	
 @media (min-width: 992px) {
+	#page ul.about li {
+		width: 305px;
+		display: inline-block;
+	}
   	.container {
 		width:970px;
 	}	

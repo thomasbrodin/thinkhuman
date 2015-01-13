@@ -84,8 +84,9 @@ text-rendering: auto;
 	color: #000;
 }
 .fa.phone {
-	padding: 6px 0 0 13px;
+	padding: 6px 9px 0 0;
 	font-size: 1.9em;
+	float: right;
 }
 .phone:before{
 	content: "\f095";
@@ -210,7 +211,6 @@ text-rendering: auto;
 	display: block;
 	margin: 1px 0;
 }
-
 /* masthead */
 #masthead {
   padding-top: 115px;
@@ -283,14 +283,14 @@ text-rendering: auto;
 }
 
 .shading-top {
-  background:url('css/images/shading-top.png') repeat-x 0 0;
+  background:url(images/shading-top.png) repeat-x 0 0;
   height: 26px;
   position: absolute;
   width: 100%;
   margin-top: -55px;
 }
 .shading-bottom {
-  background:url('css/images/shading-bottom.png') repeat-x 0 0;
+  background:url(images/shading-bottom.png) repeat-x 0 0;
   height: 27px;
   position: relative;
   width: 100%;
@@ -361,14 +361,14 @@ img.icon {
   position: relative;
 }
 .meet-coaches .flex-direction-nav .flex-prev {
-  background: url(css/images/Arrow-Back.png);
+  background: url(images/Arrow-Back.png);
   background-repeat: no-repeat;
   background-position: 0 1px;
   padding-left: 25px;
   width: 100%;
 }
 .meet-coaches .flex-direction-nav .flex-next {
-  background: url(css/images/Arrow-Forward.png);
+  background: url(images/Arrow-Forward.png);
   background-repeat: no-repeat;
   background-position: 100% 1px;
   padding-right: 25px;
@@ -496,11 +496,11 @@ img.icon {
   top:40%;
 }
 #testimonial-slider .flex-direction-nav .flex-prev {
-  background: url(css/images/arrow-back-big.png) no-repeat;
+  background: url(images/arrow-back-big.png) no-repeat;
   left:-100px;
 }
 #testimonial-slider .flex-direction-nav .flex-next {
-  background: url(css/images/arrow-forward-big.png)no-repeat;
+  background: url(images/arrow-forward-big.png)no-repeat;
   right:-100px;
 }
 
@@ -601,8 +601,8 @@ hr.testi-break {
   margin:15px 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  background: url(css/images/h3-left.png) no-repeat center left,
-              url(css/images/h3-right.png) no-repeat center right;
+  background: url(images/h3-left.png) no-repeat center left,
+              url(images/h3-right.png) no-repeat center right;
   text-shadow: 0px 0 0 #fff,0px 0 0 #fff,1px 0 0 #fff,-1px 0 0 #fff,2px 0 0 #fff,-2px 0 0 #fff,3px 0 0 #fff,-3px 0 0 #fff,4px 0 0 #fff,-4px 0 0 #fff,5px 0 0 #fff,-5px 0 0 #fff,6px 0 0 #fff,-6px 0 0 #fff,7px 0 0 #fff,-7px 0 0 #fff,8px 0 0 #fff,-8px 0 0 #fff,9px 0 0 #fff,-9px 0 0 #fff,10px 0 0 #fff,-10px 0 0 #fff,11px 0 0 #fff,-11px 0 0 #fff,12px 0 0 #fff,-12px 0 0 #fff,13px 0 0 #fff,-13px 0 0 #fff,14px 0 0 #fff,-14px 0 0 #fff,15px 0 0 #fff,-15px 0 0 #fff,16px 0 0 #fff,-16px 0 0 #fff,17px 0 0 #fff,-17px 0 0 #fff,18px 0 0 #fff,-18px 0 0 #fff,19px 0 0 #fff,-19px 0 0 #fff,20px 0 0 #fff,-20px 0 0 #fff,21px 0 0 #fff,-21px 0 0 #fff,22px 0 0 #fff,-22px 0 0 #fff,23px 0 0 #fff,-23px 0 0 #fff,24px 0 0 #fff,-24px 0 0 #fff,25px 0 0 #fff,-25px 0 0 #fff,26px 0 0 #fff,-26px 0 0 #fff,27px 0 0 #fff,-27px 0 0 #fff,28px 0 0 #fff,-28px 0 0 #fff,29px 0 0 #fff,-29px 0 0 #fff
 }
 #page h4, .h4 {
@@ -633,7 +633,7 @@ color:#f3af19
   font-size: 24px;
 }
 #page ol{ 
-  background: url(css/images/circle.png)repeat-y top left;
+  background: url(images/circle.png)repeat-y top left;
   padding-left: 37px;
   margin:10px 0;
 }
@@ -649,7 +649,7 @@ color:#f3af19
 }
 #page ul li{
   list-style: none;
-  background: url(css/images/dots.png)no-repeat;
+  background: url(images/dots.png)no-repeat;
   background-position: 0 5px;
   padding:0 30px;
   margin:5px 0;
@@ -678,7 +678,7 @@ color:#f3af19
 	background-position: top center;
 	padding: 60px 0 0;
 	text-align: center;
-	min-height: 145px;
+	min-height: 175px;
 	margin:0 8.3333% 4.1666%;
 }
 #page ul.service-menu li a {
@@ -717,8 +717,93 @@ img.page-img {
 	max-width: 100%;
 	display: block;
 }
-/* ABOUT */
 
+#page ul.service-menu li:hover,
+#page ul.about li:hover,
+#page ul.coaching-menu li:hover{
+	opacity: .7
+}
+/* ABOUT */
+#page ul.about {
+	margin-top: 4em
+}
+#page ul.about li {
+	width: 100%;
+	padding:0;
+}
+#page ul.about li a{
+	display: block;
+	border: none;
+	font-size: 1.1em;
+	font-family:  "Agenda Black";
+	letter-spacing: 0.1em;
+	color: #404040;
+	text-transform: uppercase;
+	border:none;
+}
+#page ul.about li:first-child{
+	background: url(images/1.png) no-repeat top center;
+	height:140px;
+}
+#page ul.about li:first-child a {
+	padding: 35px 25px 0 155px
+}
+#page ul.about li:nth-child(2){
+	background: url(images/2.png)no-repeat top center;
+	height:165px;
+}
+#page ul.about li:nth-child(2) a {
+	padding: 68px 15px 0 161px
+}
+#page ul.about li:nth-child(3){
+	background: url(images/3.png)no-repeat top center;
+	height:200px;
+}
+#page ul.about li:nth-child(3) a {
+	padding: 90px 22px 0 190px
+}
+
+/* COACHING */
+
+#page ul.coaching-menu {
+	margin-top: 4em
+}
+#page ul.coaching-menu li {
+	width: 100%;
+	padding:0;
+	margin:2em 0;
+}
+#page ul.coaching-menu li a{
+	display: block;
+	border: none;
+	font-size: 1.1em;
+	font-family:  "Agenda Black";
+	letter-spacing: 0.1em;
+	color: #404040;
+	text-transform: uppercase;
+	border:none;
+	text-align: center;
+}
+#page ul.coaching-menu li:first-child{
+	background: url(images/about-life.png)no-repeat top center;
+	height:120px;
+}
+#page ul.coaching-menu li:first-child a {
+	padding: 40px 170px 0 0
+}
+#page ul.coaching-menu li:nth-child(2){
+	background: url(images/about-career.png)no-repeat top center;
+	height:120px;
+}
+#page ul.coaching-menu li:nth-child(2) a {
+	padding: 68px 0 0
+}
+#page ul.coaching-menu li:nth-child(3){
+	background: url(images/about-executive.png) no-repeat top center;
+}
+#page ul.coaching-menu li:nth-child(3) a {
+	padding: 90px 0 0
+}
 /* CONTACT */
 .contact h5 {
   font-family: 'Raleway Heavy';
@@ -728,7 +813,6 @@ img.page-img {
   color:#f3af19;
   padding: 1em 0;
   margin-bottom: 0;
-  /*background: url(css/images/arrow-side.png)no-repeat center left;*/
   text-align: center
 }
 #page.contact hr {
@@ -883,9 +967,7 @@ img.aligncenter{
 	padding:0
 }
 /* -----------------------FOOTER */ 
-#wrapper {
-	margin-bottom: 81px
-}
+
 .site-footer {
   background-color: #333333;
   height: 81px;
@@ -894,16 +976,7 @@ img.aligncenter{
   padding-top: 32px;
   letter-spacing: 0.08em;
   font-size: 0.9em;
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-}
-.no-sticky .site-footer{
-	position: relative;
-}
-
-.no-sticky #wrapper {
-	margin-bottom: 0
+   position:relative;
 }
 
 .site-footer ul {
@@ -944,7 +1017,7 @@ img.aligncenter{
   width:33px; height: 33px;
   margin-right:10px;
   margin-top: -7px;
-  background: url(css/images/social-sprite.png);
+  background: url(images/social-sprite.png);
   cursor: pointer
 }
 a.social-connect:last-of-type{

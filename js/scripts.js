@@ -12,9 +12,6 @@ jQuery(document).ready(function($) {
       logoBar = $('#logobar');
       lbHeight = logoBar.height();
   }
-  if (bHeight > windowHeight) {
-    body.addClass('no-sticky');
-  }
   $('.cs-placeholder').click(function() {
     topBar.addClass('selected');
     $('.top-yellow-bar').addClass('selected');
@@ -78,7 +75,6 @@ jQuery(document).ready(function($) {
   function resizeFold(){
 		windowMax = Math.max($window.height(),780);
 		heightHome.css({ height:windowMax-lbHeight});
-    console.log(windowMax);
   }
   function getGridSize() {
     return (window.innerWidth < 400) ? 2 :
