@@ -164,7 +164,9 @@
 	img.icon {
 		max-height: 65px;
 	}
-	#page ul.service-menu {
+	#page ul.service-menu,
+	#page ul.about,
+	#page ul.coaching-menu {
 		margin-top: 0
 	}
 	#page ol {
@@ -198,6 +200,9 @@
 	}
 	#page ul.about li:nth-child(3) a {
 	padding: 90px 22px 0 190px
+	}
+	#page ul.coaching-menu li:first-child a {
+		padding: 41px 125px 0 0;
 	}
 }
   	

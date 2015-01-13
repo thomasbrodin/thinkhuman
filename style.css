@@ -771,7 +771,7 @@ img.page-img {
 #page ul.coaching-menu li {
 	width: 100%;
 	padding:0;
-	margin:2em 0;
+	margin-bottom: 2em;
 }
 #page ul.coaching-menu li a{
 	display: block;
