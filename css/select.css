@@ -30,15 +30,15 @@ div.cs-select:focus {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	background: #f3af19;
+	background: #fff048;
   	text-transform: uppercase;
   	padding: 11px 15px 11px 15px;
   	width:93%;
   	height: 44px;
-  	color: #6a4900;
+  	color: #232323;
   	font-family:'Raleway Heavy';
   	font-size: 1em;
-  	border: 1px solid #6a4900;
+  	border: 1px solid #232323;
   	/*-webkit-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
 	-moz-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
 	box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);*/
@@ -176,6 +176,6 @@ div.cs-select:focus {
 
 .cs-skin-overlay li.cs-focus span,
 .cs-skin-overlay li.cs-selected span {
-	color: #f3af19;
+	color: #fff048;
 	background: transparent;
 }

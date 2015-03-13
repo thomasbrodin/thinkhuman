@@ -10,14 +10,14 @@
 }
 
 body{
-  background: #fff;
+  background: #efefef;
   color:#232323;
   font-family: 'Raleway light';
   letter-spacing: 0.08em
 }
 
 body.home {
-   background: #fdfdfd;
+   background: #efefef;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
-  color: #f3af19;
+  color: #ccc;
 }
 
 .only-xs {
@@ -65,7 +65,7 @@ a:hover, a:focus {
   margin:20px 0;
 }
 .yellow{
-  color:#f3af19;  
+  color:#fff048;  
 }
 
 .top-navbar header i {
@@ -99,37 +99,30 @@ text-rendering: auto;
 .top-navbar .mandala {
   float:left;
   display: block;
-  max-width:58px;
-}
-.top-navbar.fixed .mandala {
-  max-width:40px;
+  max-height:40px;
 }
 .top-navbar .brand{
   float:left;
   display: block;
-  margin-left:15px;
+  margin-left:12px;
 }
 .top-navbar .header {
   font-family: 'AnotherQuarter';
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 0.08em;
-  padding-top: 4px;
-  font-size: 1.75em
-}
-.top-navbar.fixed h1.header {
   padding-top: 7px;
-  font-size: 2em;
+  font-size: 2.2em;
+  float: left;
 }
 .top-navbar .sub-head {
   text-transform: uppercase;
   margin: 0;
-  font-family: 'Agenda';
-  font-size: 0.75em;
-  letter-spacing: 0.08em;
-}
-.top-navbar.fixed .sub-head {
-  display: none
+  font-family: 'Agenda Black';
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  float: left;
+  margin:15px 0 0 12px;
 }
 
 .top-navbar .bar {
@@ -147,12 +140,11 @@ text-rendering: auto;
   float:right;
   font-family:'Agenda Black';
   text-transform: uppercase;
-  font-size: 1.1em;
-  letter-spacing: 0.18em;
-  margin-top: 51px;
-}
-.top-navbar.fixed nav {
-   margin-top: 31px
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin-top: 33px;
+  padding-left:0;
+  padding-right:0;
 }
 .top-navbar nav ul {
   padding: 0;
@@ -161,7 +153,7 @@ text-rendering: auto;
 .top-navbar nav ul li {
   list-style: none;
   display:inline-block;
-  padding:0 25px;
+  padding:0 20px;
 }
 .top-navbar nav ul li:last-child {
   padding-right: 0
@@ -177,7 +169,7 @@ text-rendering: auto;
 
 /* TOP YELLOW BAR */
 .top-yellow-bar {
-  background-color: #f3af19;
+  background-color: #fff048;
   color: #fdfdfd;
   height:22px;
   width:100%;
@@ -192,20 +184,20 @@ text-rendering: auto;
   padding: 3px 0;
   font-family: 'Agenda Black';
   text-transform: uppercase;
-  color:white;
+  color:#232323;
   font-size: 0.875em;
   letter-spacing: 0.18em;
 }
 
 .top-yellow-bar span a {
-	color:#fff;
-}
-.top-yellow-bar span a:hover {
 	color:#232323;
 }
+.top-yellow-bar span a:hover {
+	color: #fff8ab;
+}
 .top-yellow-bar span.only-xs a {
-	color:#fff;
-	background: #f3af19;
+	color:#232323;
+	background: #fff048;
 	padding:4px 6px;
 	text-align: center;
 	display: block;
@@ -275,31 +267,17 @@ text-rendering: auto;
   padding: 55px 0;
 }
 .yellowPanel{
-  background-color: #f3af19;
+  background-color: #fff048;
   color: white;
   padding-top:55px;
   text-align: center;
   position: relative;
 }
 
-.shading-top {
-  background:url(images/shading-top.png) repeat-x 0 0;
-  height: 26px;
-  position: absolute;
-  width: 100%;
-  margin-top: -55px;
-}
-.shading-bottom {
-  background:url(images/shading-bottom.png) repeat-x 0 0;
-  height: 27px;
-  position: relative;
-  width: 100%;
-}
-
 /* Gray title bar for sections */
 .section-graybar{
-  background-color: #f4f4f4;
-  color: #979797;
+  background-color: #fff;
+  color: #232323;
   font-family: "Raleway Heavy";
   font-size: 1em;
   text-transform: uppercase;
@@ -323,7 +301,7 @@ img.icon {
 
 /* Clients Logo */
 .logobar_title {
-  color:#6a4900;
+  color:#232323;
   font-family: "Raleway Heavy";
   font-size: 1.2em;
   margin: 0;
@@ -333,7 +311,7 @@ img.icon {
 }
 
 .logobar_break {
-  width: 257px;
+  width: 118px;
   border-color: #232323;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -344,44 +322,52 @@ img.icon {
   text-align: right;
   letter-spacing: 0.08em;
 }
-.meet-coaches .flex-direction-nav li {
-  display: inline-block;
-  padding-left: 25px
+
+/* COL 5  */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
-.meet-coaches .slides > li { 
-  margin-right: 55px 
+.col-xs-15 {
+    width: 20%;
+    float: left;
 }
-.meet-coaches .flex-direction-nav a  { 
-  display: block;
-  text-decoration:none; 
-  width: 50px; 
-  height: 20px; 
-  margin: -10px 0 0; 
-  top:10px;
-  position: relative;
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
 }
-.meet-coaches .flex-direction-nav .flex-prev {
-  background: url(images/Arrow-Back.png);
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-  padding-left: 25px;
-  width: 100%;
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
 }
-.meet-coaches .flex-direction-nav .flex-next {
-  background: url(images/Arrow-Forward.png);
-  background-repeat: no-repeat;
-  background-position: 100% 1px;
-  padding-right: 25px;
-  width: 100%;
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
 }
 .coach .name {
   font-family: "Raleway Light";
   font-size: 1em;
   margin-top: 10px;
 }
+.coach {
+  min-height: 230px;
+  margin-bottom: 20px;
+}
 .img-coaches {
   display: inline-block;
   max-width: 100%;
+  width:100%;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;
@@ -459,9 +445,9 @@ img.icon {
 .service-item .read-more{
   display: inline-block;
   margin: 5px 0 20px;
-  background-color: #f3af19!important;
+  background-color: #fff048!important;
   text-transform: uppercase;
-  color: #6a4900;
+  color: #232323;
   font-family: "Raleway Bold";
   font-size: 0.9em;
   letter-spacing: 0.025em;
@@ -473,7 +459,7 @@ img.icon {
 /* TESTIMONIALS  */
 
 .testimonials .header{
-  color: #6a4900;
+  color: #232323;
   font-family: "Raleway Heavy";
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -505,7 +491,7 @@ img.icon {
 }
 
 .testi p{
-  color: #ffffff;
+  color: #232323;
   font-family: "Raleway Light";
   text-align: justify;
   line-height: 2.5;
@@ -513,7 +499,7 @@ img.icon {
   letter-spacing: 0.08em
 }
 .witness{
-  color:#6a4900;
+  color:#232323;
   text-align: right;
   margin-top: 35px
 }
@@ -526,24 +512,24 @@ img.icon {
 .witness .info{
   font-family:georgia, serif;
   font-size: 1em;
-  color: #6a4900;
+  color: #232323;
   font-style: italic;
 }
 
 hr.testi-break {
   width:120px;
-  border-color: #6a4900;
+  border-color: #232323;
   margin-top: 10px;
   float: right;
 }
 
 .inThePress .header{
-	color: #6a4900;
-  	font-family: "Raleway Heavy";
-  	font-size: 1.1em;
-  	letter-spacing: 0.1em;
-  	text-transform: uppercase;
-  	display: inline-block;
+	color: #232323;
+  font-family: "Raleway Heavy";
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-block;
 	float: left;
 	max-width: none;
 	line-height: 1.5;
@@ -551,9 +537,16 @@ hr.testi-break {
 	width: 100%;
 }
 .inThePress {
-  margin:30px 0 10px;
+  padding:30px 0 10px;
 }
 
+img.press-logos {
+  height:auto;
+  width:100%;
+  max-width: 819px;
+  display: block;
+  padding-top: 8px
+}
 /* ----------------------- PAGES */ 
 #main, #single, #error, #page {
   margin: 140px 0 70px
@@ -581,10 +574,8 @@ hr.testi-break {
 }
 #page h1, .h1 {
  font-family: 'Agenda Black';
- text-shadow: -1px 1px 0px #fff, -2px 2px 0px rgba(0,0,0,8);
  letter-spacing: 0.08em;
  text-transform: uppercase;
- border-bottom: 1px solid #232323;
  padding-bottom: 20px
 }
 #page h2, .h2{
@@ -596,14 +587,11 @@ hr.testi-break {
 }
 #page h3 {
   font-family: 'AnotherQuarter';
-  text-align: center;
+  text-align: left;
   padding:10px 0;
   margin:15px 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  background: url(images/h3-left.png) no-repeat center left,
-              url(images/h3-right.png) no-repeat center right;
-  text-shadow: 0px 0 0 #fff,0px 0 0 #fff,1px 0 0 #fff,-1px 0 0 #fff,2px 0 0 #fff,-2px 0 0 #fff,3px 0 0 #fff,-3px 0 0 #fff,4px 0 0 #fff,-4px 0 0 #fff,5px 0 0 #fff,-5px 0 0 #fff,6px 0 0 #fff,-6px 0 0 #fff,7px 0 0 #fff,-7px 0 0 #fff,8px 0 0 #fff,-8px 0 0 #fff,9px 0 0 #fff,-9px 0 0 #fff,10px 0 0 #fff,-10px 0 0 #fff,11px 0 0 #fff,-11px 0 0 #fff,12px 0 0 #fff,-12px 0 0 #fff,13px 0 0 #fff,-13px 0 0 #fff,14px 0 0 #fff,-14px 0 0 #fff,15px 0 0 #fff,-15px 0 0 #fff,16px 0 0 #fff,-16px 0 0 #fff,17px 0 0 #fff,-17px 0 0 #fff,18px 0 0 #fff,-18px 0 0 #fff,19px 0 0 #fff,-19px 0 0 #fff,20px 0 0 #fff,-20px 0 0 #fff,21px 0 0 #fff,-21px 0 0 #fff,22px 0 0 #fff,-22px 0 0 #fff,23px 0 0 #fff,-23px 0 0 #fff,24px 0 0 #fff,-24px 0 0 #fff,25px 0 0 #fff,-25px 0 0 #fff,26px 0 0 #fff,-26px 0 0 #fff,27px 0 0 #fff,-27px 0 0 #fff,28px 0 0 #fff,-28px 0 0 #fff,29px 0 0 #fff,-29px 0 0 #fff
 }
 #page h4, .h4 {
   font-family: 'Raleway light';
@@ -621,15 +609,11 @@ hr.testi-break {
   color:#232323;
 }
 #page h6, .h6 {
-color:#f3af19
+color:#fff048
 }
 #page blockquote {
-  border:4px solid #999;
-  padding: 30px 90px;
-  box-shadow:
-        0 0 0 4px #fff,
-        0 0 0 8px #999;
-  font-family: 'Agenda';
+  padding: 30px 0;
+  font-family: 'Raleway light';
   font-size: 24px;
 }
 #page ol{ 
@@ -656,7 +640,54 @@ color:#f3af19
 } 
 
 #page hr {
-  border: 3px solid #f3af19;
+  border: 3px solid #fff048;
+}
+
+.case-study {
+  background-color:#fff048;
+  padding:3em 2.5em;
+}
+#page .case-study h3 {
+  margin:0;
+  padding:0;
+  font-weight: 3em;
+  letter-spacing: 0.1em;
+}
+#page .case-study h2 {
+  font-family: 'Raleway Heavy';
+  text-transform: uppercase;
+  font-size: 1.7em;
+  letter-spacing: 0.15em;
+  margin: 0 0 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+}
+
+#page a.case {
+  background-color:#fff;
+  border:0;
+  padding:8px 30px
+}
+
+.service-list {
+  margin:2em 0;
+}
+.service-list img.icon {
+  background-color: #fff;
+  padding:1.5em;
+}
+
+#page h5.service-title {
+  margin:4px 0 6px;
+}
+#page p.service-description{
+  margin:0;
+  font-size: 16px
+}
+#page a.service-link{
+ border:0;
+ font-family: 'Raleway Heavy';
+ text-transform: uppercase;
 }
 
 /* SERVICES */
@@ -810,7 +841,7 @@ img.page-img {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1pt;
-  color:#f3af19;
+  color:#fff048;
   padding: 1em 0;
   margin-bottom: 0;
   text-align: center
@@ -834,7 +865,7 @@ img.page-img {
 
 .form-control-wrapper .form-control:not(select), 
 .form-control:not(select) {
-  border: 1px solid #f3af19!important;
+  border: 1px solid #fff048!important;
   background: white;
   height: auto!important;
   padding: 11px;
@@ -845,20 +876,20 @@ img.page-img {
 .form-control:focus:not(select), 
 .form-control-wrapper .form-control.focus:not(select), 
 .form-control.focus:not(select) {
-  border: 2px solid #f3af19!important;
+  border: 2px solid #fff048!important;
   height: auto!important;
   padding: 9px;
 }
 .form-control-wrapper .material-input:before{
-  background-color: #f3af19!important
+  background-color: #fff048!important
 }
 .form-control-wrapper .material-input:after{
   height:28px;
   width: 56px;
 }
 .form-control-wrapper .form-control:focus~.material-input:after {
-  border: 2px solid #f3af19!important;
-  background-color: #f3af19!important;
+  border: 2px solid #fff048!important;
+  background-color: #fff048!important;
 }
 
 .contact .checkbox {
@@ -883,7 +914,7 @@ img.page-img {
 .checkbox label .check {
   float: left;
   margin-right: 8px;
-  border: 1px solid #f3af19;
+  border: 1px solid #fff048;
   background: white;
   left: 0;
 }
@@ -896,11 +927,11 @@ img.page-img {
 }
 .checkbox input[type=checkbox]:checked~.check:before,
 .checkbox input[type=checkbox]:checked~.check {
-  color: #f3af19!important;
+  color: #fff048!important;
 }
 
 .checkbox input[type=checkbox]:checked~.check:after{
-  background-color: #f3af19!important
+  background-color: #fff048!important
 }
 
 .contact .button.side{
@@ -918,7 +949,7 @@ img.page-img {
   box-shadow: -3px 3px 0 grey;
   cursor: pointer;
   padding: 2px 0 4px 0;
-  background-color: #f3af19;
+  background-color: #fff048;
   margin-left: 0
 }
 
@@ -969,7 +1000,7 @@ img.aligncenter{
 /* -----------------------FOOTER */ 
 
 .site-footer {
-  background-color: #333333;
+  background-color: #232323;
   height: 81px;
   color: #999999;
   font-family: "Raleway Heavy";

@@ -232,7 +232,10 @@
 	.cs-skin-overlay .cs-options > ul {
 		width: 970px;
 	}
-	.top-navbar .mandala {
+	.top-navbar nav ul li:first-child{
+		padding-left:0;
+	}
+	/*.top-navbar .mandala {
  	 max-width:75px;
 	}
 	.top-navbar .header {
@@ -243,7 +246,7 @@
 	}
 	.top-navbar nav {
   		margin-top: 67px;
-	}
+	}*/
 	.inThePress .header {
 		font-size: 1em;
 		margin: 6px 40px 0 6px;

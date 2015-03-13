@@ -26,21 +26,21 @@
 	                    </select>
 
 	                    <style type="text/css">
-							.cs-select .cs-options li:first-child{
-								background-image: url('{{TimberImage(post.get_field('service_1_icon')).src}}');
-							}
-							.cs-select .cs-options li:nth-child(2) {
-								background-image: url('{{TimberImage(post.get_field('service_2_icon')).src}}');
-							}
-							.cs-select .cs-options li:nth-child(3) {
-								background-image: url('{{TimberImage(post.get_field('service_3_icon')).src}}');
-							}
-							.cs-select .cs-options li:nth-child(4) {
-								background-image: url('{{TimberImage(post.get_field('service_4_icon')).src}}');
-							}
-							.cs-select .cs-options li:nth-child(5) {
-								background-image: url('{{TimberImage(post.get_field('service_5_icon')).src}}');
-							}
+        							.cs-select .cs-options li:first-child{
+        								background-image: url('{{TimberImage(post.get_field('service_1_icon')).src}}');
+        							}
+        							.cs-select .cs-options li:nth-child(2) {
+        								background-image: url('{{TimberImage(post.get_field('service_2_icon')).src}}');
+        							}
+        							.cs-select .cs-options li:nth-child(3) {
+        								background-image: url('{{TimberImage(post.get_field('service_3_icon')).src}}');
+        							}
+        							.cs-select .cs-options li:nth-child(4) {
+        								background-image: url('{{TimberImage(post.get_field('service_4_icon')).src}}');
+        							}
+        							.cs-select .cs-options li:nth-child(5) {
+        								background-image: url('{{TimberImage(post.get_field('service_5_icon')).src}}');
+        							}
 	                    </style>
 	                  </div>
 	                </div>
@@ -59,42 +59,34 @@
 	<!--   Clients logos bar       -->
 	<div id="logobar" class="yellowPanel">
 
-        <div class="shading-top"></div>
-
         <h3 class="logobar_title">WE WORK WITH EXECUTIVES AT</h3>
         <hr class="logobar_break">
         <img class="client-logos img-responsive" src="{{TimberImage(post.get_field('logo_clients')).src}}" alt="client logos">
-
-        <div class="shading-bottom"></div>
 
     </div>
 
 	<!--    meet our coaches       -->
 	<div class="section meet-coaches">
-        <div class="container gutter-sm">
+        <div class="container gutter-xlg">
           <div class="section-graybar clearfix">
-            <div class="title">Meet our coaches</div>
-            <!--    Controls slider       -->
-            <nav>
-            
-            </nav>
+            <div class="title"><a href="/about/coaches">Meet our coaches</a></div>
           </div>
           {% set images = post.get_field('coaches') %}
-          <div id="coach-slider" class="flexslider">
-            <ul class="slides coaches">
+          <div id="coach-slider">
+            <div class="row coaches">
             	{% for image in images %}
-	              <li class="coach">
+	              <div class="col-md-15 coach">
 	              	<a href="{{image.alt}}">
-	                <img class="img-coaches" src="{{TimberImage(image.id).get_src|resize(140, 150, 'center')}}" alt="{{image.title}}">
-	                <div class="name">{{image.title}}
-						{% if image.caption %}<br>
-	                		<span class="yellow">{{image.caption}}</span>
-	                	{% endif %}
-	                </div>
+	                 <img class="img-coaches" src="{{TimberImage(image.id).get_src|resize(140, 150, 'center')}}" alt="{{image.title}}">
+  	                <div class="name">{{image.title}}
+  						        {% if image.caption %}<br>
+  	                		<span>{{image.caption}}</span>
+  	                	{% endif %}
+  	                </div>
 	               	</a>
-	              </li>
+	              </div>
 	            {% endfor %}
-            </ul>
+            </div>
           </div>
 
         </div>
@@ -103,14 +95,10 @@
       <!--    PUT US TO WORK  -->
       <div class="yellowPanel">
 
-        <div class="shading-top"></div>
-
         <img class="img-responsive put-work" src="{{theme.uri}}/images/PUT-US-TO-WORK.png" alt="put us to work">
         <a class="btn button" href="contact">
           <span>LETS GO</span>
         </a>
-
-        <div class="shading-bottom"></div>
 
       </div>
 		<!-- Our services  -->
@@ -216,8 +204,6 @@
        <!--Testimonials -->
       <div class="yellowPanel testimonials">
 
-        <div class="shading-top"></div>
-
         <img src="{{theme.uri}}/images/bullhorn.png" alt="icon">
         <h5 class="header">What people are saying about us</h5>
 
@@ -282,13 +268,11 @@
         </div>
         <div class="inThePress">
         	<div class="container">
-	        	<h5 class="header">In the Press</h3>
-	          	<img class="img-responsive" src="{{TimberImage(post.get_field('press_logos')).src}}" alt="logos">
+	        	<h5 class="header">In the Press</h5>
+	          <img class="press-logos" src="{{TimberImage(post.get_field('press_logos')).src}}" alt="logos">
 	        </div>
         </div>
         
-        <div class="shading-bottom"></div>
-
       </div>
 
 {% endblock %}
