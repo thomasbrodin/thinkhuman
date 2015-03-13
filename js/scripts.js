@@ -36,23 +36,23 @@ jQuery(document).ready(function($) {
   $.material.init();
   // Sliders
   $window.load(function() {
-    $('#coach-slider').flexslider({
-      animation: "slide",
-      animationLoop: true,
-      slideshow: false,
-      itemWidth: 140,
-      itemMargin: 55,
-      controlsContainer: ".section-graybar nav",
-      controlNav: false,
-      prevText: "Prev",
-      nextText: "Next",
-      minItems: getGridSize(),
-      maxItems: getGridSize(),
-      start: function(slider){
-        $('body').removeClass('loading');
-        flexslider = slider;
-      }
-    });
+    // $('#coach-slider').flexslider({
+    //   animation: "slide",
+    //   animationLoop: true,
+    //   slideshow: false,
+    //   itemWidth: 140,
+    //   itemMargin: 55,
+    //   controlsContainer: ".section-graybar nav",
+    //   controlNav: false,
+    //   prevText: "Prev",
+    //   nextText: "Next",
+    //   minItems: getGridSize(),
+    //   maxItems: getGridSize(),
+    //   start: function(slider){
+    //     $('body').removeClass('loading');
+    //     flexslider = slider;
+    //   }
+    // });
     $('#testimonial-slider').flexslider({
       animation: "slide",
       slideshow: false,
