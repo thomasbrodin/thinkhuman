@@ -30,13 +30,14 @@ div.cs-select:focus {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	background: #fff048;
+	background: #feef6a;
   	text-transform: uppercase;
   	padding: 11px 15px 11px 15px;
   	width:93%;
   	height: 44px;
   	color: #232323;
-  	font-family:'Raleway Heavy';
+  	font-family: $font-stack;
+  	font-weight: $font-heavy;
   	font-size: 1em;
   	border: 1px solid #232323;
   	/*-webkit-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
@@ -72,7 +73,8 @@ div.cs-select:focus {
 	font-size: 2em;
 	display: block;
 	text-align: center;
-	font-family: 'Raleway light';
+	font-family: $font-stack;
+  	font-weight: $font-light;
 	letter-spacing: 1pt;
 	color:#666;
 	padding-bottom: 2.5em;
@@ -80,7 +82,7 @@ div.cs-select:focus {
 .cs-select li.cs-optgroup > ul li span {
 	padding: 0;
 	font-size: 1.1em;
-	font-family:  "Agenda Black";
+	font-family:$font-highlight-bold;
 	letter-spacing: 0.1em;
 	color: #404040;
 	text-transform: uppercase;
@@ -124,7 +126,7 @@ div.cs-select:focus {
 .cs-skin-overlay > span:before,
 .cs-skin-overlay.cs-active > span:before {
 	display: block;
-	font: normal normal normal 14px/1 FontAwesome;
+	font: normal normal normal 14px/1 $font-icons;
 	font-size: 1.3em;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
@@ -176,6 +178,6 @@ div.cs-select:focus {
 
 .cs-skin-overlay li.cs-focus span,
 .cs-skin-overlay li.cs-selected span {
-	color: #fff048;
+	color: #feef6a;
 	background: transparent;
 }

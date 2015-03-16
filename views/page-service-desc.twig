@@ -1,13 +1,13 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
-	<div id="{{post.post_type}}">
+{% set bgImage = post.get_field('background_image_right_side') %}
+	
+	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat 95% top;">{% endif %}>
         <div class="container">
           <div class="row">
-          	{% set bgImage = post.get_field('background_image_right_side') %}
-			
-          	<div class="{% if bgImage %}col-md-10{% else %}col-md-12{% endif %}">	
+          			
+          	<div class="{% if bgImage %}col-md-8{% else %}col-md-12{% endif %}">	
 
 	          	{% if post.get_thumbnail %}
 					<div id="featured-image">
@@ -21,36 +21,44 @@
 					{% for row in post.get_field('page_blocks') %}
 
 						{% if row.acf_fc_layout == 'block_text' %}
-							{{ row.service_text }}
+							<div class="page-block text">
+								{{ row.service_text }}
+							</div>
 						{% endif %}
 						{% if row.acf_fc_layout == 'case_study' %}
-							<div class="case-study">
-								<h3>case study</h3>
-								<h2>{{ row.casestudy_title }}</h2>
+							<div class="page-block case-study">
+								<h2 class="case-header">{{ row.case_header }}</h2>
+								<h3 class="case-title">{{ row.casestudy_title }}</h3>
 								{{ row.casestudy_description }}
-								<a href="{{ row.casestudy_link }}" class="btn button case">Read the case study</a>
+								{% if row.casestudy_link %}
+									<a href="{{ row.casestudy_link }}" class="btn button case">{{ row.casestudy_link_title }}</a>
+								{% endif %}
 							</div>
 						{% endif %}
 
 						{% if row.acf_fc_layout == 'list_icons' %}
-							{% for row_rep in row.row_icon_text %}
+							<div class="page-block">
+								
+								{% for row_rep in row.row_icon_text %}
+									 <div class="service-list">
+						            	<div class="row">
+								            <div class="col-sm-2">
+								               <img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
+								            </div>
+								            <div class="col-sm-10">
+								            	<h5 class="service-title">{{ row_rep.service_title }}</h5>
+							          			<p class="service-description">{{ row_rep.short_description }}
+							          				{% if row_rep.service_link %}
+							          					<a class="service-link" href="{{ row_rep.service_link }}">Read More</a>
+							          				{% endif %}
+							          			</p>
+							          		</div> 
+								          
+							           </div>
+							        </div>
+								{% endfor %}
 
-								 <div class="service-list">
-					            	<div class="row">
-							            <div class="col-sm-2">
-							               <img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
-							            </div>
-							            <div class="col-sm-10">
-							            	<h5 class="service-title">{{ row_rep.service_title }}</h5>
-						          			<p class="service-description">{{ row_rep.short_description }}
-						          				<a class="service-link" href="{{ row_rep.service_link }}">Read More</a>
-						          			</p>
-						          		</div> 
-							          
-						           </div>
-						        </div>
-
-							{% endfor %}
+							</div>
 						{% endif %}
 
 					{% endfor %}
@@ -67,10 +75,19 @@
         </div>
       </div>
 	</div><!-- content -->
-	{% if bgImage %}
-		<div id="bg-page-img" style="background:url({{TimberImage(bgImage.url).src|resize(300)}}) no-repeat right 150px"></div>
-	{% endif %}
-	<!--   Clients logos pre Footer       -->
+
+	{% if servicespages %}
+		<div class="related-services">
+			<div class="container">
+				<h3 class="other-header">Other Services</h3>
+				<ul class="other-services-list">
+					{{ servicespages }}
+				</ul>
+			</div>
+		</div>
+	{% endif %}	
+
 	{% include 'partials/bottom-page.twig' %}
+	<!--   Clients logos pre Footer       -->
 
 {% endblock %}

@@ -74,14 +74,3 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav .flex-next:hover { opacity: 1}
 
 .flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-
-@media screen and (max-width: 768px) {
-  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-  .meet-coaches .flex-direction-nav {
-  	display: none
-  }
-	#testimonial-slider .flex-direction-nav {
-  	display: none
-  }
-}

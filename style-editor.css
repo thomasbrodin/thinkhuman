@@ -1,4 +1,5 @@
 @import url("css/fonts/font.css");
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,700,900,200,300);
 
 a {
  border-bottom: 1px solid #000;
@@ -7,42 +8,53 @@ a {
 }
 p {
   font-family: 'Raleway';
+  font-weight: 300;
   line-height: 1.5;
   color: #232323;
   font-size: 14px
 }
 p strong {
-  font-family: 'Raleway Bold';
+  font-family: 'Raleway';
+  font-weight:700;
 }
 
 h1{
- font-family: 'Agenda Black';
+ font-family: 'Raleway';
+ font-weight: 900;
  letter-spacing: 0.08em;
  text-transform: uppercase;
  padding-bottom: 20px
 }
+h1:first-of-type {
+  padding-bottom: 0
+}
 h2{
-  font-family: 'Agenda';
+  font-family: 'Raleway';
+  padding-bottom: 22px;
+  border-bottom: 1px solid #000000;
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   margin-bottom: 35px
 }
 h3 {
-  font-family: 'AnotherQuarter';
+  font-family: 'Raleway';
+  font-weight: 900;
   padding:10px 0;
   margin:15px 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
 h4{
-  font-family: 'Raleway light';
+  font-family: 'Raleway';
+  font-weight:300;
   margin: 20px 0 40px;
   font-size: 24px;
   line-height: 1.2;
  }
 h5,  h6{
-  font-family: 'Raleway Heavy';
+  font-family: 'Raleway';
+  font-weight:900;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1pt;
@@ -53,15 +65,21 @@ h5 {
   color:#232323;
 }
 h6 {
-  color:#fff048
+  color:#feef6a
 }
 blockquote {
-  padding: 30px 0;
-  margin:2em 0;
+  padding: 0 0 30px 0;
 }
 blockquote p {
-  font-family: 'Raleway light';
-  font-size: 24px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 22px;
+}
+blockquote p strong {
+  font-family: 'Raleway';
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 ol{ 
   background: url(images/circle.png)repeat-y top left;
@@ -89,6 +107,6 @@ ul li{
 } 
 
 hr {
-  border: 3px solid #fff048;
+  border: 3px solid #feef6a;
   margin:1em 0;
 }

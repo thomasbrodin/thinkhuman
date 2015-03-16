@@ -1,3 +1,15 @@
+$font-stack: 'Raleway', sans-serif;
+$font-ultralight:200;
+$font-light:300;
+$font-medium:500;
+$font-bold:700;
+$font-heavy:900;
+
+$font-slim:'AnotherQuarter';
+$font-highlight: 'Agenda';
+$font-highlight-bold: 'Agenda Black';
+$font-icons:'FontAwesome';
+
 @font-face {
   font-family: 'AnotherQuarter';
   src: url('fonts/anotherquarter-regular.eot'); /* IE9 Compat Modes */
