@@ -15,7 +15,7 @@
 
 	                  <div class="find-out-about">
 	                    <select class="cs-select cs-skin-overlay">
-	                      <option value="" disabled selected>Find out more about</option>
+	                      <option value="" disabled selected>Learn more about</option>
 	                      <optgroup label="Find out more about">
 	                        <option value="{{post.get_field("service_1_link")}}">{{post.get_field("service_1")}}</option>
 	                        <option value="{{post.get_field("service_2_link")}}">{{post.get_field("service_2")}}</option>
@@ -75,7 +75,7 @@
           <div id="coach-slider">
             <div class="row coaches">
             	{% for image in images %}
-	              <div class="col-md-15 coach">
+	              <div class="col-md-15 col-xs-15 coach">
 	              	<a href="{{image.alt}}">
 	                 <img class="img-coaches" src="{{TimberImage(image.id).get_src|resize(140, 150, 'center')}}" alt="{{image.title}}">
   	                <div class="name">{{image.title}}
@@ -93,7 +93,7 @@
       </div>
 
       <!--    PUT US TO WORK  -->
-      <div class="yellowPanel">
+      <div class="yellowPanel hidden-xs">
 
         <img class="img-responsive put-work" src="{{theme.uri}}/images/PUT-US-TO-WORK.png" alt="put us to work">
         <a class="btn button" href="contact">
@@ -114,6 +114,7 @@
               		<header class="col-sm-6">
 		                <img src="{{TimberImage(post.get_field('service_1_icon')).src}}" alt="icon">
 		                <h4 class="title">{{post.get_field("service_1")}}</h4>
+                    <hr class="service-break">
               		</header>
             	</div>
         	
@@ -132,6 +133,7 @@
 		            <header class="col-sm-6">
 		                <img src="{{TimberImage(post.get_field('service_2_icon')).src}}" alt="icon">
 		                <h4 class="title">{{post.get_field("service_2")}}</h4>
+                    <hr class="service-break">
 		            </header>
             	</div>
         	
@@ -150,6 +152,7 @@
 	              <header class="col-sm-6">
 	                <img src="{{TimberImage(post.get_field('service_3_icon')).src}}" alt="icon">
 	                <h4 class="title">{{post.get_field("service_3")}}</h4>
+                  <hr class="service-break">
 	              </header>      	
             	</div>
 	          
@@ -167,6 +170,7 @@
 		            <header class="col-sm-6">
 		                <img src="{{TimberImage(post.get_field('service_4_icon')).src}}" alt="icon">
 		                <h4 class="title">{{post.get_field("service_4")}}</h4>
+                    <hr class="service-break">
 		            </header>
             	</div>
         	
@@ -185,6 +189,7 @@
 		            <header class="col-sm-6">
 		               	<img src="{{TimberImage(post.get_field('service_5_icon')).src}}" alt="icon">
 		                <h4 class="title">{{post.get_field("service_5")}}</h4>
+                    <hr class="service-break">
 		            </header>
 	            </div>
 

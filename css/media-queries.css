@@ -4,7 +4,8 @@
 		display: inline-block!important;
 	}
 	.top-yellow-bar span.start {
-		display: block!important
+		display: block!important;;
+		padding-top:1em;
 	}
  	.gutter-sm{
 	  	padding-right: 15px;
@@ -25,40 +26,46 @@
 	.bottom-xs {
 		bottom: 0;
 		position: fixed;
-		height: 32px;
-		background: #232323;
+		height: 46px;
 	}
 	.top-navbar {
 		padding-top:0;
 		background: #fff;
+		position: fixed;
+	}
+	.top-navbar header{
+  		margin:10px 0;
 	}
 	.top-navbar.fixed header{
   		margin-top: 6px;
   		margin-bottom: 4px
 	}
-	.top-navbar .mandala {
-		max-width: 45px;
+	.top-navbar a.logo {
 		margin-left: 15px;
+	}
+	.top-navbar .logo-img {
+		max-width: 45px;
+		margin-top:10px;
 	}
 	.top-navbar .brand {
 		margin-left:10px;
+		width: 190px;
 	}
 	.top-navbar h1.header {
   		padding-top: 0;
   		font-size: 1.5em;
-	}
-	.top-navbar.fixed h1.header {
-		padding-top: 10px;
-  		font-size: 1.5em;
+  		padding-top: 10px;
 	}
 	.top-navbar .sub-head {
 		font-size: .7em;
-  		letter-spacing: 0.08em;
+  		margin: 0;
+  		padding: 0 2em 0 0.2em;
 	}
 	.top-navbar nav {
 		margin-top: 10px;
 		width:100%;
 		margin-bottom: 25px;
+		float: left;
 	}
 	.top-navbar.fixed nav {
 		margin-top: 10px
@@ -66,24 +73,12 @@
 	.top-navbar nav ul li {
 		display: block;
 		text-align: left;
-		padding-right: 15px;
+		padding-left: 15px;
 		line-height: 25px
 	}
-	.site-footer {
-		height:140px;
-		padding-top: 20px;
-	}
-	.site-footer ul {
-		padding:0;
-	}
-	.social-connect {
-		margin: 15px 28px;
-	}
-	a.social-connect:last-of-type {
-		margin-right: 28px
-	}
-	.connect a.phone {
-		display: none
+	#masthead {
+		max-height: none;
+		padding: 90px 0 2em;
 	}
 	#page ul.service-menu li {
 		width: 100%;
@@ -104,18 +99,11 @@
 	div.cs-select {
 		max-width: 300px
 	}
-	#masthead {
-		max-height: none;
-		padding-bottom:2em;
-	}
 	.mission {
-		padding-top: 2em
+		display: none;
 	}
 	.yellowPanel {
-		padding-top: 25px
-	}
-	.shading-top {
-		margin-top: -25px;
+		padding: 40px 10px 30px 10px;
 	}
 	.logobar_title {
 		font-size: .8em;
@@ -131,11 +119,23 @@
 		padding: 15px;
 		margin: 0 0 25px;
 	}
-	.put-work {
-		padding: 25px
+	.service-item {
+		text-align: center!important
 	}
-	.yellowPanel .button {
-		width:220px;
+	.service-item header{
+		margin:0;
+	}
+	.service-item header img {
+		float:none;
+	}
+	.service-item header h4.title{
+		font-size: 17px;
+		padding:25px 25px 0
+	}
+	.service-item header hr {
+		width:120px;
+		margin-left:auto;
+		margin-right: auto
 	}
 	.testimonials .header {
 		margin: 30px auto 0;
@@ -161,18 +161,65 @@
 	.inThePress {
 		margin: 0;
 	}
-	img.icon {
-		max-height: 65px;
+	.service-list img.icon {
+		max-height: 75px;
+		padding: 0.75em;
+ 		margin: 0 auto 15px;
+	}
+	.service-list {
+		text-align: center!important;
+	}
+	#main, #single, #error, #page {
+		padding-top:1em;
+	}
+	#page h1, .h1 {
+		font-size:20px;
+ 		line-height: 24px;
+ 		padding-right: 0em;
+	}
+	#page blockquote p {
+		font-size: 18px;
+		padding: 0;
+	}
+	#page p {
+	 line-height: 1.3;
+	 color: black;
+	 font-size: 16px;
+	}
+	#page.contact p {
+		line-height: 1.3;
+	 	color: black;
+	 	font-size: 16px;
+	 	padding:0 1em;
+	}
+	#page ul {
+	 margin: 0;
+	 padding: 0;
+	 font-size: 18px;
+	 margin-top: 18px;
+	}
+	#page ul li {
+		background-position: 0 5px;
+ 		padding: 0 0 10px 15px;
+ 		margin: 5px 0;
+ 		font-size: 12px;
+ 		line-height: 1.3;
+ 		color: black;
+ 		font-weight: 700;
 	}
 	#page ul.service-menu,
 	#page ul.about,
 	#page ul.coaching-menu {
 		margin-top: 0
 	}
+	#page ul.service-menu li a {
+		font-size: 1.3em
+	}
 	#page ol {
 		background: transparent;
 		padding-left: 20px;
 	}
+
 	#page ol li {
 		font-size: 14px;
 		line-height: 20px;
@@ -181,9 +228,6 @@
 	#page h3 {
 		text-shadow:none;
 		background: none;
-	}
-	#page blockquote {
-		padding: 30px;
 	}
 	div#featured-image {
 		width:50%;
@@ -203,6 +247,25 @@
 	}
 	#page ul.coaching-menu li:first-child a {
 		padding: 41px 125px 0 0;
+	}
+	.site-footer {
+		height:140px;
+		padding-top: 20px;
+	}
+	.site-footer ul {
+		padding:0;
+	}
+	.connect {
+		float:none;
+	}
+	.social-connect {
+		margin: 10px;
+	}
+	a.social-connect:last-of-type {
+		margin-right: 28px
+	}
+	.connect a.phone {
+		display: none
 	}
 }
   	
@@ -235,18 +298,9 @@
 	.top-navbar nav ul li:first-child{
 		padding-left:0;
 	}
-	/*.top-navbar .mandala {
- 	 max-width:75px;
-	}
-	.top-navbar .header {
-		font-size: 2.75em;
-	}
-	.top-navbar .sub-head {
-		font-size: 0.97em;
-	}
-	.top-navbar nav {
-  		margin-top: 67px;
-	}*/
+	#testimonial-slider .flex-direction-nav {
+  		display: none
+  	}
 	.inThePress .header {
 		font-size: 1em;
 		margin: 6px 40px 0 6px;
@@ -256,21 +310,9 @@
 		padding: 1.5em 0 0;
 	}
 }
-@media (min-width: 1200px) {
-  div#bg-page-img {
-		position: absolute;
-		top: 0;
-		right:0;
-		width:100%;
-		height:100%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-  	.flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-  	.flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-	#testimonial-slider .flex-direction-nav {
-  	display: none
+@media (max-width: 1024px) {
+  #main, #single, #error, #page {
+		background-image: none!important;
   }
 }
 

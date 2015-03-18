@@ -20,11 +20,11 @@ jQuery(document).ready(function($) {
   // TopNav Scroll
   $window.scroll(function() {
 		scrolled = Math.max(0, $window.scrollTop());
-		if ( (scrolled >= 140) && (!topBar.hasClass('selected')) ){
+		if ( (scrolled >= 22) && (!topBar.hasClass('selected')) ){
       topBar.addClass('fixed');
-		} else if ( (scrolled >= 140) && (topBar.hasClass('selected')) ) {
+		} else if ( (scrolled >= 22) && (topBar.hasClass('selected')) ) {
       topBar.removeClass('fixed');
-    } else if ( (scrolled < 140) && (topBar.hasClass('selected')) ) {
+    } else if ( (scrolled < 22) && (topBar.hasClass('selected')) ) {
       topBar.removeClass('fixed');
     } else {
       topBar.removeClass('fixed');
@@ -43,7 +43,7 @@ jQuery(document).ready(function($) {
     });
   });
   function resizeFold(){
-    windowMax = Math.max($window.height(),780);
+    windowMax = Math.max($window.height(),700);
     heightHome.css({ height:windowMax-lbHeight});
   }
   // Resizes

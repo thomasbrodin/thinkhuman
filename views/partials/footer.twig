@@ -2,7 +2,7 @@
 	  <footer class="site-footer">
 			<div class="col-md-7">
 				<ul>
-					<li><span class="agenda">©&nbsp;{{"now"|date('Y')}}&nbsp;</span>&nbsp;&nbsp;{{site.name}}</li>
+					<li>©&nbsp;{{"now"|date('Y')}}&nbsp;&nbsp;&nbsp;{{site.name}}</li>
 				{% for item in footer.get_items %}
 				    <li class="{{item.classes | join(' ')}}">
 				        <a class="nav-item services" href="{{item.get_link}}">{{item.title}}</a>
