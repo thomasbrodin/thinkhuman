@@ -61,7 +61,8 @@
 
         <h3 class="logobar_title">WE WORK WITH EXECUTIVES AT</h3>
         <hr class="logobar_break">
-        <img class="client-logos img-responsive" src="{{TimberImage(post.get_field('logo_clients')).src}}" alt="client logos">
+        <img class="hidden-xs img-responsive" src="{{theme.uri}}/images/logos-clients-home.png" alt="Client logos">
+        <img class="visible-xs-block img-responsive" src="{{theme.uri}}/images/logos-clients-home-mobile.png" alt="Client logos">
 
     </div>
 
@@ -274,7 +275,8 @@
         <div class="inThePress">
         	<div class="container">
 	        	<h5 class="header">In the Press</h5>
-	          <img class="press-logos" src="{{TimberImage(post.get_field('press_logos')).src}}" alt="logos">
+	          <img class="hidden-xs press-logos" src="{{theme.uri}}/images/logos-press.png" alt="logos">
+            <img class="visible-xs-block press-logos" src="{{theme.uri}}/images/logos-press-mobile.png" alt="logos">
 	        </div>
         </div>
         

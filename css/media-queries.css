@@ -1,11 +1,9 @@
 
 @media screen and (max-width: 767px) {	
-	.only-xs {
-		display: inline-block!important;
-	}
+	
 	.top-yellow-bar span.start {
-		display: block!important;;
 		padding-top:1em;
+		text-align: center
 	}
  	.gutter-sm{
 	  	padding-right: 15px;
@@ -33,12 +31,11 @@
 		background: #fff;
 		position: fixed;
 	}
+	#content {
+		 padding-top: 110px 
+	}
 	.top-navbar header{
   		margin:10px 0;
-	}
-	.top-navbar.fixed header{
-  		margin-top: 6px;
-  		margin-bottom: 4px
 	}
 	.top-navbar a.logo {
 		margin-left: 15px;
@@ -78,7 +75,10 @@
 	}
 	#masthead {
 		max-height: none;
-		padding: 90px 0 2em;
+		padding-bottom: 45px;
+	}
+	.case-study.col-md-8 {
+		margin-right: 0
 	}
 	#page ul.service-menu li {
 		width: 100%;
@@ -109,9 +109,10 @@
 		font-size: .8em;
 	}
 	.logobar_break {
-		width:150px;
+		width:80px;
 	}
-	.yellowPanel .client-logos {
+	.panel .img-responsive,
+	.yellowPanel .img-responsive {
 		padding:15px
 	}
 	.section-graybar {
@@ -152,14 +153,14 @@
 	.witness .info {
 		font-size: .8em;
 	}
-	#testimonial-slider .flex-direction-nav .flex-prev {
-		left:0;
-	}
-	#testimonial-slider .flex-direction-nav .flex-next {
-		right:0;
-	}
 	.inThePress {
 		margin: 0;
+	}
+	.inThePress .header {
+		margin: 0;
+	}
+	img.icon {
+  		max-height: 75px;
 	}
 	.service-list img.icon {
 		max-height: 75px;
@@ -168,9 +169,6 @@
 	}
 	.service-list {
 		text-align: center!important;
-	}
-	#main, #single, #error, #page {
-		padding-top:1em;
 	}
 	#page h1, .h1 {
 		font-size:20px;
@@ -232,10 +230,6 @@
 	div#featured-image {
 		width:50%;
 	}
-	.inThePress .header {
-		font-size: .8em;
-		margin: 0;
-	}
 	#page ul.about li:first-child a {
 		padding: 35px 25px 0 155px;
 	}
@@ -250,16 +244,20 @@
 	}
 	.site-footer {
 		height:140px;
-		padding-top: 20px;
+		padding-top: 17px;
+		text-align: center!important
 	}
 	.site-footer ul {
 		padding:0;
 	}
 	.connect {
 		float:none;
+		padding: 0 0 0 20px;
 	}
 	.social-connect {
-		margin: 10px;
+		margin: 7px;
+  		display: inline-block;
+  		float: none;
 	}
 	a.social-connect:last-of-type {
 		margin-right: 28px
@@ -267,6 +265,9 @@
 	.connect a.phone {
 		display: none
 	}
+	#testimonial-slider .flex-direction-nav {
+  		display: none
+  	}
 }
   	
 @media (min-width: 992px) {
@@ -298,9 +299,6 @@
 	.top-navbar nav ul li:first-child{
 		padding-left:0;
 	}
-	#testimonial-slider .flex-direction-nav {
-  		display: none
-  	}
 	.inThePress .header {
 		font-size: 1em;
 		margin: 6px 40px 0 6px;

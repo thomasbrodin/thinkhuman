@@ -3,7 +3,7 @@
 {% block content %}
 {% set bgImage = post.get_field('background_image_right_side') %}
 	
-	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat 95% top;">{% endif %}>
+	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat 95% top;"{% endif %}>
         <div class="container">
           <div class="row">
           			
@@ -26,7 +26,7 @@
 							</div>
 						{% endif %}
 						{% if row.acf_fc_layout == 'case_study' %}
-							<div class="page-block case-study">
+							<div class="page-block case-study{% if row.block_color == 'white' %} white{% endif %}{% if not bgImage %} col-md-8{% endif %}">
 								<h2 class="case-header">{{ row.case_header }}</h2>
 								<h3 class="case-title">{{ row.casestudy_title }}</h3>
 								{{ row.casestudy_description }}

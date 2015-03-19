@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
   var $window = $(window),
       heightHome = $("#masthead"),
       topBar = $('.top-navbar'),
+      main = $('#content'),
       windowMax,
       scrolled;
   if ($("#logobar").length){
@@ -22,12 +23,14 @@ jQuery(document).ready(function($) {
 		scrolled = Math.max(0, $window.scrollTop());
 		if ( (scrolled >= 22) && (!topBar.hasClass('selected')) ){
       topBar.addClass('fixed');
+      main.addClass('fixed');
 		} else if ( (scrolled >= 22) && (topBar.hasClass('selected')) ) {
       topBar.removeClass('fixed');
     } else if ( (scrolled < 22) && (topBar.hasClass('selected')) ) {
       topBar.removeClass('fixed');
     } else {
       topBar.removeClass('fixed');
+      main.removeClass('fixed');
     }
   });
   $.material.init();
