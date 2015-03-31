@@ -48,6 +48,13 @@ a:hover, a:focus {
 .home #content{
   padding-bottom:0
 }
+
+#page a.edit {
+  display: block;
+  clear:both;
+  margin:15px;
+  border:0
+}
 /* ----------------------- NAV */ 
 .top-navbar {
   color: #ffffff;
@@ -129,18 +136,20 @@ a:hover, a:focus {
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 0.08em;
-  padding-top: 7px;
+  padding:0;
   font-size: 2.2em;
-  display: inline-block;
+  display: block;
+  line-height: 1;
 }
 .top-navbar .sub-head {
   margin: 0;
   font-family: $font-stack;
   font-weight:$font-medium;
   font-size:1em;
-  display: inline-block;
-  margin-left:8px;
-  letter-spacing: 1px
+  margin-left:4px;
+  letter-spacing: 1px;
+  display: block;
+  line-height: 1;
 }
 
 .top-navbar nav {
@@ -346,6 +355,9 @@ img.icon {
   letter-spacing: 0.08em;
 }
 
+.meet-coaches {
+  padding:55px 0 0px
+}
 /* COL 5  */
 .col-xs-15,
 .col-sm-15,
@@ -405,17 +417,17 @@ img.icon {
 }
 .img-coaches:hover {
   background-color: rgba(150,150,150,0.8);
-  filter:none;
- -webkit-filter:none;
 }
-/* put us to work */
 
+/* put us to work */
+.yellowPanel.cta {
+  padding:58px 0 67px
+}
 .yellowPanel .button{
   color:white;
   font-family:$font-highlight-bold;
   font-size: 1.25em;
   letter-spacing: 0.18em;
-  width: 164px;
   height: 50px;
   border-radius: 3px;
   border: 1px solid white;
@@ -436,8 +448,8 @@ img.icon {
  background-color:rgba(243,175,25,1)!important
 }
 
-.put-work {
-  padding-bottom: 40px;
+.yellowPanel .img-responsive.put-work {
+  padding:0 0 40px;
   display: inline-block;
 }
 
@@ -603,7 +615,7 @@ img.press-logos {
  padding-bottom: 2px;
  color:#000;
 }
-#page p {
+page p {
   line-height: 1.5;
   color: #232323;
   font-size: 18px
@@ -627,7 +639,8 @@ img.press-logos {
  padding-right:5em;
 }
 #page h1:first-of-type {
-  padding-bottom: 0
+  padding-bottom: 0;
+  padding-top:40px;
 }
 #page h2, .h2{
    font-family:$font-stack;
@@ -761,7 +774,7 @@ color:#feef6a
 }
 .service-list img.icon {
   background-color: #fff;
-  padding:1.5em;
+  padding:0;
 }
 
 #page h5.service-title {
