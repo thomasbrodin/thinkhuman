@@ -3,7 +3,7 @@
 {% block content %}
 {% set bgImage = post.get_field('background_image_right_side') %}
 	
-	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat 95% top;"{% endif %}>
+	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat right top;"{% endif %}>
         <div class="container">
           <div class="row">
           			
@@ -37,7 +37,7 @@
 						{% endif %}
 
 						{% if row.acf_fc_layout == 'list_icons' %}
-							<div class="page-block">
+							<div class="page-block {% if not bgImage %} col-md-8{% endif %}">
 								
 								{% for row_rep in row.row_icon_text %}
 									 <div class="service-list">
@@ -66,12 +66,12 @@
 					{{post.content}}
 				{% endif %}
 
-				{% if post.can_edit %}
-				    <a href="{{post.get_edit_url}}">Edit me!</a>
-				{% endif %}
-
           	</div>
 
+
+				{% if post.can_edit %}
+				    <a class="edit" href="{{post.get_edit_url}}">Edit me!</a>
+				{% endif %}
         </div>
       </div>
 	</div><!-- content -->
