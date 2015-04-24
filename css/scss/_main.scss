@@ -273,8 +273,14 @@ img.featured-image {
 .find-out-about {
   width:80%;
   margin: 0 auto;
+  padding:1em 0;
 }
 
+img.centered {
+  width:40px;
+  display: block;
+  margin:0 auto  
+}
 /* ----------------------- HOME SECTIONS */ 
 .section {
   padding: 55px 0;
