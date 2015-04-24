@@ -287,13 +287,7 @@
 
 		// if there´s a link defined
 		if( opt.getAttribute( 'data-link' ) ) {
-			// open in new tab?
-			if( this.options.newTab ) {
-				window.open( opt.getAttribute( 'data-link' ), '_blank' );
-			}
-			else {
-				window.location = opt.getAttribute( 'data-link' );
-			}
+			window.location = opt.getAttribute( 'data-link' );
 		}
 
 		// callback

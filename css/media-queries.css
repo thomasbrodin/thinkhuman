@@ -99,9 +99,6 @@
 	div.cs-select {
 		max-width: 300px
 	}
-	.mission {
-		display: none;
-	}
 	.yellowPanel {
 		padding: 40px 10px 30px 10px;
 	}
@@ -305,7 +302,8 @@
 		max-width: 75px;
 	}
 	.find-out-about {
-		padding: 1.5em 0 0;
+		padding:1.5em 0 0;
+		width:33.33%;
 	}
 }
 @media (max-width: 1024px) {

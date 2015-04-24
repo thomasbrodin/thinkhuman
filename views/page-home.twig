@@ -8,20 +8,21 @@
           <div class="vert-mid">
 			
             	<div class="container gutter-sm">
-				  <div class="row">
-	                <div class="col-sm-5 the-pitch">
-	                  
-	                  {{post.get_field("text_presentation")}}
+				        <div class="row">
+	               
+	                  <img src="{{post.thumbnail.src}}" class="featured-image img-responsive">
+
+	                  <h3>{{post.get_field("text_presentation")}}</h3>
 
 	                  <div class="find-out-about">
 	                    <select class="cs-select cs-skin-overlay">
-	                      <option value="" disabled selected>Learn more about</option>
+	                      <option value="" disabled selected>explore our services</option>
 	                      <optgroup label="Find out more about">
-	                        <option value="{{post.get_field("service_1_link")}}">{{post.get_field("service_1")}}</option>
-	                        <option value="{{post.get_field("service_2_link")}}">{{post.get_field("service_2")}}</option>
-	                        <option value="{{post.get_field("service_3_link")}}">{{post.get_field("service_3")}}</option>
-	                        <option value="{{post.get_field("service_4_link")}}">{{post.get_field("service_4")}}</option>
-	                        <option value="{{post.get_field("service_5_link")}}">{{post.get_field("service_5")}}</option>
+	                        <option data-link="{{post.get_field("service_1_link")}}">{{post.get_field("service_1")}}</option>
+	                        <option data-link="{{post.get_field("service_2_link")}}">{{post.get_field("service_2")}}</option>
+	                        <option data-link="{{post.get_field("service_3_link")}}">{{post.get_field("service_3")}}</option>
+	                        <option data-link="{{post.get_field("service_4_link")}}">{{post.get_field("service_4")}}</option>
+	                        <option data-link="{{post.get_field("service_5_link")}}">{{post.get_field("service_5")}}</option>
 	                      </optgroup>
 	                    </select>
 
@@ -43,11 +44,7 @@
         							}
 	                    </style>
 	                  </div>
-	                </div>
-
-                <div class="col-sm-7 mission">
-                  <img src="{{post.thumbnail.src}}" alt="our mission" class="pull-right img-responsive">
-                </div>
+	                            
 
               </div>
             </div>

@@ -5,7 +5,6 @@ div.cs-select {
 	text-align: left;
 	z-index: 8;
 	width: 100%;
-	max-width: 500px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -30,19 +29,16 @@ div.cs-select:focus {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	background: #feef6a;
-  	text-transform: uppercase;
-  	padding: 11px 15px 11px 15px;
-  	width:93%;
-  	height: 44px;
+	background: #fff;
+  	padding: 15px 20px;
+  	width:100%;
+  	height: 50px;
   	color: #232323;
   	font-family: $font-stack;
-  	font-weight: $font-heavy;
+  	font-weight: $font-medium;
   	font-size: 1em;
-  	border: 1px solid #232323;
-  	/*-webkit-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
-	-moz-box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);
-	box-shadow: -4px 4px 0px 0px rgba(242,242,242,1);*/
+  	border: none;
+  	outline: none;
   	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -127,15 +123,16 @@ div.cs-select:focus {
 .cs-skin-overlay.cs-active > span:before {
 	display: block;
 	font: normal normal normal 14px/1 $font-icons;
-	font-size: 1.3em;
+	font-size: 2em;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-transform: translate3d(0,-50%,0);
 	transform: translate3d(0,-50%,0);
-	content: "\f0c9";
+	content: "\f0d7";
 	float: right;
 	padding-top:19px;
+	color:#6584d4
 }
 
 .cs-skin-overlay .cs-selected span::after {

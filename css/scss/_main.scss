@@ -86,7 +86,7 @@ a:hover, a:focus {
   margin:18px 0 24px;
 }
 .yellow{
-  color:#feef6a;  
+  color:$highlight;  
 }
 
 .top-navbar header i {
@@ -185,7 +185,7 @@ a:hover, a:focus {
 
 /* TOP YELLOW BAR */
 .top-yellow-bar {
-  background-color: #feef6a;
+  background-color: $highlight;
   color: #fdfdfd;
   height:22px;
   width:100%;
@@ -213,7 +213,7 @@ a:hover, a:focus {
 }
 .top-yellow-bar span.only-xs a {
 	color:#232323;
-	background: #feef6a;
+	background: $highlight;
 	padding:0;
 	text-align: center;
 	display: block;
@@ -239,6 +239,10 @@ a:hover, a:focus {
   vertical-align: middle;
 }
 
+img.featured-image {
+  margin: 0 auto
+}
+
 .the-pitch {
 	padding-top: .8em;
 }
@@ -258,28 +262,18 @@ a:hover, a:focus {
   letter-spacing: 0.05em;
 }
 
-.find-out-about p{
-  font-family:$font-stack;
-  font-weight: $font-bold;
-  letter-spacing: 0.05em;
-  margin:0;
-  padding:0;
-}
-
-.arm-up {
-  position: absolute;
-  width: 100%;
+.home-center h3 {
+  font-family: "Agenda Black";
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
   text-align: center;
-  top: 24%;
 }
 
-.arm-up img{
-  width: 310px;
- /* -ms-transform: rotate(-19deg) translateX(7%); 
-  -webkit-transform: rotate(-19deg) translateX(7%); 
-  transform: rotate(-19deg) translateX(7%);*/
+.find-out-about {
+  width:80%;
+  margin: 0 auto;
 }
-
 
 /* ----------------------- HOME SECTIONS */ 
 .section {
@@ -287,7 +281,7 @@ a:hover, a:focus {
 }
 
 .yellowPanel{
-  background-color: #feef6a;
+  background-color: $highlight;
   color: white;
   padding-top:65px;
   text-align: center;
@@ -434,8 +428,7 @@ img.icon {
   display: inline-block;
   line-height: 34px;
   vertical-align: top;
-  margin:0 0 0 20px;
-  box-shadow: -6px 6px 0 white;
+  margin:0 ;
   cursor: pointer
 }
 
@@ -492,7 +485,7 @@ img.icon {
 .service-item .read-more{
   display: inline-block;
   margin: 5px 0 20px;
-  background-color: #feef6a!important;
+  background-color: $highlight!important;
   text-transform: uppercase;
   color: #232323;
   font-family:$font-highlight-bold;
@@ -674,7 +667,7 @@ page p {
   color:#232323;
 }
 #page h6, .h6 {
-color:#feef6a
+color:$highlight
 }
 #page blockquote {
   padding: 30px 0;
@@ -718,7 +711,7 @@ color:#feef6a
 } 
 
 #page hr {
-  border: 3px solid #feef6a;
+  border: 3px solid $highlight;
 }
 
 #page img {
@@ -731,7 +724,7 @@ color:#feef6a
    margin-bottom: 50px
 }
 .case-study {
-  background-color:#feef6a;
+  background-color:$highlight;
   padding:3em 2.5em;
 }
 .case-study.white {
@@ -761,7 +754,7 @@ color:#feef6a
   border-bottom: 1px solid #fff;
 }
 .case-study.white h3.case-title {
-  border-bottom: 1px solid #feef6a;
+  border-bottom: 1px solid $highlight;
 }
 #page a.case {
   background-color:#fff;
@@ -854,7 +847,7 @@ div#featured-image {
 }
 
 .related-services {
-  background-color: #feef6a;
+  background-color: $highlight;
   color: white;
   padding: 40px 0 55px;
   position:relative
@@ -985,7 +978,7 @@ h3.other-header {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1pt;
-  color:#feef6a;
+  color:$highlight;
   padding: 1em 0;
   margin-bottom: 0;
   text-align: center
@@ -1009,7 +1002,7 @@ h3.other-header {
 
 .form-control-wrapper .form-control:not(select), 
 .form-control:not(select) {
-  border: 1px solid #feef6a!important;
+  border: 1px solid $highlight!important;
   background: white;
   height: auto!important;
   padding: 11px;
@@ -1020,20 +1013,20 @@ h3.other-header {
 .form-control:focus:not(select), 
 .form-control-wrapper .form-control.focus:not(select), 
 .form-control.focus:not(select) {
-  border: 2px solid #feef6a!important;
+  border: 2px solid $highlight!important;
   height: auto!important;
   padding: 9px;
 }
 .form-control-wrapper .material-input:before{
-  background-color: #feef6a!important
+  background-color: $highlight!important
 }
 .form-control-wrapper .material-input:after{
   height:28px;
   width: 56px;
 }
 .form-control-wrapper .form-control:focus~.material-input:after {
-  border: 2px solid #feef6a!important;
-  background-color: #feef6a!important;
+  border: 2px solid $highlight!important;
+  background-color: $highlight!important;
 }
 
 .contact .checkbox {
@@ -1059,7 +1052,7 @@ h3.other-header {
 .checkbox label .check {
   float: left;
   margin-right: 8px;
-  border: 1px solid #feef6a;
+  border: 1px solid $highlight;
   background: white;
   left: 0;
 }
@@ -1072,11 +1065,11 @@ h3.other-header {
 }
 .checkbox input[type=checkbox]:checked~.check:before,
 .checkbox input[type=checkbox]:checked~.check {
-  color: #feef6a!important;
+  color: $highlight!important;
 }
 
 .checkbox input[type=checkbox]:checked~.check:after{
-  background-color: #feef6a!important
+  background-color: $highlight!important
 }
 
 .contact .button.side{
@@ -1094,7 +1087,7 @@ h3.other-header {
   box-shadow: -3px 3px 0 grey;
   cursor: pointer;
   padding: 2px 0 4px 0;
-  background-color: #feef6a;
+  background-color: $highlight;
   margin-left: 0
 }
 
