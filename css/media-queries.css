@@ -56,12 +56,11 @@
 	.top-navbar .sub-head {
 		font-size: .7em;
   		margin: 0;
-  		padding: 0 2em 0 0.2em;
+  		padding: 0 7em 0 0.2em;
 	}
 	.top-navbar nav {
 		margin-top: 10px;
-		width:100%;
-		margin-bottom: 25px;
+		width:110%;
 		float: left;
 	}
 	.top-navbar.fixed nav {
@@ -70,8 +69,17 @@
 	.top-navbar nav ul li {
 		display: block;
 		text-align: left;
-		padding-left: 15px;
-		line-height: 25px
+		padding-left: 20px;
+		line-height: 46px;
+		border-bottom:1px solid #fff;
+		background-color: #000;
+	}
+	.top-navbar nav ul li:last-child{
+		border:none;
+		line-height: 47px
+	}
+	.navbar-nav>li>a {
+		color:white;
 	}
 	#masthead {
 		max-height: none;
@@ -302,8 +310,7 @@
 		max-width: 75px;
 	}
 	.find-out-about {
-		padding:1.5em 0;
-		width:33.33%;
+		padding:2em 0;
 	}
 }
 @media (max-width: 1024px) {

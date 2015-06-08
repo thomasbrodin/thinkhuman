@@ -28,13 +28,18 @@
                     <p>Your Message</p>
                     <textarea aria-invalid="false" class="form-control" rows="10" cols="40" name="message" id="message"></textarea>
                     
-                    <!-- <p>Security code</p>
-                    
-                    <input type="text" name="vchVarificationCode" id="vchVarificationCode" maxlength="10" onkeyup="popVal();" onpaste="return false;" oncut="return false;" oncontextmenu="return false;" oncopy="return false;" onBlur="popVal();" />
-                    
-                    <img src="http://www.think-human.com/wp-content/themes/thinkhuman/cap1/captcha.php?.png" alt="Security Code" border="1" id="captcha_b" vspace="6" height="60" style="margin:auto 10px" /><small>(case sensitive)</small>
-                    <span id='contactus_scaptcha_errorloc' class='error'></span> -->
-                    
+                    <p>Security code</p>
+                     <div class="row">
+                        <div class="col-md-4">
+                            <img src="http://www.think-human.com/wp-content/themes/thinkhuman/cap1/captcha.php?.png" alt="Security Code" border="1" id="captcha_b" vspace="6" height="60" style="margin:auto 10px" />
+                            <span id='contactus_scaptcha_errorloc' class='error'></span>
+                         </div>
+                        <div class="col-md-8">
+                             <input type="text" name="vchVarificationCode" id="vchVarificationCode" class="form-control" maxlength="10" onkeyup="popVal();" onpaste="return false;" oncut="return false;" oncontextmenu="return false;" oncopy="return false;" onBlur="popVal();" />
+                            <small>(case sensitive)</small>
+                      </div>
+                    </div>
+
                     <div class="checkbox">
                         <label>
                           <input type="checkbox">
@@ -48,7 +53,7 @@
         	    <input id="name_chid" type="hidden" value="" name="name_chid">
         	    <input type="hidden" value="true" name="submitted">
         	    <input type="hidden" value="Think Human Contact Form">
-        	    <input type="hidden" value="thank-you-4" name="redirect">
+        	    <input type="hidden" value="thank-you" name="redirect">
         	    <input type="hidden" value="info@think-human.com" name="form_name">
         	    <input type="hidden" value="http://www.think-human.com/" name="website">
                           

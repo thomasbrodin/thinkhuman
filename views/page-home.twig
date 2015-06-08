@@ -10,44 +10,20 @@
             	<div class="container gutter-sm">
 				        <div class="row">
 	               
-	                  <img src="{{post.thumbnail.src}}" class="featured-image img-responsive">
-
-	                  <h3>{{post.get_field("text_presentation")}}</h3>
-
+	                  <h2 class="line">RALLY INDIVIDUALS,</h2>
+                    <h2 class="line">ELECTRIFY CULTURES &</h2>
+                    <h2 class="line">DELIVER BREAKTHROUGH
+                    <h2 class="line">PERFORMANCE.</h2>
+                </div>
+                <div class="row">
 	                  <div class="find-out-about">
-	                    <select class="cs-select cs-skin-overlay">
-	                      <option value="" disabled selected>explore our services</option>
-	                      <optgroup label="Find out more about">
-	                        <option data-link="{{post.get_field("service_1_link")}}">{{post.get_field("service_1")}}</option>
-	                        <option data-link="{{post.get_field("service_2_link")}}">{{post.get_field("service_2")}}</option>
-	                        <option data-link="{{post.get_field("service_3_link")}}">{{post.get_field("service_3")}}</option>
-	                        <option data-link="{{post.get_field("service_4_link")}}">{{post.get_field("service_4")}}</option>
-	                        <option data-link="{{post.get_field("service_5_link")}}">{{post.get_field("service_5")}}</option>
-	                      </optgroup>
-	                    </select>
-
-	                    <style type="text/css">
-        							.cs-select .cs-options li:first-child{
-        								background-image: url('{{TimberImage(post.get_field('service_1_icon')).src}}');
-        							}
-        							.cs-select .cs-options li:nth-child(2) {
-        								background-image: url('{{TimberImage(post.get_field('service_2_icon')).src}}');
-        							}
-        							.cs-select .cs-options li:nth-child(3) {
-        								background-image: url('{{TimberImage(post.get_field('service_3_icon')).src}}');
-        							}
-        							.cs-select .cs-options li:nth-child(4) {
-        								background-image: url('{{TimberImage(post.get_field('service_4_icon')).src}}');
-        							}
-        							.cs-select .cs-options li:nth-child(5) {
-        								background-image: url('{{TimberImage(post.get_field('service_5_icon')).src}}');
-        							}
-	                    </style>
+                      <h3>{{post.get_field("text_presentation")}}</h3>
+                      <a class="btn button services" href="services">
+                        <span>explore our services</span>
+                      </a>
 	                  </div>
-	                 
-                     <img src="{{theme.uri}}/images/thunder.png" class="centered">
+                </div>
 
-              </div>
             </div>
 
           </div>
@@ -120,7 +96,7 @@
 	              <p class="col-md-12">{{post.get_field("service_1_description")}}</p>
 	            </div>
 	            
-            	<a href="{{post.get_field("service_1_link")}}" class="btn button read-more">Read More</a>
+            	<a href="{{post.get_field("service_1_link")}}" class="btn button read-more">Learn More</a>
         	</div>
 		{% endif %}
 		{% if post.get_field('service_2') %}
@@ -139,7 +115,7 @@
               		<p class="col-md-12">{{post.get_field("service_2_description")}}</p>
               	</div>
 	         
-            	<a href="{{post.get_field("service_2_link")}}" class="btn button read-more">Read More</a>
+            	<a href="{{post.get_field("service_2_link")}}" class="btn button read-more">Learn More</a>
           	</div>
         {% endif %}
 		{% if post.get_field('service_3') %}
@@ -157,7 +133,7 @@
               		<p class="col-sm-12">{{post.get_field("service_3_description")}}</p>
               	</div>
 	            
-            	<a href="{{post.get_field("service_3_link")}}" class="btn button read-more">Read More</a>
+            	<a href="{{post.get_field("service_3_link")}}" class="btn button read-more">Learn More</a>
           	</div>
         {% endif %}
 		{% if post.get_field('service_4') %}
@@ -176,7 +152,7 @@
               		<p class="col-sm-12">{{post.get_field("service_4_description")}}</p>
               	</div>
 	            
-	            <a href="{{post.get_field("service_4_link")}}" class="btn button read-more">Read More</a>
+	            <a href="{{post.get_field("service_4_link")}}" class="btn button read-more">Learn More</a>
           	</div>
         {% endif %}
 		{% if post.get_field('service_5') %}
@@ -196,7 +172,7 @@
           			<p class="col-md-12">{{post.get_field("service_5_description")}}</p>
           		</div>
 	           
-	            <a href="{{post.get_field("service_5_link")}}" class="btn button read-more">Read More</a>
+	            <a href="{{post.get_field("service_5_link")}}" class="btn button read-more">Learn More</a>
          	</div>
           {% endif %}
 	
