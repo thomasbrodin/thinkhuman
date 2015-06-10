@@ -7,17 +7,15 @@
         <div class="home-center">
           <div class="vert-mid">
 			
-            	<div class="container gutter-sm">
+            	<div class="container gutter">
 				        <div class="row">
-	               
-	                  <h2 class="line">RALLY INDIVIDUALS,</h2>
-                    <h2 class="line">ELECTRIFY CULTURES &</h2>
-                    <h2 class="line">DELIVER BREAKTHROUGH
-                    <h2 class="line">PERFORMANCE.</h2>
+                    {% for landing_rep in post.get_field('landing_rep') %}
+  	                  <h2 class="line">{{ landing_rep.Landing_copy }}</h2>
+                    {% endfor %}
                 </div>
                 <div class="row">
 	                  <div class="find-out-about">
-                      <h3>{{post.get_field("text_presentation")}}</h3>
+                      <h3 class="hidden-xs">{{post.get_field("text_presentation")}}</h3>
                       <a class="btn button services" href="services">
                         <span>explore our services</span>
                       </a>
@@ -30,157 +28,108 @@
         </div>
     </div>
 
-	<!--   Clients logos bar       -->
-	<div id="logobar" class="yellowPanel">
+  	<!--   Clients logos bar       -->
+  	<div id="logobar" class="greyPanel">
 
-        <h3 class="logobar_title">WE WORK WITH EXECUTIVES AT</h3>
-        <hr class="logobar_break">
         <img class="hidden-xs img-responsive" src="{{theme.uri}}/images/logos-clients-home.png" alt="Client logos">
         <img class="visible-xs-block img-responsive" src="{{theme.uri}}/images/logos-clients-home-mobile.png" alt="Client logos">
 
     </div>
 
-	<!--    meet our coaches       -->
-	<!-- <div class="section meet-coaches">
-        <div class="container gutter-xlg">
-          <div class="section-graybar clearfix">
-            <div class="title"><a href="/about/coaches">Meet our coaches</a></div>
-          </div>
-          {% set images = post.get_field('coaches') %}
-          <div id="coach-slider">
-            <div class="row coaches">
-            	{% for image in images %}
-	              <div class="col-md-15 col-xs-15 coach">
-	              	<a href="{{image.alt}}">
-	                 <img class="img-coaches" src="{{TimberImage(image.id).get_src|resize(140, 150, 'center')}}" alt="{{image.title}}">
-  	                <div class="name">{{image.title}}
-  						        {% if image.caption %}<br>
-  	                		<span>{{image.caption}}</span>
-  	                	{% endif %}
-  	                </div>
-	               	</a>
-	              </div>
-	            {% endfor %}
-            </div>
-          </div>
-
-        </div>
-      </div> -->
-
-      <!--    PUT US TO WORK  -->
-      <div class="yellowPanel cta hidden-xs">
-        <a class="btn button" href="contact">
-          <span>TELL US YOUR STORY</span>
-        </a>
-      </div>
-
 		<!-- Our services  -->
       <div class="section services">
-        <div class="container gutter-xlg">
-          <div class="section-graybar clearfix">
-            <div class="title">Our Services</div>
-          </div>
-		{% if post.get_field('service_1') %}
-          	<div class="service-item">
-	          
-              	<div class="row">
-              		<header class="col-sm-6">
-		                <img src="{{TimberImage(post.get_field('service_1_icon')).src}}" alt="icon">
-		                <h4 class="title">{{post.get_field("service_1")}}</h4>
-                    <hr class="service-break">
+        <div class="container gutter">
+          <div class="row">
+    		    {% if post.get_field('service_1') %}
+              	<div class="col-md-3 service-item">
+              		<header>
+                    <a href="{{post.get_field("service_1_link")}}">
+		                  <img src="{{TimberImage(post.get_field('service_1_icon')).src}}" alt="icon">
+		                  <h4 class="title">{{post.get_field("service_1")}}</h4>
+                    </a>
               		</header>
             	</div>
-        	
-          	
-          		<div class="row">
-	              <p class="col-md-12">{{post.get_field("service_1_description")}}</p>
-	            </div>
-	            
-            	<a href="{{post.get_field("service_1_link")}}" class="btn button read-more">Learn More</a>
-        	</div>
-		{% endif %}
-		{% if post.get_field('service_2') %}
-          	<div class="service-item">
-            	
-        		<div class="row">
-		            <header class="col-sm-6">
-		                <img src="{{TimberImage(post.get_field('service_2_icon')).src}}" alt="icon">
-		                <h4 class="title">{{post.get_field("service_2")}}</h4>
-                    <hr class="service-break">
-		            </header>
-            	</div>
-        	
-           
-            	<div class="row">
-              		<p class="col-md-12">{{post.get_field("service_2_description")}}</p>
+    		    {% endif %}
+    		    {% if post.get_field('service_2') %}
+              	<div class="col-md-3 service-item">
+                    <header>
+                      <a href="{{post.get_field("service_2_link")}}">
+    		                <img src="{{TimberImage(post.get_field('service_2_icon')).src}}" alt="icon">
+    		                <h4 class="title">{{post.get_field("service_2")}}</h4>
+                      </a>
+    		            </header>
               	</div>
-	         
-            	<a href="{{post.get_field("service_2_link")}}" class="btn button read-more">Learn More</a>
-          	</div>
-        {% endif %}
-		{% if post.get_field('service_3') %}
-          	<div class="service-item">
-            	
-            	<div class="row"> 
-	              <header class="col-sm-6">
-	                <img src="{{TimberImage(post.get_field('service_3_icon')).src}}" alt="icon">
-	                <h4 class="title">{{post.get_field("service_3")}}</h4>
-                  <hr class="service-break">
-	              </header>      	
-            	</div>
-	          
-           		<div class="row">
-              		<p class="col-sm-12">{{post.get_field("service_3_description")}}</p>
+            {% endif %}
+    		    {% if post.get_field('service_3') %}
+              	<div class="col-md-3 service-item">
+                    <header>
+                      <a href="{{post.get_field("service_3_link")}}">
+    	                 <img src="{{TimberImage(post.get_field('service_3_icon')).src}}" alt="icon">
+    	                 <h4 class="title">{{post.get_field("service_3")}}</h4>
+                      </a>
+    	              </header>      	
               	</div>
-	            
-            	<a href="{{post.get_field("service_3_link")}}" class="btn button read-more">Learn More</a>
-          	</div>
-        {% endif %}
-		{% if post.get_field('service_4') %}
-          	<div class="service-item">
-            
-        		<div class="row">
-		            <header class="col-sm-6">
-		                <img src="{{TimberImage(post.get_field('service_4_icon')).src}}" alt="icon">
-		                <h4 class="title">{{post.get_field("service_4")}}</h4>
-                    <hr class="service-break">
-		            </header>
-            	</div>
-        	
-            
-            	<div class="row">
-              		<p class="col-sm-12">{{post.get_field("service_4_description")}}</p>
-              	</div>
-	            
-	            <a href="{{post.get_field("service_4_link")}}" class="btn button read-more">Learn More</a>
-          	</div>
-        {% endif %}
-		{% if post.get_field('service_5') %}
-          <div class="service-item">
-	            
-            	<div class="row">
-		            <header class="col-sm-6">
-		               	<img src="{{TimberImage(post.get_field('service_5_icon')).src}}" alt="icon">
-		                <h4 class="title">{{post.get_field("service_5")}}</h4>
-                    <hr class="service-break">
-		            </header>
-	            </div>
+            {% endif %}
 
-        	
-        	
-        		<div class="row">
-          			<p class="col-md-12">{{post.get_field("service_5_description")}}</p>
-          		</div>
-	           
-	            <a href="{{post.get_field("service_5_link")}}" class="btn button read-more">Learn More</a>
-         	</div>
-          {% endif %}
-	
+    		    {% if post.get_field('service_4') %}
+              	<div class="col-md-3 service-item">
+                    <header>
+                      <a href="{{post.get_field("service_4_link")}}">
+    		                <img src="{{TimberImage(post.get_field('service_4_icon')).src}}" alt="icon">
+    		                <h4 class="title">{{post.get_field("service_4")}}</h4>
+                      </a>
+    		            </header>
+                </div>
+            {% endif %}
+          </div>
         </div>
       </div>
-      
-       <!--Testimonials -->
-      <div class="yellowPanel testimonials">
+
+      <!--    our purpose       -->
+      <div class="section our-purpose">
+          <div class="section-background" style="background-image:url('{{TimberImage(post.get_field('bg_img_purpose')).src}}')"></div>
+          <div class="container gutter-xlg">
+              {% for copy_purpose in post.get_field('copy_purpose') %}
+                  <h2 class="line">{{ copy_purpose.purpose }}</h2>
+              {% endfor %}
+          </div>
+      </div>
+
+      <!-- Our mission  -->
+      <div class="section our-mission">
+          <div class="container gutter-xlg">
+              {% for copy_mission in post.get_field('copy_mission') %}
+                  <h2 class="line">{{ copy_mission.mission }}</h2>
+              {% endfor %}
+          </div>
+      </div>
+      <!-- Our vision  -->
+      <div class="section our-vision">
+          <div class="section-background" style="background-image:url('{{TimberImage(post.get_field('bg_img_vision')).src}}')"></div>
+          <div class="container gutter-xlg">
+              {% for copy_vision in post.get_field('copy_vision') %}
+                  <h2 class="line">{{ copy_vision.vision }}</h2>
+              {% endfor %}
+          </div>
+      </div>
+
+      <!-- Our values  -->
+      <div class="section our-values">
+          <div class="container gutter">
+              <h2 class="line">Our Values</h2>
+              {% for key,value in post.get_field('values') %}
+                <div class='col-md-3'>
+                    <div class="our-values_number">0{{key}}</div>
+                    <div class="our-values_header">{{value.header}}</div>
+                    <hr class="our-values_divider"></hr>
+                    <div class="our-values_description">{{value.description}}</div>
+                </div>
+              {% endfor %}
+          </div>
+      </div>
+
+      <!--Testimonials -->
+      <div class="greyPanel testimonials">
 
         <img src="{{theme.uri}}/images/bullhorn.png" alt="icon">
         <h5 class="header">What people are saying about us</h5>

@@ -84,7 +84,7 @@ a:hover, a:focus {
 .top-navbar header{
   margin:18px 0 24px;
 }
-.yellow{
+.gray{
   color:$highlight;  
 }
 
@@ -179,12 +179,12 @@ a:hover, a:focus {
 .top-navbar.selected{
 	position: fixed
 }
-.top-yellow-bar.selected {
+.top-grey-bar.selected {
 	position: fixed;
 }
 
-/* TOP YELLOW BAR */
-.top-yellow-bar {
+/* TOP grey BAR */
+.top-grey-bar {
   background-color: #a5a5a5;
   color: black;
   height:22px;
@@ -194,7 +194,7 @@ a:hover, a:focus {
   z-index: 13;
 }
 
-.top-yellow-bar span{
+.top-grey-bar span{
   position: relative;
   display: block;
   padding: 0;
@@ -205,13 +205,13 @@ a:hover, a:focus {
   letter-spacing: 0.1em;
 }
 
-.top-yellow-bar span a {
+.top-grey-bar span a {
 	color:#232323;
 }
-.top-yellow-bar span a:hover {
+.top-grey-bar span a:hover {
 	color: #fff8ab;
 }
-.top-yellow-bar span.only-xs a {
+.top-grey-bar span.only-xs a {
 	color:#232323;
 	background: $highlight;
 	padding:0;
@@ -301,8 +301,99 @@ img.centered {
 /* ----------------------- HOME SECTIONS */ 
 .section {
   padding: 55px 0;
+  .container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .section-background{
+    position: absolute;
+    height:600px;
+    width:100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+  h2,
+  .our-values_number
+  {
+    font-family: $font-highlight-bold;
+    font-size: 54px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 46px;
+  }
+  &.our-purpose{
+    position: relative;
+    background-color: #e7e7e7;
+    height: 600px;
+    overflow: hidden;
+    .section-background {
+      background-position: 37% center;
+    }
+    .line{
+      &:first-child {
+        color: #ee145b;
+      }
+    }
+  }
+  &.our-mission{
+    position: relative;
+    background-color: #1d1d1d;
+    height: 600px;
+    .line{
+      color:#d9dadb;
+      &:first-child{
+        color: #fff200;
+      }
+    }
+  }
+  &.our-vision{
+    position: relative;
+    background-color: #e7e7e7;
+    height: 600px;
+    .section-background {
+      background-position: 85% center;
+    }
+    .line{
+      &:first-child{
+        color: #00aeef;
+      }
+    }
+  }
+  &.our-values{
+    position: relative;
+    background-color: #ffffff;
+    height: 600px;
+    text-align: center;
+    .line{
+      margin-bottom: 50px;
+    }
+    .our-values_number{
+      color: #fff048;
+      margin-bottom: 30px;
+    }
+    .our-values_header {
+      font-family: $font-highlight-bold;
+      font-size:18px;
+      line-height:1.2;
+      text-transform: uppercase;
+      padding: 0px 2em;
+    }
+    .our-values_divider {
+      width:65%;
+      border-top: 4px solid #232323;
+    }
+    .our-values_description {
+      font-family: $font-highlight;
+      font-size:14px;
+      color: #191919;
+      padding: 0px 2em;
+    }
+  }
 }
-.yellowPanel{
+
+.greyPanel{
   background-color: $highlight;
   color: white;
   padding-top:65px;
@@ -310,8 +401,8 @@ img.centered {
   position: relative;
 }
 
-/* Gray title bar for sections */
-.section-graybar{
+/* grey title bar for sections */
+.section-greybar{
   background-color: #fff;
   color: #232323;
   font-family:$font-stack;
@@ -323,7 +414,7 @@ img.centered {
   margin:0 0 55px;
 }
 
-.section-graybar .title{
+.section-greybar .title{
   float:left;
   letter-spacing: 0.18em;
 }
@@ -339,7 +430,7 @@ img.icon {
   box-shadow: none;
   background:transparent
 }
-.yellowPanel .img-responsive,
+.greyPanel .img-responsive,
 .panel .img-responsive {
   padding: 32px 0 84px;
   margin:0 auto;
@@ -365,135 +456,28 @@ img.icon {
 }
 
 
-/* COACHES */
-.section-graybar nav{
-  text-align: right;
-  letter-spacing: 0.08em;
-}
-
-.meet-coaches {
-  padding:55px 0 0px
-}
-/* COL 5  */
-.col-xs-15,
-.col-sm-15,
-.col-md-15,
-.col-lg-15 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-.col-xs-15 {
-    width: 50%;
-    float: left;
-}
-@media (min-width: 768px) {
-.col-sm-15 {
-        width: 20%;
-        float: left;
-    }
-}
-@media (min-width: 992px) {
-    .col-md-15 {
-        width: 20%;
-        float: left;
-    }
-}
-@media (min-width: 1200px) {
-    .col-lg-15 {
-        width: 20%;
-        float: left;
-    }
-}
-.coach .name {
-   font-family:$font-stack;
-  font-weight: $font-light;
-  font-size: 1em;
-  margin-top: 10px;
-}
-.coach {
-  min-height: 245px;
-  margin-bottom: 30px;
-}
-.img-coaches {
-  display: inline-block;
-  max-width: 100%;
-  width:100%;
-  height: auto;
-  padding: 4px;
-  line-height: 1.42857143;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  -webkit-filter: grayscale(1);
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: grayscale(1);
-}
-.img-coaches:hover {
-  background-color: rgba(150,150,150,0.8);
-}
-
-/* put us to work */
-.yellowPanel.cta {
-  padding:58px 0 67px
-}
-.yellowPanel .button{
-  color:white;
-  font-family:$font-highlight-bold;
-  font-size: 1.25em;
-  letter-spacing: 0.18em;
-  height: 50px;
-  border-radius: 3px;
-  border: 1px solid white;
-  display: inline-block;
-  line-height: 34px;
-  vertical-align: top;
-  margin:0 ;
-  cursor: pointer
-}
-
-.btn:hover:not(.read-more) {
-  box-shadow: none;
-  background-color:  white!important
-}
-
-.yellowPanel .button .ripple {
- background-color:rgba(243,175,25,1)!important
-}
-
-.yellowPanel .img-responsive.put-work {
-  padding:0 0 40px;
-  display: inline-block;
-}
-
-
 /* SERVICES */
-
-.service-item {
-  margin-bottom: 30px;
+.services .container{
+  top:0;
+  transform: none
 }
 .service-item header{
-  margin-left: 15px;
-  padding-left:5px;
+  border-right:1px solid #000
 }
-.service-item header hr {
-  height:1px;
-  border-color: #d0d0d0;
-  margin:20px 0 0;
-  width:100%;
+.service-item:last-child header{
+  border-right:none
 }
 .service-item header h4.title{
-  padding:0 26px 0 60px;
+  padding:3px 0 0 52px;
   text-transform: uppercase;
   color: #232323;
   font-family:$font-highlight-bold;
-  font-size: em(21,14);
+  font-size: em(15,14);
   margin: 0;
 }
 .service-item header img{
   float:left;
+  max-height:40px
 }
 
 .service-item p{
@@ -517,7 +501,6 @@ img.icon {
   border-radius: 3px;
 }
 
-  
 /* TESTIMONIALS  */
 
 .testimonials .header{
@@ -1110,7 +1093,7 @@ h3.other-header {
   cursor: pointer;
   padding: 2px 0 4px 0;
   background-color: $highlight;
-  margin-left: 0
+  margin: 11px;
 }
 
 

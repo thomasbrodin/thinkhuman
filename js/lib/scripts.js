@@ -6,18 +6,6 @@ jQuery(document).ready(function($) {
       main = $('#content'),
       windowMax,
       scrolled;
-  if ($("#logobar").length){
-      logoBar = $('#logobar');
-      lbHeight = logoBar.height();
-  }
-  $('.cs-placeholder').click(function() {
-    topBar.addClass('selected');
-    $('.top-yellow-bar').addClass('selected');
-  });
-  $('.cs-select .cs-options li').click(function() {
-    topBar.removeClass('selected');
-    $('.top-yellow-bar').removeClass('selected');
-  });
   // TopNav Scroll
   $window.scroll(function() {
 		scrolled = Math.max(0, $window.scrollTop());
@@ -47,7 +35,7 @@ jQuery(document).ready(function($) {
   });
   function resizeFold(){
     windowMax = Math.max($window.height(),700);
-    heightHome.css({ height:windowMax-lbHeight});
+    heightHome.css({ height:windowMax-125});
   }
   // Resizes
   if ( ($("body.home").length) && ($(window).width() > 768) ){
