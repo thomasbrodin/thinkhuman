@@ -55,7 +55,6 @@
 
 		function load_styles() {
 			wp_enqueue_style( 'main', THEME_URL . '/css/main.min.css','','3.3.1','screen');
-			wp_enqueue_style( 'mobile', THEME_URL . '/css/media-queries.css',NULL, NULL, 'screen');
 		}
 
 

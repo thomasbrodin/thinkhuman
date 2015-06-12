@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
   var $window = $(window),
       heightHome = $("#masthead"),
       topBar = $('.top-navbar'),

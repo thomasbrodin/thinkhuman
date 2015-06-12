@@ -33,17 +33,24 @@ a:hover, a:focus {
   text-decoration: none;
   color: rgba(150,150,150,0.8)
 }
+.gray{
+  color:$highlight;  
+}
 
 #content {
   padding-bottom:70px;
   z-index: 1;
   position: relative;
   width:100%;
-  height:100%;
+  height:100%; 
+  &.fixed {
+    padding-top: 100px;
+  }
+  @media screen and (max-width: 767px) {  
+    padding-top: 75px 
+  }
 }
-#content.fixed {
-   padding-top: 80px 
-}
+
 .home #content{
   padding-bottom:0
 }
@@ -54,12 +61,47 @@ a:hover, a:focus {
   margin:15px;
   border:0
 }
+
+/* ----------------------- Gutter Container */ 
+.gutter-sm{
+  padding:0 30px ;
+  @media screen and (max-width: 767px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.gutter {
+  padding-right: 40px;
+  padding-left: 40px;
+  @media screen and (max-width: 767px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+.gutter-lg{
+  padding:0 50px;
+   @media screen and (max-width: 767px) {
+    padding:0 1em ;
+  }
+}
+.gutter-xlg{
+  padding:0 90px ;
+   @media screen and (max-width: 767px) {
+    padding:0 1.5em ;
+  }
+}
+
+.gutter-xxlg{
+  padding:0 120px ;
+   @media screen and (max-width: 767px) {
+    padding:0 3.2em ;
+  }
+}
+
 /* ----------------------- NAV */ 
 .top-navbar {
   color: #ffffff;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  @include transition(all .2s ease-in-out);
   z-index: 12;
   right: 0;
   left: 0;
@@ -71,6 +113,11 @@ a:hover, a:focus {
   -webkit-box-shadow: 0px 2px 10px 0px rgba(125,125,125,0.55);
   -moz-box-shadow: 0px 2px 10px 0px rgba(125,125,125,0.55);
   box-shadow: 0px 2px 10px 0px rgba(125,125,125,0.55);
+  @media screen and (max-width: 767px) { 
+    padding-top:0;
+    background: #fff;
+    position: fixed;
+  } 
 }
 
 .top-navbar a {
@@ -83,11 +130,10 @@ a:hover, a:focus {
 }
 .top-navbar header{
   margin:18px 0 24px;
+  @media screen and (max-width: 767px) { 
+    margin:10px 0;
+  }
 }
-.gray{
-  color:$highlight;  
-}
-
 .top-navbar header i {
   font-size: 2em;
 }
@@ -124,12 +170,19 @@ a:hover, a:focus {
 .top-navbar .logo {
   float:left;
   display: block;
+  @media screen and (max-width: 767px) { 
+    margin-left: 15px;
+  }
 }
 .top-navbar .brand{
   float:left;
   display: block;
   margin-left:12px;
   margin-top:5px;
+  @media screen and (max-width: 767px) { 
+    margin-left:10px;
+    width: 190px;
+  }
 }
 .top-navbar .header {
   font-family: $font-slim;
@@ -140,6 +193,11 @@ a:hover, a:focus {
   font-size: 3em;
   display: block;
   line-height: 1;
+  @media screen and (max-width: 767px) { 
+    padding-top: 0;
+    font-size: 1.5em;
+    padding-top: 10px;
+  }
 }
 .top-navbar .sub-head {
   margin: 0;
@@ -150,6 +208,11 @@ a:hover, a:focus {
   display: block;
   line-height: 1;
   text-transform: uppercase;
+  @media screen and (max-width: 767px) { 
+    font-size: .7em;
+    margin: 0;
+    padding: 0 6em 0 0.2em;
+  }
 }
 
 .top-navbar nav {
@@ -162,6 +225,11 @@ a:hover, a:focus {
   margin-top: 40px;
   padding-left:0;
   padding-right:0;
+  @media screen and (max-width: 767px) { 
+    margin-top: 5px;
+    width:110%;
+    float: left;
+  }
 }
 .top-navbar nav ul {
   padding: 0;
@@ -171,17 +239,29 @@ a:hover, a:focus {
   list-style: none;
   display:inline-block;
   padding:0 20px;
+  @media screen and (max-width: 767px) { 
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 46px;
+    border-bottom:1px solid #fff;
+    background-color: #000;
+  }
+  a {
+     @media screen and (max-width: 767px) { 
+      color:white
+    } 
+  }
 }
 .top-navbar nav ul li:last-child {
-  padding-right: 0
+  padding-right: 0;
+  @media screen and (max-width: 767px) { 
+    border:none;
+    line-height: 47px
+  }
 }
+
 /* ----------------------- HOME */ 
-.top-navbar.selected{
-	position: fixed
-}
-.top-grey-bar.selected {
-	position: fixed;
-}
 
 /* TOP grey BAR */
 .top-grey-bar {
@@ -192,6 +272,14 @@ a:hover, a:focus {
   position:relative;
   text-align: right;
   z-index: 13;
+  @media screen and (max-width: 767px) {  
+    &.bottom-xs {
+      bottom: 0;
+      position: fixed;
+      height: 46px;
+      border-top: 1px solid #000;
+    }
+  }
 }
 
 .top-grey-bar span{
@@ -203,23 +291,19 @@ a:hover, a:focus {
   color:#232323;
   font-size: 1em;
   letter-spacing: 0.1em;
+  &.start {
+    @media screen and (max-width: 767px) {  
+      padding-top:1em;
+      text-align: center
+    }
+  }
+  a {
+    color:#232323;
+  }
+  a:hover {
+    color: #fff8ab;
+  }
 }
-
-.top-grey-bar span a {
-	color:#232323;
-}
-.top-grey-bar span a:hover {
-	color: #fff8ab;
-}
-.top-grey-bar span.only-xs a {
-	color:#232323;
-	background: $highlight;
-	padding:0;
-	text-align: center;
-	display: block;
-	margin: 1px 0;
-}
-
 /* masthead */
 #masthead {
   z-index: 11;
@@ -227,6 +311,9 @@ a:hover, a:focus {
   height: 650px;
   background: url("../images/ChalkBackground.jpg");
   background-size: cover;
+  @media screen and (max-width: 767px) { 
+    max-height: 400px
+  } 
 }
 .home-center {
  display: table;
@@ -235,13 +322,10 @@ a:hover, a:focus {
  width: 100%;
  margin-bottom: 1em
 }
+
 .vert-mid {
   display: table-cell;
   vertical-align: middle;
-}
-
-img.featured-image {
-  margin: 0 auto
 }
 
 .home-center h2 {
@@ -250,7 +334,12 @@ img.featured-image {
   text-transform: uppercase;
   margin: 0;
   line-height: 46px;
-  color:white
+  color:white;
+  @media screen and (max-width: 767px) { 
+    font-size: 28px;
+    line-height: 30px;
+    word-wrap: break-word;
+  }
 }
 .home-center h3 {
   font-family: $font-highlight-bold;
@@ -262,6 +351,9 @@ img.featured-image {
 
 .find-out-about {
   padding:1em 0; 
+  @media screen and (max-width: 767px) { 
+    margin-top:1em;
+  }
   h3 {
     font-family: $font-highlight-bold;
     text-transform: uppercase;
@@ -286,6 +378,10 @@ img.featured-image {
     background-position: 230px 16px;
     margin: 0;
     border-radius:0;
+    @media screen and (max-width: 767px) { 
+      width: 100%;
+      background-position: 94% 16px;
+    }
     span {
       text-transform: lowercase;  
     }
@@ -301,14 +397,18 @@ img.centered {
 /* ----------------------- HOME SECTIONS */ 
 .section {
   padding: 55px 0;
+  height:600px;
+  @media screen and (max-width: 767px) {  
+      height: 360px;
+  }
   .container{
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   .section-background{
     position: absolute;
-    height:600px;
+    height:100%;
     width:100%;
     top: 0;
     left: 0;
@@ -322,11 +422,18 @@ img.centered {
     text-transform: uppercase;
     margin: 0;
     line-height: 46px;
+    @media screen and (max-width: 767px) { 
+      font-size: 28px;
+      line-height: 30px;
+      word-wrap: break-word;
+    }
+  }
+  &.services {
+    height:100%
   }
   &.our-purpose{
     position: relative;
     background-color: #e7e7e7;
-    height: 600px;
     overflow: hidden;
     .section-background {
       background-position: 37% center;
@@ -340,7 +447,6 @@ img.centered {
   &.our-mission{
     position: relative;
     background-color: #1d1d1d;
-    height: 600px;
     .line{
       color:#d9dadb;
       &:first-child{
@@ -351,7 +457,6 @@ img.centered {
   &.our-vision{
     position: relative;
     background-color: #e7e7e7;
-    height: 600px;
     .section-background {
       background-position: 85% center;
     }
@@ -364,7 +469,15 @@ img.centered {
   &.our-values{
     position: relative;
     background-color: #ffffff;
-    height: 600px;
+    @media screen and (max-width: 990px) {  
+      height: auto;
+    }
+    .container{
+      @media screen and (max-width: 990px) {  
+        top:0;
+        @include transform(none);
+      }
+    }
     text-align: center;
     .line{
       margin-bottom: 50px;
@@ -372,6 +485,9 @@ img.centered {
     .our-values_number{
       color: #fff048;
       margin-bottom: 30px;
+      @media screen and (max-width: 767px) { 
+        margin:20px 0
+      }
     }
     .our-values_header {
       font-family: $font-highlight-bold;
@@ -399,6 +515,9 @@ img.centered {
   padding-top:65px;
   text-align: center;
   position: relative;
+  @media screen and (max-width: 767px) { 
+    padding: 40px 10px 30px 10px;
+  }
 }
 
 /* grey title bar for sections */
@@ -434,6 +553,9 @@ img.icon {
 .panel .img-responsive {
   padding: 32px 0 84px;
   margin:0 auto;
+  @media screen and (max-width: 767px) { 
+    padding:15px
+  }
 }
 
 /* Clients Logo */
@@ -445,7 +567,10 @@ img.icon {
   margin: 0;
   padding-bottom: 10px; 
   letter-spacing: 0.14em;
-  text-align: center
+  text-align: center;
+  @media screen and (max-width: 767px) { 
+    font-size: .8em;
+  }
 }
 
 .logobar_break {
@@ -453,6 +578,9 @@ img.icon {
   border-color: #232323;
   margin-top: 5px;
   margin-bottom: 0px;
+  @media screen and (max-width: 767px) { 
+      width:80px;
+  }
 }
 
 
@@ -461,31 +589,41 @@ img.icon {
   top:0;
   transform: none
 }
-.service-item header{
-  border-right:1px solid #000
+.service-item {
+  @media screen and (max-width: 992px) { 
+    text-align: center!important
+  }
+  header{
+    border-right:1px solid #000;
+    @media screen and (max-width: 992px) { 
+      margin-bottom:.7em;
+      border-right:none;
+      padding-bottom:.7em;
+      border-bottom:1px solid #000;
+    }
+    h4.title{
+      padding:3px 0 0 52px;
+      text-transform: uppercase;
+      color: #232323;
+      font-family:$font-highlight-bold;
+      font-size: em(15,14);
+      margin: 0;
+      @media screen and (max-width: 992px) { 
+        font-size: 17px;
+        padding:25px 25px 0
+      }
+    }
+    img {
+      float:left;
+      max-height:40px;
+      @media screen and (max-width: 992px) { 
+        float:none;
+      }
+    }
+  }
 }
 .service-item:last-child header{
   border-right:none
-}
-.service-item header h4.title{
-  padding:3px 0 0 52px;
-  text-transform: uppercase;
-  color: #232323;
-  font-family:$font-highlight-bold;
-  font-size: em(15,14);
-  margin: 0;
-}
-.service-item header img{
-  float:left;
-  max-height:40px
-}
-
-.service-item p{
-   font-family:$font-stack;
-  font-weight: $font-medium;
-  font-size: em(13,14);
-  margin-top: 20px;
-  letter-spacing: 0.025em;
 }
 
 .service-item .read-more{
@@ -503,14 +641,66 @@ img.icon {
 
 /* TESTIMONIALS  */
 
-.testimonials .header{
-  color: #232323;
-  font-family:$font-stack;
-  font-weight: $font-heavy;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 20px auto 50px;
+.testimonials {
+  .header{
+    color: #232323;
+    font-family:$font-stack;
+    font-weight: $font-heavy;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 20px auto 50px;
+    @media screen and (max-width: 767px) {  
+      margin: 30px auto 0;
+      font-size: 1.1em;
+      padding: 0 15px
+    }
+  }
+  .testi {
+    p {
+      color: #232323;
+      font-family:$font-stack;
+      font-weight: $font-light;
+      text-align: justify;
+      line-height: 2.5;
+      font-size: 1.2em;
+      letter-spacing: 0.08em;
+      @media screen and (max-width: 767px) {  
+        line-height: 1.5;
+        font-size: .8em;
+      }
+    }
+    .witness{
+      color:#232323;
+      text-align: right;
+      margin-top: 35px;
+      .name{
+        font-family:$font-stack;
+        font-weight: $font-heavy;
+        font-size: 1em;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        @media screen and (max-width: 767px) {  
+          font-size: .9em;
+        }
+      }
+      .info{
+        font-family:georgia, serif;
+        font-size: 1em;
+        color: #232323;
+        font-style: italic;
+        @media screen and (max-width: 767px) {  
+          font-size: .8em;
+        }
+      }
+    }
+    hr.testi-break {
+      width:120px;
+      border-color: #232323;
+      margin-top: 10px;
+      float: right;
+    }
+  }
 }
 
 #testimonial-slider {
@@ -518,14 +708,19 @@ img.icon {
   margin-bottom: 55px;
 }
 
-#testimonial-slider .flex-direction-nav a  { 
-  display: block;
-  text-decoration:none; 
-  width: 30px; 
-  height: 60px; 
-  margin: -15px 0 0; 
-  text-indent: -9999px;
-  top:40%;
+#testimonial-slider .flex-direction-nav {
+  @media screen and (max-width: 767px) { 
+    display: none
+  }
+  a  { 
+    display: block;
+    text-decoration:none; 
+    width: 30px; 
+    height: 60px; 
+    margin: -15px 0 0; 
+    text-indent: -9999px;
+    top:40%;
+  }
 }
 #testimonial-slider .flex-direction-nav .flex-prev {
   background: url(../images/arrow-back-big.png) no-repeat;
@@ -536,66 +731,43 @@ img.icon {
   right:-100px;
 }
 
-.testi p{
-  color: #232323;
-   font-family:$font-stack;
-  font-weight: $font-light;
-  text-align: justify;
-  line-height: 2.5;
-  font-size: 1.2em;
-  letter-spacing: 0.08em
-}
-.witness{
-  color:#232323;
-  text-align: right;
-  margin-top: 35px
-}
-.witness .name{
-   font-family:$font-stack;
-  font-weight: $font-heavy;
-  font-size: 1em;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-.witness .info{
-  font-family:georgia, serif;
-  font-size: 1em;
-  color: #232323;
-  font-style: italic;
-}
-
-hr.testi-break {
-  width:120px;
-  border-color: #232323;
-  margin-top: 10px;
-  float: right;
-}
-
-.inThePress .header{
-	color: #232323;
-   font-family:$font-stack;
-  font-weight: $font-heavy;
-  font-size: 1.1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  display: inline-block;
-	float: left;
-	max-width: none;
-	line-height: 1.5;
-	margin: 5px auto;
-	width: 100%;
-}
 .inThePress {
   padding:30px 0 10px;
+  @media screen and (max-width: 767px) {  
+    margin: 0;
+  }
+  .header{
+  	color: #232323;
+     font-family:$font-stack;
+    font-weight: $font-heavy;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+  	float: left;
+  	max-width: none;
+  	line-height: 1.5;
+  	margin: 5px auto;
+  	width: 100%;
+    @media screen and (max-width: 767px) {  
+      margin: 0;
+    }
+    @media screen and (min-width: 992px) {  
+      font-size: 1em;
+      margin: 6px 40px 0 6px;
+      max-width: 75px;
+    }
+  }
+  img.press-logos {
+    height:auto;
+    width:100%;
+    max-width: 819px;
+    display: block;
+    padding-top: 8px
+  }
 }
 
-img.press-logos {
-  height:auto;
-  width:100%;
-  max-width: 819px;
-  display: block;
-  padding-top: 8px
-}
+
 /* ----------------------- PAGES */ 
 
 #main h2, #single h2, #error h2, #page h2 {
@@ -613,11 +785,17 @@ img.press-logos {
  padding-bottom: 2px;
  color:#000;
 }
-page p {
+#page p {
   line-height: 1.5;
   color: #232323;
-  font-size: 18px
+  font-size: 18px;
+  @media screen and (max-width: 767px) { 
+    font-size: 16px;
+    line-height: 1.3;
+    padding:0 1em;
+  }
 }
+
 .text p::first-letter {
   font-family: 'Raleway';
   font-weight: 900;
@@ -630,11 +808,16 @@ page p {
 #page h1, .h1 {
   font-family:$font-stack;
   font-weight: $font-heavy;
- letter-spacing: 0.04em;
- text-transform: uppercase;
- font-size:32px;
- line-height: 29px;
- padding-right:5em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size:32px;
+  line-height: 29px;
+  padding-right:5em;
+  @media screen and (max-width: 767px) { 
+    font-size:20px;
+    line-height: 24px;
+    padding-right: 0em;
+  }
 }
 #page h1:first-of-type {
   padding-bottom: 0;
@@ -652,7 +835,11 @@ page p {
    font-family:$font-stack;
   font-weight: $font-heavy;
   text-transform: uppercase;
-  font-size: 23px
+  font-size: 23px;
+  @media screen and (max-width: 767px) { 
+    text-shadow:none;
+    background: none;
+  }
 }
 #page h4, .h4 {
    font-family:$font-stack;
@@ -684,7 +871,11 @@ color:$highlight
   margin-top: 0
 }
 #page blockquote p {
-  font-size: 22px
+  font-size: 22px;
+  @media screen and (max-width: 767px) { 
+    font-size: 18px;
+    padding: 0;
+  }
 }
 #page blockquote p strong {
    font-family:$font-stack;
@@ -696,16 +887,31 @@ color:$highlight
   background: url(../images/circle.png)repeat-y top left;
   padding-left: 37px;
   margin:10px 0;
+  @media screen and (max-width: 767px) { 
+    background: transparent;
+    padding-left: 20px;
+  }
 }
 #page ol li{
   line-height: 32px;
   padding: 1px 0 13px 15px;
-  font-size: 16px
+  font-size: 16px;
+  @media screen and (max-width: 767px) { 
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 0 5px;
+  }
 } 
 #page ul {
   margin:0;
   padding:0;
-  font-size: 18px
+  font-size: 18px;
+  @media screen and (max-width: 767px) { 
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    margin-top: 18px;
+  }
 }
 #page ul li{
   list-style: none;
@@ -713,6 +919,15 @@ color:$highlight
   background-position: 0 5px;
   padding:0 30px;
   margin:5px 0;
+  @media screen and (max-width: 767px) { 
+    background-position: 0 5px;
+    padding: 0 0 10px 15px;
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.3;
+    color: black;
+    font-weight: 700;
+  }
 } 
 
 #page hr {
@@ -724,6 +939,7 @@ color:$highlight
   display: block;
   height: auto;
 }
+
 /* page-block */
 .page-block {
    margin-bottom: 50px
@@ -737,6 +953,9 @@ color:$highlight
 }
 .case-study.col-md-8 {
   margin-right: 33.3333%;
+  @media screen and (max-width: 767px) { 
+    margin-right: 0
+  }
 }
 #page h2.case-header {
   font-family:$font-slim;
@@ -769,10 +988,18 @@ color:$highlight
 
 .service-list {
   margin:2em 0;
+  @media screen and (max-width: 767px) {  
+    text-align: center!important;
+  }
 }
 .service-list img.icon {
   background-color: #fff;
   padding:0;
+  @media screen and (max-width: 767px) {  
+    max-height: 75px;
+    padding: 0.75em;
+    margin: 0 auto 15px;
+  }
 }
 
 #page h5.service-title {
@@ -801,6 +1028,9 @@ color:$highlight
 	padding: 0;
 	width: 100%;
 	margin-top: 5em;
+  @media screen and (max-width: 767px) { 
+    margin-top:0
+  }
 }
 #page ul.service-menu li {
 	float: left;
@@ -811,7 +1041,13 @@ color:$highlight
 	text-align: center;
 	min-height: 175px;
 	margin:0 13.5% 6.75%;
+  @media screen and (max-width: 767px) { 
+    width: 100%;
+    margin:0;
+    padding:60px 1em 1em;
+  }
 }
+
 #page ul.service-menu li a {
 	padding: 0;
 	font-size: 1.1em;
@@ -820,6 +1056,9 @@ color:$highlight
 	color: #404040;
 	text-transform: uppercase;
 	border:none;
+  @media screen and (max-width: 767px) { 
+    font-size: 1.3em
+  }
 }
 
 #page ul.service-menu li:first-child{
@@ -834,15 +1073,15 @@ color:$highlight
 #page ul.service-menu li:nth-child(4) {
 	background-image: url(../images/icon5.png);
 }
-// #page ul.service-menu li:nth-child(5) {
-// 	background-image: url(../images/icon5.png);
-// }
 
 div#featured-image {
 	width: 31%;
 	display: block;
 	float: right;
 	margin-left: 2%;
+  @media screen and (max-width: 767px) { 
+    width:50%;
+  }
 }
 
 #page ul.service-menu li:hover,
@@ -897,11 +1136,18 @@ h3.other-header {
 }
 /* ABOUT */
 #page ul.about {
-	margin-top: 4em
+	margin-top: 4em;
+  @media screen and (max-width: 767px) { 
+    margin-top:0
+  }
 }
 #page ul.about li {
 	width: 100%;
 	padding:0;
+  @media screen and (max-width: 767px) { 
+    width: 305px;
+    display: inline-block;
+  }
 }
 #page ul.about li a{
 	display: block;
@@ -938,7 +1184,10 @@ h3.other-header {
 /* COACHING */
 
 #page ul.coaching-menu {
-	margin-top: 4em
+	margin-top: 4em;
+  @media screen and (max-width: 767px) { 
+    margin-top:0
+  }
 }
 #page ul.coaching-menu li {
 	width: 100%;
@@ -1151,12 +1400,20 @@ img.aligncenter{
   padding-top: 32px;
   letter-spacing: 0.08em;
   font-size: 0.9em;
-   position:relative;
+  position:relative;
+  @media screen and (max-width: 767px) { 
+    height:140px;
+    padding-top: 17px;
+    text-align: center!important
+  }
 }
 
 .site-footer ul {
   padding-left: 15px;
   margin:0;
+  @media screen and (max-width: 767px) { 
+    padding:0;
+  }
 }
 .site-footer ul li{
   display: inline-block;
@@ -1179,12 +1436,19 @@ img.aligncenter{
 }
 .connect {
   float: right;
-  padding-right: 20px
+  padding-right: 20px;
+  @media screen and (max-width: 767px) { 
+    float:none;
+    padding: 0 0 0 20px;
+  }
 }
 .connect a.phone{
   float:left;
   display: block;
   margin-right: 20px;
+  @media screen and (max-width: 767px) { 
+    display: none
+  }
 }
 .social-connect{
   float:left;
@@ -1193,12 +1457,29 @@ img.aligncenter{
   margin-right:10px;
   margin-top: -7px;
   background: url(../images/social-sprite.png);
-  cursor: pointer
+  cursor: pointer;
+  @media screen and (max-width: 767px) { 
+    margin: 7px;
+    display: inline-block;
+    float: none;
+  }
 }
 a.social-connect:last-of-type{
   margin-right: 0; 
+  @media screen and (max-width: 767px) { 
+    margin-right: 28px
+  }
 }
 .social-connect.twitter{ background-position: -40px 0; }
 .social-connect.google{ background-position: -80px 0; }
 .social-connect.linkdin{ background-position: -120px 0; }
 .social-connect.email{ background-position: -160px 0; }
+
+
+@media screen and (max-width: 1024px) {
+  #main, #single, #error, #page {
+    background-image: none!important;
+  }
+}
+
+

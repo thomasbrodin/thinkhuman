@@ -1,6 +1,6 @@
   {% block footer %}
 	  <footer class="site-footer">
-			<div class="col-md-7">
+			<div class="col-sm-7">
 				<ul>
 					<li>©&nbsp;{{"now"|date('Y')}}&nbsp;&nbsp;&nbsp;{{site.name}}</li>
 				{% for item in footer.get_items %}
@@ -11,7 +11,7 @@
 				</ul>
 			</div>
 
-			<div class="col-md-5">
+			<div class="col-sm-5">
 				<div class="connect">
 				  <a class="phone" href="tel:{{options.phone_number}}">{{options.phone_number}}</a>
 				  {% if options.facebook %}
@@ -34,14 +34,6 @@
 	</footer>
 
 	{{ function('wp_footer') }}
-	<script>
-	(function() {
-		[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
-	  		new SelectFx(el, {
-			    stickyPlaceholder: false
-			});
-		});
-	})();
-	</script>
+
 
 {% endblock %}
