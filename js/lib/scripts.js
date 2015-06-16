@@ -44,8 +44,11 @@ jQuery(document).ready(function($) {
       itemWidth: 180,
       itemMargin:0,
       keyboard: true,
-      move:1,
-      directionNav: false,
+      move:3,
+      slideshowSpeed: 7000,    
+      animationSpeed: 600,  
+      directionNav: true,
+      controlsContainer: "#logo-slider nav",
       controlNav: false,
       minItems: getGridSize(),
       maxItems: getGridSize(),
@@ -69,9 +72,8 @@ jQuery(document).ready(function($) {
     resizeFold();
   }
   function getGridSize() {
-        return (window.innerWidth < 320) ? 1 :
-               (window.innerWidth < 400) ? 2 :
-               (window.innerWidth < 768) ? 3 :
+        return (window.innerWidth < 320) ? 2 :
+               (window.innerWidth < 400) ? 3 :
                (window.innerWidth < 992) ? 4 :
                (window.innerWidth < 1200) ? 5 : 6 ;
   }
