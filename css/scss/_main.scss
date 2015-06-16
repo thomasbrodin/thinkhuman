@@ -38,7 +38,6 @@ a:hover, a:focus {
 }
 
 #content {
-  padding-bottom:70px;
   z-index: 1;
   position: relative;
   width:100%;
@@ -394,6 +393,19 @@ img.centered {
   margin:0 auto  
 }
 
+
+/* clients Logos */
+div#logobar {
+  padding: 65px 0;
+}
+.img-logo {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  line-height: 1.42857143;
+}
+
 /* ----------------------- HOME SECTIONS */ 
 .section {
   padding: 55px 0;
@@ -492,9 +504,8 @@ img.centered {
     .our-values_header {
       font-family: $font-highlight-bold;
       font-size:18px;
-      line-height:1.2;
+      line-height:1.4;
       text-transform: uppercase;
-      padding: 0px 2em;
     }
     .our-values_divider {
       width:65%;
@@ -582,8 +593,6 @@ img.icon {
       width:80px;
   }
 }
-
-
 /* SERVICES */
 .services .container{
   top:0;
@@ -731,39 +740,52 @@ img.icon {
   right:-100px;
 }
 
+
+/* Press Logos */
+.custom.col-md-1 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 50%;
+    float: left;
+    min-height: 125px;
+    @media screen and (min-width: 768px) {
+      width: 25%;
+    }
+    @media screen and (min-width: 992px) {
+      width: 12.5%;
+       min-height: 0
+    }
+}
 .inThePress {
   padding:30px 0 10px;
   @media screen and (max-width: 767px) {  
     margin: 0;
   }
   .header{
-  	color: #232323;
-     font-family:$font-stack;
+    color: #232323;
+    font-family:$font-stack;
     font-weight: $font-heavy;
     font-size: 1.1em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    display: inline-block;
-  	float: left;
-  	max-width: none;
-  	line-height: 1.5;
-  	margin: 5px auto;
-  	width: 100%;
+    line-height: 1.5;
     @media screen and (max-width: 767px) {  
       margin: 0;
+      text-align:center
     }
     @media screen and (min-width: 992px) {  
       font-size: 1em;
-      margin: 6px 40px 0 6px;
-      max-width: 75px;
+      text-align:left;
     }
   }
-  img.press-logos {
-    height:auto;
-    width:100%;
-    max-width: 819px;
-    display: block;
-    padding-top: 8px
+  img.press-logo {
+    max-width:100%;
+    padding:.2em .4em;
+    @media screen and (min-width: 1200px) {  
+      padding:.6em .8em
+    }
   }
 }
 

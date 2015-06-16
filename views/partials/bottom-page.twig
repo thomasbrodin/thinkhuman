@@ -1,7 +1,17 @@
-<div id="logobar" class="panel">
 
-	<img src="{{theme.uri}}/images/icon-clients.png" class="icon" alt="icon">
-	<h3 class="logobar_title">OUR CLIENTS</h3>
-	<hr class="logobar_break">
-	<img class="img-responsive" src="{{theme.uri}}/images/logos-clients.png" alt="Client logos">
+<div id="logobar" class="greyPanel">        
+    <div class="container gutter">
+
+      {% set images = options.client_logos %}
+      <div id="logo-slider" class="flexslider">
+        <ul class="slides">
+            {% for image in images %}
+              <li class="client-logo">          
+                <img class="img-logo" src="{{TimberImage(image.id).get_src|resize(300)}}" alt="{{image.title}}">
+              </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+        
 </div>

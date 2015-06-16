@@ -29,10 +29,20 @@
     </div>
 
   	<!--   Clients logos bar       -->
-  	<div id="logobar" class="greyPanel">
+  	<div id="logobar" class="greyPanel">        
+        <div class="container gutter">
 
-        <img class="hidden-xs img-responsive" src="{{theme.uri}}/images/logos-clients-home.png" alt="Client logos">
-        <img class="visible-xs-block img-responsive" src="{{theme.uri}}/images/logos-clients-home-mobile.png" alt="Client logos">
+          {% set logos = options.client_logos %}
+          <div id="logo-slider" class="flexslider">
+            <ul class="slides">
+                {% for image in logos %}
+                  <li class="client-logo">          
+                    <img class="img-logo" src="{{TimberImage(image.id).get_src|resize(300)}}" alt="{{image.title}}">
+                  </li>
+                {% endfor %}
+            </ul>
+          </div>
+        </div>
 
     </div>
 
@@ -195,12 +205,26 @@
         </div>
         <div class="inThePress">
         	<div class="container">
-	        	<h5 class="header">In the Press</h5>
-	          <img class="hidden-xs press-logos" src="{{theme.uri}}/images/logos-press.png" alt="logos">
-            <img class="visible-xs-block press-logos" src="{{theme.uri}}/images/logos-press-mobile.png" alt="logos">
-	        </div>
-        </div>
-        
+            <div class="row">
+
+	        	  <h5 class="col-md-1 header">In the Press</h5>
+              
+              <div class="col-md-11">
+                <div class="row">
+	               {% set logosPress = post.get_field('logos_press') %}
+                  {% for image in logosPress %}
+                  {% set blocks = (12 / loop.length)|round(0, 'floor') %}
+                    <div class="custom col-md-{{blocks}}"> 
+                      <a href="{{image.alt}}" target="_blank">         
+                        <img class="press-logo" src="{{TimberImage(image.id).get_src|resize(200)}}" alt="{{image.title}}">
+                      </a>
+                    </div>
+                  {% endfor %}
+                </div>
+	           </div>
+
+          </div>
+        </div>        
       </div>
 
 {% endblock %}
