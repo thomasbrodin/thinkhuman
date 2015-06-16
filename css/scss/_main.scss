@@ -84,7 +84,7 @@ a:hover, a:focus {
   }
 }
 .gutter-xlg{
-  padding:0 90px ;
+  padding:0 80px ;
    @media screen and (max-width: 767px) {
     padding:0 1.5em ;
   }
@@ -149,7 +149,7 @@ a:hover, a:focus {
 	color: #000;
 }
 .fa.phone {
-	padding: 16px 9px 0 0;
+	padding: 12px 9px 0 0;
 	font-size: 1.9em;
 	float: right;
 }
@@ -159,18 +159,21 @@ a:hover, a:focus {
 }
 .top-navbar .navbar-toggle {
 	margin:10px 15px 0 0;
-	padding: 4px 0 0;
+	padding: 0;
 }
 .top-navbar .logo-img {
   float:left;
   display: block;
   max-height:62px;
+  @media screen and (max-width: 767px) { 
+      max-height: 50px;
+  }  
 }
 .top-navbar .logo {
   float:left;
   display: block;
   @media screen and (max-width: 767px) { 
-    margin-left: 15px;
+    margin-left: 9px;
   }
 }
 .top-navbar .brand{
@@ -180,7 +183,8 @@ a:hover, a:focus {
   margin-top:5px;
   @media screen and (max-width: 767px) { 
     margin-left:10px;
-    width: 190px;
+    width: 150px;
+    margin-top: 0px
   }
 }
 .top-navbar .header {
@@ -193,9 +197,8 @@ a:hover, a:focus {
   display: block;
   line-height: 1;
   @media screen and (max-width: 767px) { 
-    padding-top: 0;
     font-size: 1.5em;
-    padding-top: 10px;
+    padding-top: 7px;
   }
 }
 .top-navbar .sub-head {
@@ -210,7 +213,7 @@ a:hover, a:focus {
   @media screen and (max-width: 767px) { 
     font-size: .7em;
     margin: 0;
-    padding: 0 6em 0 0.2em;
+    padding: 0 1em 0 0.2em;
   }
 }
 
@@ -397,13 +400,15 @@ img.centered {
 /* clients Logos */
 div#logobar {
   padding: 65px 0;
+  @media screen and (max-width: 767px) { 
+    padding: 40px 10px 30px 10px;
+  }
 }
 .img-logo {
   display: inline-block;
   max-width: 100%;
   height: auto;
-  padding: 20px;
-  line-height: 1.42857143;
+  padding: 1em;
 }
 
 /* ----------------------- HOME SECTIONS */ 
@@ -497,7 +502,7 @@ div#logobar {
     .our-values_number{
       color: #fff048;
       margin-bottom: 30px;
-      @media screen and (max-width: 767px) { 
+      @media screen and (max-width: 990px) { 
         margin:20px 0
       }
     }
@@ -515,7 +520,13 @@ div#logobar {
       font-family: $font-highlight;
       font-size:14px;
       color: #191919;
-      padding: 0px 2em;
+      padding: 0px 6em;
+      @media screen and (min-width: 992px) {
+         padding: 0px 1em;
+      }
+      @media screen and (min-width: 1200px) {
+         padding: 0px 2em;
+      }
     }
   }
 }
@@ -772,7 +783,7 @@ img.icon {
     text-transform: uppercase;
     line-height: 1.5;
     @media screen and (max-width: 767px) {  
-      margin: 0;
+      margin: 1em 0;
       text-align:center
     }
     @media screen and (min-width: 992px) {  

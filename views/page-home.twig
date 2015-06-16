@@ -37,7 +37,7 @@
             <ul class="slides">
                 {% for image in logos %}
                   <li class="client-logo">          
-                    <img class="img-logo" src="{{TimberImage(image.id).get_src|resize(300)}}" alt="{{image.title}}">
+                    <img class="img-logo" src="{{TimberImage(image.id).get_src}}" alt="{{image.title}}">
                   </li>
                 {% endfor %}
             </ul>
@@ -127,9 +127,9 @@
       <div class="section our-values">
           <div class="container gutter">
               <h2 class="line">Our Values</h2>
-              {% for key,value in post.get_field('values') %}
+              {% for value in post.get_field('values') %}
                 <div class='col-md-3'>
-                    <div class="our-values_number">0{{key}}</div>
+                    <div class="our-values_number">0{{loop.index}}</div>
                     <div class="our-values_header">{{value.header}}</div>
                     <hr class="our-values_divider"></hr>
                     <div class="our-values_description">{{value.description}}</div>
