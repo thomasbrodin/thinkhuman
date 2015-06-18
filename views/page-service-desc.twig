@@ -3,30 +3,39 @@
 {% block content %}
 {% set bgImage = post.get_field('background_image_right_side') %}
 	
-	<div id="{{post.post_type}}" {% if bgImage %}style="background:url({{TimberImage(bgImage.url).src}}) no-repeat right top;"{% endif %}>
-        <div class="container">
+	<div id="{{post.post_type}}">
+       
+  		<div class="header-image">	
+  			{% if post.get_field('header_image') %}
+  				<div class="header-background" style="background-image:url('{{TimberImage(post.get_field('header_image')).src}}')"></div>
+			{% endif %}
+			<div class="container header-caption">
+				<div class="col-md-8">
+					<h1>{{post.title}}</h1>
+					{% if post.get_field('page_quote') %}
+						<blockquote class="header"><p>{{post.get_field('page_quote')}}</p></blockquote>
+					{% endif %}
+					{% if post.get_field('quote_author') %}
+						<p class="author">{{post.get_field('quote_author')}}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
           <div class="row">
           			
-          	<div class="{% if bgImage %}col-md-8{% else %}col-md-12{% endif %}">	
-
-	          	{% if post.get_thumbnail %}
-					<div id="featured-image">
-						<img class="page-img" src="{{post.get_thumbnail.get_src|resize(400)}}" />
-					</div>
-				{% endif %}
-
-				<h1>{{post.title}}</h1>
-
-				{% if post.page_blocks %}
+				{% if post.get_field('page_blocks') %}
 					{% for row in post.get_field('page_blocks') %}
 
 						{% if row.acf_fc_layout == 'block_text' %}
-							<div class="page-block text">
+							<div class="page-block col-md-8 text">
 								{{ row.service_text }}
 							</div>
 						{% endif %}
+
 						{% if row.acf_fc_layout == 'case_study' %}
-							<div class="page-block case-study{% if row.block_color == 'white' %} white{% endif %}{% if not bgImage %} col-md-8{% endif %}">
+							<div class="page-block col-md-8 case-study"{% if row.case_bg_color %} style="background-color:{{row.case_bg_color}}"{% endif %}>
 								<h2 class="case-header">{{ row.case_header }}</h2>
 								<h3 class="case-title">{{ row.casestudy_title }}</h3>
 								{{ row.casestudy_description }}
@@ -37,21 +46,22 @@
 						{% endif %}
 
 						{% if row.acf_fc_layout == 'list_icons' %}
-							<div class="page-block {% if not bgImage %} col-md-8{% endif %}">
+							<div class="page-block col-md-8">
 								
 								{% for row_rep in row.row_icon_text %}
 									 <div class="service-list">
 						            	<div class="row">
 								            <div class="col-sm-2">
-								               <img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
+
+								            	{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
+								             		<img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
+												{% if row_rep.service_link %}</a>{% endif %}
 								            </div>
 								            <div class="col-sm-10">
-								            	<h5 class="service-title">{{ row_rep.service_title }}</h5>
-							          			<p class="service-description">{{ row_rep.short_description }}
-							          				{% if row_rep.service_link %}
-							          					<a class="service-link" href="{{ row_rep.service_link }}">Read More</a>
-							          				{% endif %}
-							          			</p>
+								            	{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
+													<h5 class="service-title">{{ row_rep.service_title }}</h5>
+												{% if row_rep.service_link %}</a>{% endif %}
+							          			<p class="service-description">{{ row_rep.short_description }}</p>
 							          		</div> 
 								          
 							           </div>
@@ -66,22 +76,20 @@
 					{{post.content}}
 				{% endif %}
 
-          	</div>
-
-
 				{% if post.can_edit %}
 				    <a class="edit" href="{{post.get_edit_url}}">Edit me!</a>
 				{% endif %}
         </div>
       </div>
-	</div><!-- content -->
 
-	{% if servicespages %}
-		<div class="related-services">
+	</div><!-- page -->
+
+	{% if childpages %}
+		<div class="related-pages">
 			<div class="container">
-				<h3 class="other-header">Other Services</h3>
-				<ul class="other-services-list">
-					{{ servicespages }}
+				<h3 class="other-header">Related pages</h3>
+				<ul class="other-pages-list">
+					{{ childpages }}
 				</ul>
 			</div>
 		</div>

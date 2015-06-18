@@ -438,7 +438,19 @@ img.centered {
     background-color: #e7e7e7;
     overflow: hidden;
     .section-background {
-      background-position: 37% center;
+      @media screen and (max-width: 768px) { 
+        background-position: 38% center;
+        background-size: 1800px;
+      }
+      @media screen and (min-width: 768px) { 
+        background-position: 34% center;
+      }
+      @media screen and (min-width: 992px) { 
+        background-position: 39% center;
+      }
+      @media screen and (min-width: 1200px) { 
+         background-position: 43% center;
+      }
     }
     .line{
       &:first-child {
@@ -505,7 +517,9 @@ img.centered {
       font-family: $font-highlight;
       font-size:14px;
       color: #191919;
-      padding: 0px 6em;
+      @media screen and (min-width: 768px) {
+         padding: 0px 6em;
+      }
       @media screen and (min-width: 992px) {
          padding: 0px 1em;
       }
@@ -619,6 +633,10 @@ div#logobar {
   }
   header{
     border-right:1px solid #000;
+    a {
+      position: relative;
+      display: block;
+    }
     @media screen and (max-width: 992px) { 
       margin-bottom:.7em;
       border-right:none;
@@ -626,16 +644,21 @@ div#logobar {
       border-bottom:1px solid #000;
     }
     h4.title{
-      padding:3px 0 0 52px;
+      @media screen and (max-width: 992px) { 
+        font-size: 17px;
+        padding:25px 25px 0
+      }
+      @media screen and (min-width: 992px) { 
+        padding:6px 0 0 52px;
+      }
+      @media screen and (min-width: 1200px) { 
+        padding:6px 37px 0 52px;
+      }
       text-transform: uppercase;
       color: #232323;
       font-family:$font-highlight-bold;
       font-size: em(15,14);
       margin: 0;
-      @media screen and (max-width: 992px) { 
-        font-size: 17px;
-        padding:25px 25px 0
-      }
     }
     img {
       float:left;
@@ -815,6 +838,56 @@ div#logobar {
   margin-bottom: 35px
 }
 
+#page .header-image {
+  position: relative;
+  background-color: #E7E7E7;
+  overflow: hidden;
+  height: 450px;
+  width: 100%;
+  .header-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px) { 
+      background-position: left;
+    }
+    @media screen and (max-width: 992px) { 
+      position:relative;
+      height: 50%;
+      background-size: contain;
+      background-position: center;
+    }
+    @media screen and (min-width: 992px) { 
+      background-position: 90% center;
+    }
+    @media screen and (min-width: 1200px) { 
+       background-position: 85% center;
+    }
+  }
+  .header-caption {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+    @media screen and (max-width: 992px) { 
+      top: 0%;
+      @include transform(none);
+    }
+    h1{
+      margin: 0;
+      @media screen and (min-width: 992px) { 
+        margin-bottom: 3em;
+      }
+    }
+    blockquote {
+      margin:0;
+      padding:0 4em 0 0;
+    }
+
+  }
+}
 /* PAGE TYPO */
 
 #page a {
@@ -838,6 +911,7 @@ div#logobar {
   font-weight: 900;
   font-size: 32px;
 }
+
 #page p strong {
    font-family:$font-stack;
   font-weight: $font-bold;
@@ -851,7 +925,7 @@ div#logobar {
   line-height: 29px;
   padding-right:5em;
   @media screen and (max-width: 767px) { 
-    font-size:20px;
+    font-size:em(20);
     line-height: 24px;
     padding-right: 0em;
   }
@@ -898,28 +972,27 @@ div#logobar {
 #page h6, .h6 {
 color:$highlight
 }
+
 #page blockquote {
   padding: 30px 0;
    font-family:$font-stack;
   font-weight: $font-light;
-}
-#page blockquote:first-of-type {
-  padding-top:0;
-  margin-top: 0
+  border:none
 }
 #page blockquote p {
   font-size: 22px;
   @media screen and (max-width: 767px) { 
-    font-size: 18px;
+    font-size: 14px;
     padding: 0;
   }
 }
-#page blockquote p strong {
+#page p.author {
    font-family:$font-stack;
   font-weight: $font-heavy;
   text-transform: uppercase;
   font-size: 14px;
 }
+
 #page ol{ 
   background: url(../images/circle.png)repeat-y top left;
   padding-left: 37px;
@@ -979,7 +1052,8 @@ color:$highlight
 
 /* page-block */
 .page-block {
-   margin-bottom: 50px
+   margin-bottom: 50px;
+   clear: both;
 }
 .case-study {
   background-color:$highlight;
@@ -1127,8 +1201,8 @@ div#featured-image {
 	opacity: .7
 }
 
-.related-services {
-  background-color: $highlight;
+.related-pages {
+  background-color: white;
   color: white;
   padding: 40px 0 55px;
   position:relative
@@ -1146,31 +1220,22 @@ h3.other-header {
   border-bottom: 1px solid #fff;
 }
 
-.other-services-list {
+.other-pages-list {
   margin-bottom: 0;
   padding:0
 }
-.other-services-list li {
+.other-pages-list li {
   font-family:$font-stack;
   font-weight: $font-heavy;
   background-repeat:no-repeat;
   list-style: none;
   padding-left: 30px;
-  margin-bottom: 6px;
-  text-transform: capitalize
+  margin-bottom: 8px;
+  line-height:16px;
+  text-transform: capitalize;
+  background-image: url(../images/LeDot.png);
 }
-.other-services-list li:first-child{
-  background-image: url(../images/icon1-sm.png);
-}
-.other-services-list li:nth-child(2) {
-  background-image: url(../images/icon2-sm.png);
-}
-.other-services-list li:nth-child(3) {
-  background-image: url(../images/icon3-sm.png);
-}
-.other-services-list li:nth-child(4) {
-  background-image: url(../images/icon5-sm.png);
-}
+
 /* ABOUT */
 div#page {
    @media screen and (min-width: 992px) { 
@@ -1178,7 +1243,7 @@ div#page {
   }
 }
 #page ul.about {
-	margin: 2em;
+	margin: 0;
   @media screen and (min-width: 992px) { 
     margin:4em
   }

@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Services Page
+ * Template Name: Modular Page
  * 
  */
 
@@ -16,6 +16,6 @@ $args = array(
         'post_type' => 'page',
         'post_parent' => $parent,
     );
-$context ['servicespages'] =  wp_list_pages("title_li=&child_of=" . $parent . "&depth=1&&echo=0");
+$context ['childpages'] =  wp_list_pages("title_li=&child_of=" . $parent . "&depth=1&&echo=0");
 
 Timber::render(array('page-service-desc.twig'), $context);
