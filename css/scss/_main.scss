@@ -1111,9 +1111,12 @@ div#logobar {
     border-color: #232323!important
   }
   .card_description {
-    font-family: $font-medium;
-    font-size:14px;
-    color: #191919;
+    p {
+      font-family: $font-medium;
+      font-size:14px;
+      color: #191919;
+      text-align:center
+    }
     @media screen and (min-width: 768px) {
        padding: 0px 6em;
     }
@@ -1223,7 +1226,8 @@ div#logobar {
   background-color: white;
   color: white;
   padding: 40px 0 55px;
-  position:relative
+  position:relative;
+  border-top: 1px solid grey;
 }
 
 h3.other-header {

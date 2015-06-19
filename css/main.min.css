@@ -15191,66 +15191,67 @@ div#logobar {
   #page section.cards .card_divider {
     width: 65%;
     border-color: #232323 !important; }
-  /* line 1113, scss/_main.scss */
-  #page section.cards .card_description {
+  /* line 1114, scss/_main.scss */
+  #page section.cards .card_description p {
     font-family: "Agenda Medium", sans-serif;
     font-size: 14px;
-    color: #191919; }
-    @media screen and (min-width: 768px) {
-      /* line 1113, scss/_main.scss */
-      #page section.cards .card_description {
-        padding: 0px 6em; } }
-    @media screen and (min-width: 992px) {
-      /* line 1113, scss/_main.scss */
-      #page section.cards .card_description {
-        padding: 0px 1em; } }
-    @media screen and (min-width: 1200px) {
-      /* line 1113, scss/_main.scss */
-      #page section.cards .card_description {
-        padding: 0px 2em; } }
+    color: #191919;
+    text-align: center; }
+  @media screen and (min-width: 768px) {
+    /* line 1113, scss/_main.scss */
+    #page section.cards .card_description {
+      padding: 0px 6em; } }
+  @media screen and (min-width: 992px) {
+    /* line 1113, scss/_main.scss */
+    #page section.cards .card_description {
+      padding: 0px 1em; } }
+  @media screen and (min-width: 1200px) {
+    /* line 1113, scss/_main.scss */
+    #page section.cards .card_description {
+      padding: 0px 2em; } }
 
-/* line 1129, scss/_main.scss */
+/* line 1132, scss/_main.scss */
 .service-list {
   margin: 2em 0; }
   @media screen and (max-width: 767px) {
-    /* line 1129, scss/_main.scss */
+    /* line 1132, scss/_main.scss */
     .service-list {
       text-align: center !important; } }
 
-/* line 1135, scss/_main.scss */
+/* line 1138, scss/_main.scss */
 .service-list img.icon {
   background-color: #fff;
   padding: 0; }
   @media screen and (max-width: 767px) {
-    /* line 1135, scss/_main.scss */
+    /* line 1138, scss/_main.scss */
     .service-list img.icon {
       max-height: 75px;
       padding: 0.75em;
       margin: 0 auto 15px; } }
 
-/* line 1145, scss/_main.scss */
+/* line 1148, scss/_main.scss */
 #page h5.service-title {
   margin: 0 0 6px; }
 
-/* line 1148, scss/_main.scss */
+/* line 1151, scss/_main.scss */
 #page p.service-description {
   margin: 0;
   font-size: 1em;
   line-height: 1.4; }
 
-/* line 1153, scss/_main.scss */
+/* line 1156, scss/_main.scss */
 #page a.service-link {
   border: 0;
   font-family: "Agenda Black", sans-serif;
   text-transform: uppercase; }
 
 /* SERVICES */
-/* line 1160, scss/_main.scss */
+/* line 1163, scss/_main.scss */
 #page h1.title {
   text-align: center;
   border: none; }
 
-/* line 1164, scss/_main.scss */
+/* line 1167, scss/_main.scss */
 #page ul.service-menu {
   list-style: none;
   margin: 0;
@@ -15258,11 +15259,11 @@ div#logobar {
   width: 100%;
   margin-top: 5em; }
   @media screen and (max-width: 767px) {
-    /* line 1164, scss/_main.scss */
+    /* line 1167, scss/_main.scss */
     #page ul.service-menu {
       margin-top: 0; } }
 
-/* line 1174, scss/_main.scss */
+/* line 1177, scss/_main.scss */
 #page ul.service-menu li {
   float: left;
   width: 23%;
@@ -15273,13 +15274,13 @@ div#logobar {
   min-height: 175px;
   margin: 0 13.5% 6.75%; }
   @media screen and (max-width: 767px) {
-    /* line 1174, scss/_main.scss */
+    /* line 1177, scss/_main.scss */
     #page ul.service-menu li {
       width: 100%;
       margin: 0;
       padding: 60px 1em 1em; } }
 
-/* line 1190, scss/_main.scss */
+/* line 1193, scss/_main.scss */
 #page ul.service-menu li a {
   padding: 0;
   font-size: 1.1em;
@@ -15289,40 +15290,41 @@ div#logobar {
   text-transform: uppercase;
   border: none; }
   @media screen and (max-width: 767px) {
-    /* line 1190, scss/_main.scss */
+    /* line 1193, scss/_main.scss */
     #page ul.service-menu li a {
       font-size: 1.3em; } }
 
-/* line 1203, scss/_main.scss */
+/* line 1206, scss/_main.scss */
 #page ul.service-menu li:first-child {
   background-image: url(../images/icon1.png); }
 
-/* line 1206, scss/_main.scss */
+/* line 1209, scss/_main.scss */
 #page ul.service-menu li:nth-child(2) {
   background-image: url(../images/icon2.png); }
 
-/* line 1209, scss/_main.scss */
+/* line 1212, scss/_main.scss */
 #page ul.service-menu li:nth-child(3) {
   background-image: url(../images/icon3.png); }
 
-/* line 1212, scss/_main.scss */
+/* line 1215, scss/_main.scss */
 #page ul.service-menu li:nth-child(4) {
   background-image: url(../images/icon5.png); }
 
-/* line 1216, scss/_main.scss */
+/* line 1219, scss/_main.scss */
 #page ul.service-menu li:hover,
 #page ul.about li:hover,
 #page ul.coaching-menu li:hover {
   opacity: 0.7; }
 
-/* line 1222, scss/_main.scss */
+/* line 1225, scss/_main.scss */
 .related-pages {
   background-color: white;
   color: white;
   padding: 40px 0 55px;
-  position: relative; }
+  position: relative;
+  border-top: 1px solid grey; }
 
-/* line 1229, scss/_main.scss */
+/* line 1233, scss/_main.scss */
 h3.other-header {
   color: #232323;
   text-transform: uppercase;
@@ -15332,12 +15334,12 @@ h3.other-header {
   letter-spacing: 0.1em;
   font-size: 2.125em; }
 
-/* line 1239, scss/_main.scss */
+/* line 1243, scss/_main.scss */
 .other-pages-list {
   margin-bottom: 0;
   padding: 0; }
 
-/* line 1243, scss/_main.scss */
+/* line 1247, scss/_main.scss */
 .other-pages-list li {
   font-family: "Agenda Semibold", sans-serif;
   background-repeat: no-repeat;
@@ -15350,27 +15352,27 @@ h3.other-header {
 
 /* ABOUT */
 @media screen and (min-width: 992px) {
-  /* line 1255, scss/_main.scss */
+  /* line 1259, scss/_main.scss */
   div#page {
     min-height: 450px; } }
 
-/* line 1260, scss/_main.scss */
+/* line 1264, scss/_main.scss */
 #page ul.about {
   margin-top: 4em;
   padding-left: 7px; }
   @media screen and (max-width: 767px) {
-    /* line 1260, scss/_main.scss */
+    /* line 1264, scss/_main.scss */
     #page ul.about {
       margin-top: 0; } }
 
-/* line 1267, scss/_main.scss */
+/* line 1271, scss/_main.scss */
 #page ul.about li {
   width: 100%;
   padding: 0;
   margin-bottom: 2em;
   line-height: 50px; }
 
-/* line 1273, scss/_main.scss */
+/* line 1277, scss/_main.scss */
 #page ul.about li a {
   display: block;
   border: none;
@@ -15383,34 +15385,34 @@ h3.other-header {
   padding-left: 65px;
   background-position: top left; }
 
-/* line 1285, scss/_main.scss */
+/* line 1289, scss/_main.scss */
 #page ul.about li:first-child {
   background-image: url(../images/OurStory.png); }
 
-/* line 1288, scss/_main.scss */
+/* line 1292, scss/_main.scss */
 #page ul.about li:nth-child(2) {
   background-image: url(../images/OurCoaches.png); }
 
-/* line 1291, scss/_main.scss */
+/* line 1295, scss/_main.scss */
 #page ul.about li:nth-child(3) {
   background-image: url(../images/Press.png); }
 
 /* COACHING */
-/* line 1297, scss/_main.scss */
+/* line 1301, scss/_main.scss */
 #page ul.coaching-menu {
   margin-top: 4em; }
   @media screen and (max-width: 767px) {
-    /* line 1297, scss/_main.scss */
+    /* line 1301, scss/_main.scss */
     #page ul.coaching-menu {
       margin-top: 0; } }
 
-/* line 1303, scss/_main.scss */
+/* line 1307, scss/_main.scss */
 #page ul.coaching-menu li {
   width: 100%;
   padding: 0;
   margin-bottom: 2em; }
 
-/* line 1308, scss/_main.scss */
+/* line 1312, scss/_main.scss */
 #page ul.coaching-menu li a {
   display: block;
   border: none;
@@ -15422,34 +15424,34 @@ h3.other-header {
   border: none;
   text-align: center; }
 
-/* line 1319, scss/_main.scss */
+/* line 1323, scss/_main.scss */
 #page ul.coaching-menu li:first-child {
   background: url(../images/about-life.png) no-repeat top center;
   height: 120px; }
 
-/* line 1323, scss/_main.scss */
+/* line 1327, scss/_main.scss */
 #page ul.coaching-menu li:first-child a {
   padding: 40px 170px 0 0; }
 
-/* line 1326, scss/_main.scss */
+/* line 1330, scss/_main.scss */
 #page ul.coaching-menu li:nth-child(2) {
   background: url(../images/about-career.png) no-repeat top center;
   height: 120px; }
 
-/* line 1330, scss/_main.scss */
+/* line 1334, scss/_main.scss */
 #page ul.coaching-menu li:nth-child(2) a {
   padding: 68px 0 0; }
 
-/* line 1333, scss/_main.scss */
+/* line 1337, scss/_main.scss */
 #page ul.coaching-menu li:nth-child(3) {
   background: url(../images/about-executive.png) no-repeat top center; }
 
-/* line 1336, scss/_main.scss */
+/* line 1340, scss/_main.scss */
 #page ul.coaching-menu li:nth-child(3) a {
   padding: 90px 0 0; }
 
 /* CONTACT */
-/* line 1340, scss/_main.scss */
+/* line 1344, scss/_main.scss */
 .contact h5 {
   font-family: "Agenda Black", sans-serif;
   font-size: 18px;
@@ -15460,11 +15462,11 @@ h3.other-header {
   margin-bottom: 0;
   text-align: center; }
 
-/* line 1350, scss/_main.scss */
+/* line 1354, scss/_main.scss */
 #page.contact hr {
   margin: 2em 10em; }
 
-/* line 1354, scss/_main.scss */
+/* line 1358, scss/_main.scss */
 #page.contact p {
   font-size: 18px;
   line-height: 1.4;
@@ -15472,12 +15474,12 @@ h3.other-header {
   margin: 1em 0;
   padding: 0 3em; }
 
-/* line 1362, scss/_main.scss */
+/* line 1366, scss/_main.scss */
 .contact hr {
   border: 1px solid #f1f1f1;
   margin: 3em 0 2em; }
 
-/* line 1367, scss/_main.scss */
+/* line 1371, scss/_main.scss */
 .form-control-wrapper .form-control:not(select),
 .form-control:not(select) {
   border: 1px solid #A5A5A5 !important;
@@ -15487,7 +15489,7 @@ h3.other-header {
   margin: 0 auto 10px;
   width: 98%; }
 
-/* line 1376, scss/_main.scss */
+/* line 1380, scss/_main.scss */
 .form-control-wrapper .form-control:focus:not(select),
 .form-control:focus:not(select),
 .form-control-wrapper .form-control.focus:not(select),
@@ -15496,26 +15498,26 @@ h3.other-header {
   height: auto !important;
   padding: 9px; }
 
-/* line 1384, scss/_main.scss */
+/* line 1388, scss/_main.scss */
 .form-control-wrapper .material-input:before {
   background-color: #A5A5A5 !important; }
 
-/* line 1387, scss/_main.scss */
+/* line 1391, scss/_main.scss */
 .form-control-wrapper .material-input:after {
   height: 28px;
   width: 56px; }
 
-/* line 1391, scss/_main.scss */
+/* line 1395, scss/_main.scss */
 .form-control-wrapper .form-control:focus ~ .material-input:after {
   border: 2px solid #A5A5A5 !important;
   background-color: #A5A5A5 !important; }
 
-/* line 1396, scss/_main.scss */
+/* line 1400, scss/_main.scss */
 .contact .checkbox {
   display: block;
   margin-bottom: 20px; }
 
-/* line 1401, scss/_main.scss */
+/* line 1405, scss/_main.scss */
 .contact .checkbox label span.yes {
   font-family: "Agenda Black", sans-serif;
   font-size: 11px;
@@ -15525,13 +15527,13 @@ h3.other-header {
   position: relative;
   display: inline-block; }
 
-/* line 1410, scss/_main.scss */
+/* line 1414, scss/_main.scss */
 .contact .checkbox label {
   font-size: 11px;
   padding-left: 4px;
   line-height: 30px; }
 
-/* line 1415, scss/_main.scss */
+/* line 1419, scss/_main.scss */
 .checkbox label .check {
   float: left;
   margin-right: 8px;
@@ -15539,23 +15541,23 @@ h3.other-header {
   background: white;
   left: 0; }
 
-/* line 1423, scss/_main.scss */
+/* line 1427, scss/_main.scss */
 .checkbox label .ripple {
   left: -4px;
   top: -3px;
   height: 35px;
   width: 35px; }
 
-/* line 1429, scss/_main.scss */
+/* line 1433, scss/_main.scss */
 .checkbox input[type=checkbox]:checked ~ .check:before,
 .checkbox input[type=checkbox]:checked ~ .check {
   color: #A5A5A5 !important; }
 
-/* line 1434, scss/_main.scss */
+/* line 1438, scss/_main.scss */
 .checkbox input[type=checkbox]:checked ~ .check:after {
   background-color: #A5A5A5 !important; }
 
-/* line 1438, scss/_main.scss */
+/* line 1442, scss/_main.scss */
 .contact .button.side {
   color: #232323;
   font-family: "Agenda Medium", sans-serif;
@@ -15575,52 +15577,52 @@ h3.other-header {
   margin: 11px; }
 
 /* wordpress Editor Classes */
-/* line 1459, scss/_main.scss */
+/* line 1463, scss/_main.scss */
 .aligncenter,
 div.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 1465, scss/_main.scss */
+/* line 1469, scss/_main.scss */
 .alignleft {
   float: left;
   text-align: left; }
 
-/* line 1469, scss/_main.scss */
+/* line 1473, scss/_main.scss */
 .alignright {
   float: right;
   text-align: right; }
 
-/* line 1473, scss/_main.scss */
+/* line 1477, scss/_main.scss */
 img.alignright {
   margin: 0px 0px 8px 8px; }
 
-/* line 1476, scss/_main.scss */
+/* line 1480, scss/_main.scss */
 img.alignleft {
   margin: 0px 35px 8px 0px; }
 
-/* line 1479, scss/_main.scss */
+/* line 1483, scss/_main.scss */
 .wp-caption {
   text-align: center;
   background-color: transparent;
   padding-top: 4px;
   margin: 10px; }
 
-/* line 1484, scss/_main.scss */
+/* line 1488, scss/_main.scss */
 .wp-caption img {
   margin: 0;
   padding: 0;
   border: 0 none; }
 
-/* line 1489, scss/_main.scss */
+/* line 1493, scss/_main.scss */
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
   padding: 0 4px 5px;
   margin: 0; }
 
-/* line 1495, scss/_main.scss */
+/* line 1499, scss/_main.scss */
 img.alignright,
 img.alignleft,
 img.aligncenter {
@@ -15628,7 +15630,7 @@ img.aligncenter {
   padding: 0; }
 
 /* -----------------------FOOTER */
-/* line 1503, scss/_main.scss */
+/* line 1507, scss/_main.scss */
 .site-footer {
   background-color: #232323;
   height: 81px;
@@ -15639,65 +15641,65 @@ img.aligncenter {
   font-size: 0.9em;
   position: relative; }
   @media screen and (max-width: 767px) {
-    /* line 1503, scss/_main.scss */
+    /* line 1507, scss/_main.scss */
     .site-footer {
       height: 140px;
       padding-top: 17px;
       text-align: center !important; } }
 
-/* line 1519, scss/_main.scss */
+/* line 1523, scss/_main.scss */
 .site-footer ul {
   padding-left: 15px;
   margin: 0; }
   @media screen and (max-width: 767px) {
-    /* line 1519, scss/_main.scss */
+    /* line 1523, scss/_main.scss */
     .site-footer ul {
       padding: 0; } }
 
-/* line 1526, scss/_main.scss */
+/* line 1530, scss/_main.scss */
 .site-footer ul li {
   display: inline-block;
   list-style: none;
   padding-right: 1em; }
 
-/* line 1531, scss/_main.scss */
+/* line 1535, scss/_main.scss */
 .site-footer li span {
   font-family: "Agenda Black", sans-serif;
   font-size: 1em;
   letter-spacing: 0.1em; }
 
-/* line 1536, scss/_main.scss */
+/* line 1540, scss/_main.scss */
 .site-footer a,
 .site-footer a:visited {
   color: #999999;
   cursor: pointer; }
 
-/* line 1541, scss/_main.scss */
+/* line 1545, scss/_main.scss */
 .site-footer a:hover {
   opacity: .7;
   color: #fff; }
 
-/* line 1545, scss/_main.scss */
+/* line 1549, scss/_main.scss */
 .connect {
   float: right;
   padding-right: 20px; }
   @media screen and (max-width: 767px) {
-    /* line 1545, scss/_main.scss */
+    /* line 1549, scss/_main.scss */
     .connect {
       float: none;
       padding: 0 0 0 20px; } }
 
-/* line 1553, scss/_main.scss */
+/* line 1557, scss/_main.scss */
 .connect a.phone {
   float: left;
   display: block;
   margin-right: 20px; }
   @media screen and (max-width: 767px) {
-    /* line 1553, scss/_main.scss */
+    /* line 1557, scss/_main.scss */
     .connect a.phone {
       display: none; } }
 
-/* line 1561, scss/_main.scss */
+/* line 1565, scss/_main.scss */
 .social-connect {
   float: left;
   display: block;
@@ -15708,37 +15710,37 @@ img.aligncenter {
   background: url(../images/social-sprite.png);
   cursor: pointer; }
   @media screen and (max-width: 767px) {
-    /* line 1561, scss/_main.scss */
+    /* line 1565, scss/_main.scss */
     .social-connect {
       margin: 7px;
       display: inline-block;
       float: none; } }
 
-/* line 1575, scss/_main.scss */
+/* line 1579, scss/_main.scss */
 a.social-connect:last-of-type {
   margin-right: 0; }
   @media screen and (max-width: 767px) {
-    /* line 1575, scss/_main.scss */
+    /* line 1579, scss/_main.scss */
     a.social-connect:last-of-type {
       margin-right: 28px; } }
 
-/* line 1581, scss/_main.scss */
+/* line 1585, scss/_main.scss */
 .social-connect.twitter {
   background-position: -40px 0; }
 
-/* line 1582, scss/_main.scss */
+/* line 1586, scss/_main.scss */
 .social-connect.google {
   background-position: -80px 0; }
 
-/* line 1583, scss/_main.scss */
+/* line 1587, scss/_main.scss */
 .social-connect.linkdin {
   background-position: -120px 0; }
 
-/* line 1584, scss/_main.scss */
+/* line 1588, scss/_main.scss */
 .social-connect.email {
   background-position: -160px 0; }
 
 @media screen and (max-width: 1024px) {
-  /* line 1588, scss/_main.scss */
+  /* line 1592, scss/_main.scss */
   #main, #single, #error, #page {
     background-image: none !important; } }
