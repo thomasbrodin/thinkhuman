@@ -1,16 +1,17 @@
-$font-stack: 'Raleway', sans-serif;
-$font-ultralight:200;
-$font-light:300;
-$font-medium:500;
-$font-bold:700;
-$font-heavy:900;
+$font-thin:'Agenda Thin', sans-serif;
+$font-light: 'Agenda Light', sans-serif;
+$font-regular: 'Agenda Regular', sans-serif;
+$font-medium: 'Agenda Medium', sans-serif;
+$font-semibold: 'Agenda Semibold', sans-serif;
+$font-black:'Agenda Black', sans-serif;
 
-$font-slim:'AnotherQuarter';
-$font-highlight: 'Agenda';
-$font-highlight-bold: 'Agenda Black';
+$font-logo:'AnotherQuarter';
+
 $font-icons:'FontAwesome';
 
-$highlight: #A5A5A5;
+$darkgray: #A5A5A5;
+$lightgray:#efefef;
+$gray: #e7e7e7;
 
 @font-face {
   font-family: 'AnotherQuarter';
@@ -31,11 +32,21 @@ $highlight: #A5A5A5;
        url('fonts/Agenda-Black.svg#43c86d8c48770b2c6b036a942c744fa2') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
-  font-weight:  400;
+  font-weight:  700;
 }
-
 @font-face {
-  font-family: 'Agenda';
+  font-family: 'Agenda Semibold';
+  src: url('fonts/Agenda-Semibold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Agenda-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Agenda-Semibold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Agenda-Semibold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Agenda-Semibold.svg#0c8f0ab89752c403028557f16236c1d3') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  600;
+}
+@font-face {
+  font-family: 'Agenda Medium';
   src: url('fonts/Agenda-Medium.eot'); /* IE9 Compat Modes */
   src: url('fonts/Agenda-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/Agenda-Medium.woff') format('woff'), /* Modern Browsers */
@@ -43,8 +54,42 @@ $highlight: #A5A5A5;
        url('fonts/Agenda-Medium.svg#baf4deebcdc6fbc3a6ceb2ca1c5cc8bb') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
+  font-weight:  500;
+}
+@font-face {
+  font-family: 'Agenda Regular';
+  src: url('fonts/Agenda-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Agenda-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Agenda-Regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Agenda-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Agenda-Regular.svg#9935e9c25102bd251e938d49178ea38e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
   font-weight:  400;
 }
+@font-face {
+  font-family: 'Agenda Light';
+  src: url('fonts/Agenda-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Agenda-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Agenda-Light.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Agenda-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Agenda-Light.svg#1f632c271eab1be233464a6ccd59498d') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+@font-face {
+  font-family: 'Agenda Thin';
+  src: url('fonts/Agenda-Thin.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Agenda-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Agenda-Thin.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Agenda-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Agenda-Thin.svg#1340de8bfe3a49a3c74949489e3314b0') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  100;
+}
+
 
 @font-face {
   font-family: 'FontAwesome';

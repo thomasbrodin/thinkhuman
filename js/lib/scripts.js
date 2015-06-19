@@ -45,17 +45,16 @@ jQuery(document).ready(function($) {
       itemMargin:0,
       keyboard: true,
       move:3,
-      slideshowSpeed: 7000,    
-      animationSpeed: 600,  
+      slideshowSpeed: 7000,
+      animationSpeed: 600,
       directionNav: true,
       controlsContainer: "#logo-slider nav",
       controlNav: false,
       minItems: getGridSize(),
       maxItems: getGridSize(),
       start: function(slider){
-        $('body').removeClass('loading');
+        $('#logobar').removeClass('loading');
         flexslider = slider;
-        console.log(getGridSize());
       }
     });
   });
@@ -67,7 +66,6 @@ jQuery(document).ready(function($) {
       var gridSize = getGridSize();
       flexslider.vars.minItems = gridSize;
       flexslider.vars.maxItems = gridSize;
-      console.log(gridSize);
     });
     resizeFold();
   }
