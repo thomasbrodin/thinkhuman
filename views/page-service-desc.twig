@@ -26,10 +26,10 @@
 			{% for row in post.get_field('page_blocks') %}
 
 				{% if row.acf_fc_layout == 'block_text' %}
-					<section class="block-text">
+					<section class="block-text"{% if row.text_bg_color %} style="background-color:{{row.text_bg_color}}"{% endif %}>
 							<div class="container">
 	          					<div class="row">
-									<div class="page-block col-md-8">
+									<div class="page-block text col-md-8">
 										{{ row.service_text }}
 									</div>
 								</div>
@@ -41,7 +41,7 @@
 					<section class="case-study"{% if row.case_bg_color %} style="background-color:{{row.case_bg_color}}"{% endif %}>
 						<div class="container">
 	          				<div class="row">
-								<div class="page-block col-md-8">
+								<div class="page-block{% if row.case_video %} col-md-6 pdt{% else %} col-md-8{% endif %}">
 									<h2 class="case-header">{{ row.case_header }}</h2>
 									<h3 class="case-title">{{ row.casestudy_title }}</h3>
 									{{ row.casestudy_description }}
@@ -51,13 +51,18 @@
 										{% endfor %}
 									{% endif %}
 								</div>
+								{% if row.case_video %}
+									<div class="col-md-6 video">
+										{{row.case_video }}
+									</div>
+								{% endif %}
 							</div>
 						</div>
 					</section>
 				{% endif %}
 
 				{% if row.acf_fc_layout == 'list_icons' %}
-					<section class="list-icons">
+					<section class="list-icons"{% if row.icons_bg_color %} style="background-color:{{row.icons_bg_color}}"{% endif %}>
 						<div class="container">
 	          				<div class="row">
 								<div class="page-block col-md-8">
@@ -92,12 +97,12 @@
 					<section id="accordion-wrap" class="accordions">
 						
 						{% for accordion in row.rep_accordion %}
-							<div class="accordion-header">
+							<div class="accordion-header"{% if accordion.acc_title_bg_color %} style="background-color:{{accordion.acc_title_bg_color}}"{% endif %}>
 								<div class="container">
 									<h3 data-toggle="collapse" data-parent="#accordion-wrap" data-target="#collapse-{{loop.index}}" aria-expanded="true" aria-controls="collapse-{{loop.index}}">{{ accordion.accordion_title }}</h3>
 								</div>
 							</div>
-							<div id="collapse-{{loop.index}}" class="collapse in accordion-panel">
+							<div id="collapse-{{loop.index}}" class="collapse{% if loop.first %} in{% endif %} accordion-panel"{% if accordion.acc_bg_color %} style="background-color:{{accordion.acc_bg_color}}"{% endif %}>
 								<div class="container">
 		          					<div class="row">
 										<div class="page-block col-md-8">
@@ -112,14 +117,14 @@
 				{% endif %}
 
 				{% if row.acf_fc_layout == 'cards' %}
-					<section class="cards">
+					<section class="cards"{% if row.cards_bg_color %} style="background-color:{{row.cards_bg_color}}"{% endif %}>
 						<div class="container">
 							<h3>{{row.card_header}}</h3>
 
 							<div class="row">
 				              {% for card in row.rep_cards %}
 				                <div class='col-md-3'>
-				                	<div class="inner">
+				                	<div class="inner"{% if card.card_bg_color %} style="background-color:{{card.card_bg_color}}"{% endif %}>
 					                    <div class="card_number">0{{loop.index}}</div>
 					                    <div class="card_title">{{card.card_title}}</div>
 					                    <hr class="card_divider"></hr>
