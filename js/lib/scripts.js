@@ -26,7 +26,10 @@ jQuery(document).ready(function($) {
     }
   });
   $.material.init();
-
+  if ($(".text").length) {
+    BigLetterColor = $('.text').data();
+    $('.big').css(BigLetterColor);
+  }
   // Sliders
   $window.load(function() {
     $('#testimonial-slider').flexslider({
