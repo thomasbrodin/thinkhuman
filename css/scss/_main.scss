@@ -539,9 +539,6 @@ img.centered {
     padding: 40px 10px 30px 10px;
   }
 }
-img.icon {
-  padding-bottom: 1.5em
-}
 .panel {
   position: relative;
   text-align: center;
@@ -816,68 +813,6 @@ div#logobar {
   margin-bottom: 35px
 }
 
-/* Page header */
-#page {
-  .header-image {
-    position: relative;
-    background-color: $gray;
-    overflow: hidden;
-    height: 450px;
-    width: 100%;
-    .header-background {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-repeat: no-repeat;
-      @media screen and (max-width: 768px) { 
-        background-position: left;
-      }
-      @media screen and (max-width: 992px) { 
-        position:relative;
-        height: 50%;
-        background-size: contain;
-        background-position: center;
-      }
-      @media screen and (min-width: 992px) { 
-        background-position: 90% center;
-      }
-      @media screen and (min-width: 1200px) { 
-         background-position: 85% center;
-      }
-    }
-    .header-caption {
-      position: relative;
-      top: 50%;
-      @include transform(translateY(-50%));
-      @media screen and (max-width: 992px) { 
-        top: 0%;
-        @include transform(none);
-      }
-      h1{
-        margin: 0;
-        @media screen and (min-width: 992px) { 
-          margin-bottom: 3em;
-        }
-      }
-      blockquote {
-        margin:0;
-        padding:0 4em 0 0;
-        p::first-letter, {
-          font-family:$font-black;
-          font-weight: 900;
-          font-size: 32px;
-        }
-      }
-    }
-  }
-  section {
-     padding: 55px 0;
-  }
-}
-
-
 /* PAGE TYPO */
 #page a {
  border-bottom: 1px solid #000;
@@ -900,24 +835,19 @@ div#logobar {
 }
 #page h1, .h1 {
   font-family:$font-black;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-size:32px;
-  line-height: 29px;
-  padding-right:5em;
+  font-size: 52px;
+  line-height: 40px;
+  padding-right: 1em;
   @media screen and (max-width: 767px) { 
     font-size:em(20);
     line-height: 24px;
-    padding-right: 0em;
-  }
-}
-#page h1:first-of-type {
-  padding-bottom: 0;
-  padding-top:40px;
+  } 
 }
 #page h2, .h2{
   font-family:$font-thin;
-  font-size: em(38);
+  font-size: em(36);
   text-transform: uppercase;
   padding-bottom: 22px;
   border-bottom: 1px solid #000000;
@@ -926,7 +856,7 @@ div#logobar {
 #page h3, .h3 {
   font-family:$font-black;
   text-transform: uppercase;
-  font-size:em(24);
+  font-size:em(36);
   padding: 20px 0;
   @media screen and (max-width: 767px) { 
     text-shadow:none;
@@ -958,9 +888,10 @@ div#logobar {
   border:none
 }
 #page blockquote p {
-  font-size: em(22);
+  font-size: 32px;
+  line-height: 1;
   @media screen and (max-width: 767px) { 
-    font-size: em(14);
+    font-size:14px;
     padding: 0;
   }
 }
@@ -1027,9 +958,85 @@ div#logobar {
   height: auto;
 }
 
+/* Page header */
+#page {
+  .header-image {
+    position: relative;
+    background-color: $gray;
+    overflow: hidden;
+    height: 450px;
+    width: 100%;
+    .header-background {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      @media screen and (max-width: 768px) { 
+        background-position: left;
+      }
+      @media screen and (max-width: 992px) { 
+        position:relative;
+        height: 50%;
+        background-size: contain;
+        background-position: center;
+      }
+      @media screen and (min-width: 992px) { 
+        background-position: 90% center;
+      }
+      @media screen and (min-width: 1200px) { 
+         background-position: 85% center;
+      }
+    }
+    .header-caption {
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-50%));
+      @media screen and (max-width: 992px) { 
+        top: 0%;
+        @include transform(none);
+      }
+      h1{
+        @media screen and (min-width: 992px) { 
+          margin-bottom: 3em;
+        }
+      }
+      blockquote {
+        margin:0;
+        padding:0 4em 0 0;
+      }
+    }
+  }
+  section {
+     padding: 70px 0;
+  }
+}
+
 /* page-block */
 .page-block {
    clear: both;
+}
+.big {
+  font-family: $font-black;
+  font-weight: 900;
+  font-size: 44px;
+  padding-right:2px;
+}
+/* block text */
+.lead {
+  font-family: $font-semibold!important;
+  letter-spacing: 0!important;
+  line-height: 30px!important;
+  p{
+    font-size: 1.2em!important;
+    line-height: 1.2 !important
+  }
+  h4 {
+    line-height: 1.5em!important;
+    color: #232323!important;
+    font-size: 32px!important;
+  }
 }
 
 /* case-study */
@@ -1040,7 +1047,6 @@ div#logobar {
   margin: 0;
   border:0;
   letter-spacing: 0.1em;
-  font-size: em(34);
 }
 #page h3.case-title {
   padding-top:0;
@@ -1048,6 +1054,7 @@ div#logobar {
   border-bottom: 1px solid #000;
   margin-top: 0;
   margin-bottom: 22px;
+  font-size:22px;
 }
 #page a.case {
   background-color:$lightgray;
@@ -1086,8 +1093,21 @@ div#logobar {
   .accordion-panel {
     background-color: #dcdcdc;
     .page-block {
-      padding-top:30px;
-      padding-bottom:30px
+      padding-top: 70px;
+      padding-bottom: 50px;
+      ul {
+       margin: 0;
+       padding: 0;
+       font-size: 22px;
+       letter-spacing: 0.02em;
+       li {
+         list-style: none;
+         background: url(../images/WhiteDot.png ) no-repeat;
+         background-position: 0 5px;
+         padding: 0 30px;
+         margin: 24px 0;
+        }
+      }
     }
   }
 }
@@ -1095,6 +1115,12 @@ div#logobar {
 /* Cards */
 #page section.cards {
   background-color:$lightgray;
+  h3 {
+    border-bottom:1px solid white;
+    display: inline-block;
+    clear:both;
+    margin:0 0 70px
+  }
   .inner {
     padding:3em 1em 1em;
     background-color: white;
@@ -1151,6 +1177,7 @@ div#logobar {
   }
 }
 
+/* List with Icons */
 .service-list {
   margin:2em 0;
   @media screen and (max-width: 767px) {  
@@ -1181,67 +1208,53 @@ div#logobar {
  text-transform: uppercase;
 }
 
-/* SERVICES */
-#page h1.title {
-	text-align: center;
-	border:none;
-}
-#page ul.service-menu {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	margin-top: 5em;
-  @media screen and (max-width: 767px) { 
-    margin-top:0
-  }
-}
-#page ul.service-menu li {
-	float: left;
-	width:23%;
-	background-repeat: no-repeat;
-	background-position: top center;
-	padding: 60px 0 0;
-	text-align: center;
-	min-height: 175px;
-	margin:0 13.5% 6.75%;
-  @media screen and (max-width: 767px) { 
-    width: 100%;
-    margin:0;
-    padding:60px 1em 1em;
-  }
-}
 
-#page ul.service-menu li a {
-	padding: 0;
-	font-size: 1.1em;
-	font-family:$font-black;
-	letter-spacing: 0.1em;
-	color: #404040;
-	text-transform: uppercase;
-	border:none;
-  @media screen and (max-width: 767px) { 
-    font-size: 1.3em
+/* MENU LIST TEMPLATE */
+div#page {
+  @media screen and (min-width: 992px) { 
+    min-height: 450px;
   }
-}
-
-#page ul.service-menu li:first-child{
-	background-image: url(../images/icon1.png);
-}
-#page ul.service-menu li:nth-child(2) {
-	background-image: url(../images/icon2.png);
-}
-#page ul.service-menu li:nth-child(3) {
-	background-image: url(../images/icon3.png);
-}
-#page ul.service-menu li:nth-child(4) {
-	background-image: url(../images/icon5.png);
-}
-
-#page ul.service-menu li:hover,
-#page ul.about li:hover,
-#page ul.coaching-menu li:hover{
-	opacity: .7
+  &.menu-list {
+    background-color:$lightgray;
+    padding:70px 0 110px;
+    h1 {
+      letter-spacing: 0.04em;
+      font-size:32px;
+      line-height: 29px; 
+      padding-bottom: 22px;
+      padding-right: 5em;
+      margin:0 0 78px;
+      border-bottom:1px solid white;
+      display: inline-block;
+      @media screen and (max-width: 767px) { 
+        font-size:em(20);
+        line-height: 24px;
+      } 
+    }
+    .inner {
+      padding:3em 5em;
+      background-color: white;
+      min-height: 360px;
+      @media screen and (max-width: 992px) { 
+        height:auto
+      }
+    }
+    .menu_graphic{
+      margin-bottom: 30px;
+      text-align:center;
+    }
+    .menu_title {
+      text-align:center;
+      font-family: $font-black;
+      font-size:18px;
+      line-height:1.4;
+      text-transform: uppercase;
+    }
+    .menu_divider {
+      width:65%;
+      border-color: #232323!important
+    }
+  }
 }
 
 .related-pages {
@@ -1277,91 +1290,6 @@ h3.other-header {
   background-image: url(../images/LeDot.png);
 }
 
-/* ABOUT */
-div#page {
-   @media screen and (min-width: 992px) { 
-    min-height: 450px;
-  }
-}
-#page ul.about {
-	margin-top: 4em;
-  padding-left: 7px;
-  @media screen and (max-width: 767px) { 
-    margin-top:0
-  }
-}
-#page ul.about li {
-	width: 100%;
-	padding:0;
-  margin-bottom: 2em;
-  line-height: 50px;
-}
-#page ul.about li a{
-	display: block;
-	border: none;
-	font-size: 1.1em;
-	font-family:$font-black;
-	letter-spacing: 0.1em;
-	color: #404040;
-	text-transform: uppercase;
-	border:none;
-  padding-left: 65px;
-  background-position:top left;
-}
-#page ul.about li:first-child{
-	background-image: url(../images/OurStory.png);
-}
-#page ul.about li:nth-child(2){
-	background-image: url(../images/OurCoaches.png);
-}
-#page ul.about li:nth-child(3){
-	background-image: url(../images/Press.png);
-}
-
-/* COACHING */
-
-#page ul.coaching-menu {
-	margin-top: 4em;
-  @media screen and (max-width: 767px) { 
-    margin-top:0
-  }
-}
-#page ul.coaching-menu li {
-	width: 100%;
-	padding:0;
-	margin-bottom: 2em;
-}
-#page ul.coaching-menu li a{
-	display: block;
-	border: none;
-	font-size: 1.1em;
-	font-family:$font-black;
-	letter-spacing: 0.1em;
-	color: #404040;
-	text-transform: uppercase;
-	border:none;
-	text-align: center;
-}
-#page ul.coaching-menu li:first-child{
-	background: url(../images/about-life.png)no-repeat top center;
-	height:120px;
-}
-#page ul.coaching-menu li:first-child a {
-	padding: 40px 170px 0 0
-}
-#page ul.coaching-menu li:nth-child(2){
-	background: url(../images/about-career.png)no-repeat top center;
-	height:120px;
-}
-#page ul.coaching-menu li:nth-child(2) a {
-	padding: 68px 0 0
-}
-#page ul.coaching-menu li:nth-child(3){
-	background: url(../images/about-executive.png) no-repeat top center;
-}
-#page ul.coaching-menu li:nth-child(3) a {
-	padding: 90px 0 0
-}
 /* CONTACT */
 .contact h5 {
   font-family:$font-black;

@@ -29,7 +29,7 @@
 					<section class="block-text"{% if row.text_bg_color %} style="background-color:{{row.text_bg_color}}"{% endif %}>
 							<div class="container">
 	          					<div class="row">
-									<div class="page-block text col-md-8">
+									<div class="page-block text col-md-{{row.text_width}}"{% if row.letter_color %} data-color="{{row.letter_color}}"{% endif %}>
 										{{ row.service_text }}
 									</div>
 								</div>

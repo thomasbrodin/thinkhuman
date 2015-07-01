@@ -2,26 +2,30 @@
 
 {% block content %}
 
-	<div id="{{post.post_type}}">
+	<div id="{{post.post_type}}" class="menu-list">
         <div class="container">
           <div class="row">
-          	
           	<div class="col-md-12">
-				<!-- <h1 class="title">{{post.title}}</h2> -->
-
-				<ul class="service-menu">
-				    {% for child in post.children %}
-				        <li>
-				        	<a href="{{child.link}}">{{child.title}}</a>
-				        </li>
-				    {% endfor %}
-				</ul>
-				
-          	</div>
-
+				<h1 class="title">{{post.title}}</h1>
+			</div>
+			{% set columns = post.get_field("menu_columns") %}
+          	{% for menu in post.get_field('menu_list') %}
+          		<div class="col-md-{{columns}}">
+          			<a href="{{menu.list_url}}">
+						<div class="inner">
+							<div class="menu_graphic">
+								<img class="img-responsive icon" src="{{TimberImage(menu.list_graphic).src}}"/>
+							</div>
+							<div class="menu_title">{{menu.list_title}}</div>
+							<hr class="menu_divider">
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+          
         </div>
       </div>
-	</div><!--content -->
+	</div><!--page -->
 
 	<!--   Clients logos pre Footer       -->
 	{% include 'partials/bottom-page.twig' %}

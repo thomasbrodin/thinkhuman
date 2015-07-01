@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: List of services 
+ * Template Name: Menu List with Icons
  * 
  */
 

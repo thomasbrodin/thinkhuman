@@ -19,10 +19,16 @@
 			add_filter('timber_context', array($this, 'add_to_context'));
 			add_filter('get_twig', array($this, 'add_to_twig'));
 			add_filter('show_admin_bar', '__return_false');
+
+			add_filter('acf/options_page/settings', array($this, 'options_page_settings'));
+			
+			add_filter('mce_buttons_2', array($this,'wpb_mce_buttons_2'));
+			add_filter( 'tiny_mce_before_init', array($this,'my_mce_before_init_insert_formats' ));  
+
 			add_action( 'after_setup_theme', array($this, 'add_editor_styles' ));
 			add_action('wp_enqueue_scripts', array($this, 'load_scripts'));	
 			add_action('wp_enqueue_scripts', array($this, 'load_styles'));
-			add_filter('acf/options_page/settings', array($this, 'options_page_settings'));
+
 			add_action('init', array($this,'removeHeadLinks'));	
 			register_nav_menus( array(
 				'primary' => 'Menu',
@@ -33,7 +39,7 @@
 		function add_editor_styles() {
     		add_editor_style( 'style-editor.css' );
 		}
-		
+
 		function add_to_context($context){
 			$context['options'] = get_fields('options');
 			$context['menu'] = new TimberMenu('primary');
@@ -63,6 +69,30 @@
 	    	remove_action('wp_head', 'wlwmanifest_link');
 	    	remove_action('wp_head', 'wp_generator');
 	    }
+	    function wpb_mce_buttons_2($buttons) {
+			array_unshift($buttons, 'styleselect');
+			return $buttons;
+		}
+
+		function my_mce_before_init_insert_formats( $init_array ) {  
+			$style_formats = array(  
+				array(  
+					'title' => 'Paragraph lead',  
+					'block' => 'div',  
+					'classes' => 'lead',
+					'wrapper' => true,
+				),  
+				array(
+		        	'title' => 'Bold Big Letter',
+		        	'inline' => 'span',
+		        	'classes' => 'big',
+		        )
+			);  
+
+			$init_array['style_formats'] = json_encode( $style_formats );  
+			
+			return $init_array;  
+		} 
 	}
 
 	new StarterSite();
