@@ -99,7 +99,7 @@
 						{% for accordion in row.rep_accordion %}
 							<div class="accordion-header"{% if accordion.acc_title_bg_color %} style="background-color:{{accordion.acc_title_bg_color}}"{% endif %}>
 								<div class="container">
-									<h3 data-toggle="collapse" data-parent="#accordion-wrap" data-target="#collapse-{{loop.index}}" aria-expanded="true" aria-controls="collapse-{{loop.index}}">{{ accordion.accordion_title }}</h3>
+									<h3 data-toggle="collapse" data-parent="#accordion-wrap" data-target="#collapse-{{loop.index}}" {% if loop.first %} aria-expanded="true"{% else %} aria-expanded="false" class="collapsed"{% endif %} aria-controls="collapse-{{loop.index}}">{{ accordion.accordion_title }}</h3>
 								</div>
 							</div>
 							<div id="collapse-{{loop.index}}" class="collapse{% if loop.first %} in{% endif %} accordion-panel"{% if accordion.acc_bg_color %} style="background-color:{{accordion.acc_bg_color}}"{% endif %}>

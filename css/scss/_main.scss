@@ -824,7 +824,7 @@ div#logobar {
   color: #232323;
   font-size: 18px;
   @media screen and (max-width: 767px) { 
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.3;
     padding:0 1em;
   }
@@ -841,7 +841,7 @@ div#logobar {
   line-height: 40px;
   padding-right: 1em;
   @media screen and (max-width: 767px) { 
-    font-size:em(20);
+    font-size:em(24);
     line-height: 24px;
   } 
 }
@@ -852,6 +852,10 @@ div#logobar {
   padding-bottom: 22px;
   border-bottom: 1px solid #000000;
   margin-bottom:11px;
+  @media screen and (max-width: 767px) { 
+    font-size:em(24);
+    line-height: 20px;
+  }
 }
 #page h3, .h3 {
   font-family:$font-black;
@@ -859,8 +863,7 @@ div#logobar {
   font-size:em(36);
   padding: 20px 0;
   @media screen and (max-width: 767px) { 
-    text-shadow:none;
-    background: none;
+    font-size:em(20);
   }
 }
 #page h4, .h4 {
@@ -966,6 +969,9 @@ div#logobar {
     overflow: hidden;
     height: 450px;
     width: 100%;
+    @media screen and (max-width: 768px) { 
+      height: 350px;
+    }
     .header-background {
       position: absolute;
       height: 100%;
@@ -1010,6 +1016,9 @@ div#logobar {
   }
   section {
      padding: 70px 0;
+    @media screen and (max-width: 768px) { 
+       padding: 30px 0;
+    }
   }
 }
 
@@ -1022,6 +1031,9 @@ div#logobar {
   font-weight: 900;
   font-size: 44px;
   padding-right:2px;
+   @media screen and (max-width: 768px) { 
+      font-size: 28px
+    }
 }
 /* block text */
 .lead {
@@ -1036,6 +1048,9 @@ div#logobar {
     line-height: 1.5em!important;
     color: #232323!important;
     font-size: 32px!important;
+    @media screen and (max-width: 768px) { 
+      font-size: 20px!important;
+    }
   }
 }
 
@@ -1055,6 +1070,9 @@ div#logobar {
   margin-top: 0;
   margin-bottom: 22px;
   font-size:22px;
+   @media screen and (max-width: 768px) { 
+      font-size: 18px;
+    }
 }
 #page a.case {
   background-color:$lightgray;
@@ -1095,6 +1113,17 @@ div#logobar {
     .page-block {
       padding-top: 70px;
       padding-bottom: 50px;
+      @media screen and (max-width: 767px) { 
+         padding-top: 30px;
+        padding-bottom: 20px;
+      }
+      h3 {
+        margin:10px 0;
+        &:first-child{
+          margin-top:0;
+          padding-top:0
+        }
+      }
       ul {
        margin: 0;
        padding: 0;
@@ -1222,10 +1251,8 @@ div#page {
       font-size:32px;
       line-height: 29px; 
       padding-bottom: 22px;
-      padding-right: 5em;
-      margin:0 0 78px;
+      margin:0 0 34px;
       border-bottom:1px solid white;
-      display: inline-block;
       @media screen and (max-width: 767px) { 
         font-size:em(20);
         line-height: 24px;
@@ -1273,6 +1300,9 @@ h3.other-header {
   margin-bottom: 30px;
   letter-spacing: 0.1em;
   font-size: em(34);
+  @media screen and (max-width: 767px) { 
+     font-size: em(28);
+  }
 }
 
 .other-pages-list {
