@@ -2,12 +2,12 @@
 
 {% block content %}
 {% set bgImage = post.get_field('background_image_right_side') %}
-	
+
 	<div id="{{post.post_type}}">
-       
-  		<div class="header-image">	
-  			{% if post.get_field('header_image') %}
-  				<div class="header-background" style="background-image:url('{{TimberImage(post.get_field('header_image')).src}}')"></div>
+
+			<div class="header-image">
+				{% if post.get_field('header_image') %}
+					<div class="header-background" style="background-image:url('{{TimberImage(post.get_field('header_image')).src}}')"></div>
 			{% endif %}
 			<div class="container header-caption">
 				<div class="col-md-8">
@@ -28,7 +28,7 @@
 				{% if row.acf_fc_layout == 'block_text' %}
 					<section class="block-text"{% if row.text_bg_color %} style="background-color:{{row.text_bg_color}}"{% endif %}>
 							<div class="container">
-	          					<div class="row">
+											<div class="row">
 									<div class="page-block text col-md-{{row.text_width}}"{% if row.letter_color %} data-color="{{row.letter_color}}"{% endif %}>
 										{{ row.service_text }}
 									</div>
@@ -40,7 +40,7 @@
 				{% if row.acf_fc_layout == 'case_study' %}
 					<section class="case-study"{% if row.case_bg_color %} style="background-color:{{row.case_bg_color}}"{% endif %}>
 						<div class="container">
-	          				<div class="row">
+										<div class="row">
 								<div class="page-block{% if row.case_video %} col-md-6 pdt{% else %} col-md-8{% endif %}">
 									<h2 class="case-header">{{ row.case_header }}</h2>
 									<h3 class="case-title">{{ row.casestudy_title }}</h3>
@@ -66,27 +66,27 @@
 				{% if row.acf_fc_layout == 'list_icons' %}
 					<section class="list-icons"{% if row.icons_bg_color %} style="background-color:{{row.icons_bg_color}}"{% endif %}>
 						<div class="container">
-	          				<div class="row">
+										<div class="row">
 								<div class="page-block col-md-8">
-								
+
 									{% for row_rep in row.row_icon_text %}
 										 <div class="service-list">
-							            	<div class="row">
-									            <div class="col-sm-2">
+														<div class="row">
+															<div class="col-sm-2">
 
-									            	{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
-									             		<img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
+																{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
+																	 <img class="img-responsive icon" src="{{TimberImage(row_rep.service_icon).src}}"/>
 													{% if row_rep.service_link %}</a>{% endif %}
-									            </div>
-									            <div class="col-sm-10">
-									            	{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
+															</div>
+															<div class="col-sm-10">
+																{% if row_rep.service_link %}<a class="service-link" href="{{ row_rep.service_link }}">{% endif %}
 														<h5 class="service-title">{{ row_rep.service_title }}</h5>
 													{% if row_rep.service_link %}</a>{% endif %}
-								          			<p class="service-description">{{ row_rep.short_description }}</p>
-								          		</div> 
-									          
-								           </div>
-								        </div>
+																<p class="service-description">{{ row_rep.short_description }}</p>
+															</div>
+
+													 </div>
+												</div>
 									{% endfor %}
 
 								</div>
@@ -97,7 +97,7 @@
 
 				{% if row.acf_fc_layout == 'accordion' %}
 					<section id="accordion-wrap" class="accordions">
-						
+
 						{% for accordion in row.rep_accordion %}
 							<div class="accordion-header"{% if accordion.acc_title_bg_color %} style="background-color:{{accordion.acc_title_bg_color}}"{% endif %}>
 								<div class="container">
@@ -106,7 +106,7 @@
 							</div>
 							<div id="collapse-{{loop.index}}" class="collapse{% if loop.first %} in{% endif %} accordion-panel"{% if accordion.acc_bg_color %} style="background-color:{{accordion.acc_bg_color}}"{% endif %}>
 								<div class="container">
-		          					<div class="row">
+												<div class="row">
 										<div class="page-block col-md-8">
 											{{ accordion.accordion_content }}
 										</div>
@@ -124,32 +124,32 @@
 							<h3>{{row.card_header}}</h3>
 
 							<div class="row">
-				              {% for card in row.rep_cards %}
-				                <div class='col-md-3'>
-				                	<div class="inner"{% if card.card_bg_color %} style="background-color:{{card.card_bg_color}}"{% endif %}>
-					                    <div class="card_number">0{{loop.index}}</div>
-					                    <div class="card_title">{{card.card_title}}</div>
-					                    <hr class="card_divider"></hr>
-					                    <div class="card_description">{{card.card_desc}}</div>
-					                </div>
-				                </div>
-				              {% endfor %}
-				            </div>
-				        </div>
+											{% for card in row.rep_cards %}
+												<div class='col-md-3'>
+													<div class="inner"{% if card.card_bg_color %} style="background-color:{{card.card_bg_color}}"{% endif %}>
+															<div class="card_number">0{{loop.index}}</div>
+															<div class="card_title">{{card.card_title}}</div>
+															<hr class="card_divider"></hr>
+															<div class="card_description">{{card.card_desc}}</div>
+													</div>
+												</div>
+											{% endfor %}
+										</div>
+								</div>
 					</section>
 				{% endif %}
 
 			{% endfor %}
 		{% else %}
 			<div class="container">
-      			<div class="row">
+						<div class="row">
 					{{post.content}}
 				</div>
 			</div>
 		{% endif %}
 
 		{% if post.can_edit %}
-		    <a class="edit" href="{{post.get_edit_url}}">Edit me!</a>
+				<a class="edit" href="{{post.get_edit_url}}">Edit me!</a>
 		{% endif %}
 
 	</div><!-- page -->
@@ -163,7 +163,7 @@
 				</ul>
 			</div>
 		</div>
-	{% endif %}	
+	{% endif %}
 
 	{% include 'partials/bottom-page.twig' %}
 	<!--   Clients logos pre Footer       -->
